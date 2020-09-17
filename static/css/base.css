@@ -1,0 +1,75 @@
+html {
+    height: 100%;
+}
+
+body {
+    background: url('/../media/home-bg.jpg') no-repeat center center fixed;
+    background-size: cover;
+    height: calc(100vh - 164px);
+    color: #000;
+    font-family: 'Raleway', sans-serif;
+    
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6{
+    font-family: 'Playfair Display', serif;
+}
+
+
+/* from Bulma */
+.icon {
+    align-items: center;
+    display: inline-flex;
+    justify-content: center;
+    height: 1.5rem;
+    width: 1.5rem;
+}
+
+/* navbar styling */
+.nav-link {
+    display: block;
+    padding: .5rem .5rem;
+}
+
+.logo-font-p1 {
+    font-family: 'Alex Brush', cursive;
+}
+
+/* .logo-font-p2 {
+    font-family: 'Alex Brush', cursive;
+} */
+
+.main-logo-link {
+    width: fit-content;
+    display: flex;
+}
+
+
+/* -------------------------------- Media Queries */
+
+/* Slightly larger container on xl screens */
+@media (min-width: 1200px) {
+  .container {
+    max-width: 80%;
+  }
+}
+
+/* fixed top navbar only on medium and up */
+@media (min-width: 992px) {
+    .fixed-top-desktop-only {
+        position: fixed;
+        top: 0;
+        right: 0;
+        left: 0;
+        z-index: 1030;
+    }
+
+    .header-container {
+        padding-top: 164px;
+    }
+}
