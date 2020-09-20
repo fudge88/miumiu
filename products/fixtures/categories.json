@@ -1,0 +1,66 @@
+[
+{
+    "pk": 1,
+    "model": "products.category",
+    "fields": {
+      "name": "face_mask",
+      "friendly_name": "Face Masks"
+    }
+  },
+{
+    "pk": 2,
+    "model": "products.category",
+    "fields": {
+      "name": "facial_exfoliant",
+      "friendly_name": "Facial Exfoliant"
+    }
+  },
+{
+    "pk": 3,
+    "model": "products.category",
+    "fields": {
+      "name": "facial_moisturiser",
+      "friendly_name": "Facial Moisturiser"
+    }
+  },
+{
+    "pk": 4,
+    "model": "products.category",
+    "fields": {
+      "name": "body_scrub",
+      "friendly_name": "Body Scrub"
+    }
+  },
+{
+    "pk": 5,
+    "model": "products.category",
+    "fields": {
+      "name": "body_mask",
+      "friendly_name": "Body Masks"
+    }
+  },
+{
+    "pk": 6,
+    "model": "products.category",
+    "fields": {
+      "name": "body_moisturiser",
+      "friendly_name": "Body Moisturiser"
+    }
+  },
+{
+    "pk": 7,
+    "model": "products.category",
+    "fields": {
+      "name": "waxing_beads",
+      "friendly_name": "Waxing Beads"
+    }
+  },
+{
+    "pk": 8,
+    "model": "products.category",
+    "fields": {
+      "name": "hair_removal_aftercare",
+      "friendly_name": "Hair-removal Aftercare"
+    }
+  }
+]

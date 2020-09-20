@@ -1,0 +1,770 @@
+[
+  {
+    "pk": 1,
+    "model": "products.product",
+    "fields": {
+      "sku": "pp1",
+      "name": "Charcoal Mask",
+      "short_description": "For bright and mattified skin",
+      "description": "Charcoal acts like a magnet to attract and suck out dirt, gunk, and oil from the surface of your pores. This mask will leave you with cleaner-feeling, and reduced oily skin.",
+      "directions": "Apply an even layer over your entire face. Allow to sit and dry for 20 mins, then remove mask with a damp towel.",
+      "price": 12,
+      "weight": 75,
+      "category": 1,
+      "rating": 4.8,
+      "image": "img20.jpg"
+    }
+  },
+  {
+    "pk": 2,
+    "model": "products.product",
+    "fields": {
+      "sku": "pp2",
+      "name": "Hyaluronic Acid Sheet Mask",
+      "short_description": "For smooth, tighter skin",
+      "description": "Formulated with plumping beads, and concentrated hyaluronic acid for intense replumping action. This mask reduces the appearance of wrinkles, relaxes facial features, contouring and uplifting the face.",
+      "directions": "Gently open the sheet and stretch over to the back of your ears to cover your entire face. Allow to sit 10 mins, then remove mask and massage the excess serum into your face.",
+      "price": 12,
+      "weight": 75,
+      "category": 1,
+      "rating": 4.2,
+      "image": "img39.jpg"
+    }
+  },
+  {
+    "pk": 3,
+    "model": "products.product",
+    "fields": {
+      "sku": "pp3",
+      "name": "Brightening Sheet Mask",
+      "short_description": "For Bright, hydrated skin",
+      "description": "Created with ingredients that hydrate the skin and reduce redness, inflammation, and dark spots. With added benefits of vitamin C, alpha hydroxy acids, and hyaluronic acid, designed to achieve a healthy glowing complexion from inside and out.",
+      "directions": " Gently open the sheet and stretch over to the back of your ears to cover your entire face. Allow to sit 10 mins, then remove mask and massage the excess serum into your face.",
+      "price": 12,
+      "weight": 75,
+      "category": 1,
+      "rating": 4.2,
+      "image": "img35.jpg"
+    }
+  },
+  {
+    "pk": 4,
+    "model": "products.product",
+    "fields": {
+      "sku": "pp4",
+      "name": "Salicyic Acid Mask",
+      "short_description": "For smoother, clearer skin",
+      "description": "A blend of charcoal and clay provides an ultra-deep cleanse, helping to draw out impurities from the pores to reduce the appearance of blackheads, blemishes and clogged pores. Salicylic Acid exfoliates deep into the pores, promoting a smoother and clearer complexion.",
+      "directions": "Apply a thin layer that covers your entire face. Allow to sit 10 mins, then rinse with warm water.",
+      "price": 12,
+      "weight": 75,
+      "category": 1,
+      "rating": 4.8,
+      "image": "img17.jpg"
+    }
+  },
+  {
+    "pk": 5,
+    "model": "products.product",
+    "fields": {
+      "sku": "pp5",
+      "name": "Resurfacing Mask",
+      "short_description": "Calm’s spot-prone skin",
+      "description": "A bi-weekly M.O.T. for blemished, spot-prone skin, MiuMiu’s Resurfacing Mask helps to tackle congestion, and soothe inflammation to leave your complexion both clear and content.",
+      "directions": "Apply a thin layer that covers your entire face. Allow to sit 15-20 mins, then rinse with warm water.",
+      "price": 12,
+      "weight": 75,
+      "category": 1,
+      "rating": 4.8,
+      "image": "img21.jpg"
+    }
+  },
+  {
+    "pk": 6,
+    "model": "products.product",
+    "fields": {
+      "sku": "pp6",
+      "name": "Problem Skin Mask",
+      "short_description": "For acne-prone skin",
+      "description": "Medicated mask with 10% maximum-strength Sulfur, purifying Kaolin Clay and Bentonite Clay dries and clears up acne blemishes, and helps prevent their return. Formulated to exfoliate skin, absorb excess oil and help purify clogged pores.",
+      "directions": "Apply to affected areas of face, chest and back. Allow mask to dry for 10-15 mins, then rinse thoroughly with warm water.",
+      "price": 12,
+      "weight": 75,
+      "category": 1,
+      "rating": 5,
+      "image": "img19.jpg"
+    }
+  },
+  {
+    "pk": 7,
+    "model": "products.product",
+    "fields": {
+      "sku": "pp7",
+      "name": "Essential Rose Exfoliant",
+      "short_description": "For ultra-soft, smooth and beautiful skin",
+      "description": " Rose infused, deep cleaning exfoliant, removes dead skin cells, with anti-aging, reduction in wrinkles, sun spots, and stimulates the blood flow. This gentle exfoliant, hydrates and moisturizes your skin, leaving it ultra-soft, smooth and beautiful!",
+      "directions": "Apply a pea-sized amount and massage the face and neck area in circular motions, then wash off with warm water.",
+      "price": 18,
+      "weight": 120,
+      "category": 2,
+      "rating": 4.2,
+      "image": "img33.jpg"
+    }
+  },
+  {
+    "pk": 8,
+    "model": "products.product",
+    "fields": {
+      "sku": "pp8",
+      "name": "Invigorating Coffee Exfoliant",
+      "short_description": "Wake up and buff with coffee",
+      "description": "Our body scrub is made from activated coffee combined with salts from the Dead Sea to offer your skin the ultimate stimulating, cleansing.",
+      "directions": " Apply a pea-sized amount and massage the face and neck area in circular motions, allow to sit for 2 mins, then wash off with warm water.",
+      "price": 18,
+      "weight": 120,
+      "category": 2,
+      "rating": 4.2,
+      "image": "img10.jpg"
+    }
+  },
+  {
+    "pk": 9,
+    "model": "products.product",
+    "fields": {
+      "sku": "pp9",
+      "name": "Dead Sea Salt Exfoliant",
+      "short_description": "For sensitive and dry skin",
+      "description": "Especially made for sensitive and dry skin. Dead Sea salt is ideal for detoxing all skin types, making sure your skin a nourished and cleansed. Deep-cleans and rejuvenates dull, tired skin.",
+      "directions": " Use the required amount for the area, massage the face and neck area in circular motions, then wash off with warm water.",
+      "price": 13,
+      "weight": 120,
+      "category": 2,
+      "rating": 4.2,
+      "image": "img3.jpg"
+    }
+  },
+  {
+    "pk": 10,
+    "model": "products.product",
+    "fields": {
+      "sku": "pp10",
+      "name": "Sugar Buff Exfoliant",
+      "short_description": "For nourished and hydrated skin",
+      "description": "The Brown Sugar is coupled with a mix of natural oils - Sweet almond, coconut, argan, and avocado oil, for a rich formula that nourishes and hydrates your skin, while removing dead skin cells.",
+      "directions": "Use the required amount for the area, massage the face and neck area in circular motions, then wash off with warm water.",
+      "price": 15,
+      "weight": 120,
+      "category": 2,
+      "rating": 4.2,
+      "image": "img37.jpg"
+    }
+  },
+  {
+    "pk": 11,
+    "model": "products.product",
+    "fields": {
+      "sku": "pp11",
+      "name": "Coconut Salt Exfoliant",
+      "short_description": "Healing, and restoring hydration",
+      "description": "Target scars, blemishes, and dull dry skin, with our Coconut Salt Scrub to give your body a kiss all year around. The distinct texture easily absorbs into the skin, creating a protective film to resist moisture loss and restore the hydration within the skin.",
+      "directions": " Use the required amount for the area, massage the face and neck area in circular motions, then wash off with warm water.",
+      "price": 22,
+      "weight": 120,
+      "category": 2,
+      "rating": 4.2,
+      "image": "img42.jpg"
+    }
+  },
+  {
+    "pk": 12,
+    "model": "products.product",
+    "fields": {
+      "sku": "pp12",
+      "name": "Fig and Honey Exfoliant",
+      "short_description": "Hydrate, exfoliate, condition",
+      "description": "Natural luxurious ingredients are used to gently lift dead skin cells and nourish your skin. The subtle texture treats your skin with the love it needs, feeding it natural sources of mother nature’s vitamins it needs.",
+      "directions": " Apply a pea-sized amount and massage the face and neck area in circular motions, then wash off with warm water.",
+      "price": 22,
+      "weight": 120,
+      "category": 2,
+      "rating": 4.2,
+      "image": "img23.jpg"
+    }
+  },
+  {
+    "pk": 13,
+    "model": "products.product",
+    "fields": {
+      "sku": "pp13",
+      "name": "Super Hydrating Moisturiser",
+      "short_description": "lightly soothing moisture",
+      "description": "Feel this ultra-lightweight hydrating moisturizer transform into water on contact, surging skin with more than 10,000 marine micro-droplets for intense, yet weightless, all-day hydration.",
+      "directions": " Massage onto clean skin for 30 seconds. Use AM and PM.",
+      "price": 8,
+      "weight": 45,
+      "category": 3,
+      "rating": 4.8,
+      "image": "img26.jpg"
+    }
+  },
+  {
+    "pk": 14,
+    "model": "products.product",
+    "fields": {
+      "sku": "pp14",
+      "name": "Brightening Vitamin C Moisturiser",
+      "short_description": "Soothes and hydrates",
+      "description": " This vegan, high-tech moisturizer contains the most effective, non-irritating form of vitamin C and a patented tri-peptide to boost skin's natural elasticity while delivering intense hydration.",
+      "directions": " Massage onto clean skin morning and night. Keep in a cool, dry place out of direct sunlight.",
+      "price": 24,
+      "weight": 45,
+      "category": 3,
+      "rating": 4.2,
+      "image": "img36.jpg"
+    }
+  },
+  {
+    "pk": 15,
+    "model": "products.product",
+    "fields": {
+      "sku": "pp15",
+      "name": "Gentle Rescue Moisturiser",
+      "short_description": "Soothing, balancing moisture",
+      "description": " This nourishing rose water cream, thoughtfully formulated with gentle ingredients, such as Rose water, Colloidal Gold, German Chamomile, and Jojoba Oil, absorbs instantly for a hydrated, comfortable complexion.",
+      "directions": " Massage onto face and neck to calm and soothe skin.",
+      "price": 21,
+      "weight": 45,
+      "category": 3,
+      "rating": 4.2,
+      "image": "img5.jpg"
+    }
+  },
+  {
+    "pk": 16,
+    "model": "products.product",
+    "fields": {
+      "sku": "pp16",
+      "name": "Intense Hydrate Moisturiser",
+      "short_description": "Restorative and mattifying",
+      "description": " A more intense moisturiser, using a more concentrated source of lycopene, this antioxidant-rich fruit extract is known to replenish lost vitamins and minerals as it improves the moisture barrier to help prevent dehydration and water loss.",
+      "directions": "Massage onto clean skin for instant hydration and a refreshed, balanced complexion.",
+      "price": 20,
+      "weight": 45,
+      "category": 3,
+      "rating": 4.8,
+      "image": "img24.jpg"
+    }
+  },
+  {
+    "pk": 17,
+    "model": "products.product",
+    "fields": {
+      "sku": "pp17",
+      "name": "Glowing Complexion Moisturiser",
+      "short_description": "Brighten and soften your skin",
+      "description": "This velvety, skin-brightening moisturizer with stabilized vitamin C takes skin from dry and lack luster to dewy and luminous in seconds. Advanced Shea Butter nourishes to combat dryness and flaking; powerful botanicals help recharge and protect. Giving a subtle iridescent sheen that provides an instant, healthy glow.",
+      "directions": "Massage onto clean skin for an instant, healthy glow.",
+      "price": 12,
+      "weight": 45,
+      "category": 3,
+      "rating": 4.8,
+      "image": "img1.jpg"
+    }
+  },
+  {
+    "pk": 18,
+    "model": "products.product",
+    "fields": {
+      "sku": "pp18",
+      "name": "Supercharged Moisturiser",
+      "short_description": "Rejuvenate and replenish",
+      "description": "This luxurious vegan facial oil blend is supercharged with 10% fermented camellia oil to deliver tiny antioxidant-and-moisture-packed molecules that visibly plump, rejuvenate and replenish even the most parched complexions.",
+      "directions": " Massage onto clean skin for an instant, healthy glow.",
+      "price": 22,
+      "weight": 45,
+      "category": 3,
+      "rating": 5,
+      "image": "img46.jpg"
+    }
+  },
+  {
+    "pk": 19,
+    "model": "products.product",
+    "fields": {
+      "sku": "pp19",
+      "name": "Rose Body scrub",
+      "short_description": "Luxurious, smooth, and toned",
+      "description": " Rose Scent, Deep cleaning can exfoliate the skin, removing dead skin cells, anti-aging, remove wrinkles, sun spots, stimulate blood flow, hydrates and moisturizes your skin leaving it ultra-soft, smooth and beautiful!",
+      "directions": "Apply a generous amount and massage into the skin in circular motions, allow to sit for 2 mins and then wash off with warm water.",
+      "price": 18,
+      "weight": 300,
+      "category": 4,
+      "rating": 4.2,
+      "image": "img9.jpg"
+    }
+  },
+  {
+    "pk": 20,
+    "model": "products.product",
+    "fields": {
+      "sku": "pp20",
+      "name": "Coffee Body scrub",
+      "short_description": "Smooth and energised skin",
+      "description": "Our body scrub is made from activated coffee combined with salts from the Dead Sea to offer your skin the ultimate cleansing with oil and impurities.",
+      "directions": "Apply a generous amount and massage into the skin in circular motions, allow to sit for 2 mins and then wash off with warm water.",
+      "price": 18,
+      "weight": 300,
+      "category": 4,
+      "rating": 4.2,
+      "image": "img38.jpg"
+    }
+  },
+  {
+    "pk": 21,
+    "model": "products.product",
+    "fields": {
+      "sku": "pp21",
+      "name": "Dead Sea Salt Body scrub",
+      "short_description": "Rejuvenates dull, and tired skin",
+      "description": "Especially made for sensitive and dry skin. Dead Sea salt is ideal for detoxing all skin types, making sure your skin a nourished and cleansed. Deep-cleans and rejuvenates dull, tired skin.",
+      "directions": "Apply a generous amount and massage into the skin in circular motions, allow to sit for 2 mins and then wash off with warm water.",
+      "price": 13,
+      "weight": 300,
+      "category": 4,
+      "rating": 4.2,
+      "image": "img48.jpg"
+    }
+  },
+  {
+    "pk": 22,
+    "model": "products.product",
+    "fields": {
+      "sku": "pp22",
+      "name": "Brown Sugar Body scrub",
+      "short_description": "Softening, and nourishing scrub",
+      "description": "The Brown Sugar is coupled with a mix of natural oils - Sweet almond, coconut, argan, and avocado oil, for a rich formula that nourishes and hydrates your skin, while removing dead skin cells.",
+      "directions": "Apply a generous amount and massage into the skin in circular motions, allow to sit for 2 mins and then wash off with warm water.",
+      "price": 15,
+      "weight": 300,
+      "category": 4,
+      "rating": 4.2,
+      "image": "img7.jpg"
+    }
+  },
+  {
+    "pk": 23,
+    "model": "products.product",
+    "fields": {
+      "sku": "pp23",
+      "name": "Coconut Body scrub",
+      "short_description": "Even, hydrated skin",
+      "description": "Target scars, blemishes and dull dry skin with our Coconut Salt Scrub to give your body a kiss all year around. The distinct texture easily absorbs into the skin, creating a protective film to resist moisture loss and restore the hydration within the skin.",
+      "directions": "Apply a generous amount and massage into the skin in circular motions, allow to sit for 2 mins and then wash off with warm water.",
+      "price": 22,
+      "weight": 300,
+      "category": 4,
+      "rating": 4.2,
+      "image": "img47.jpg"
+    }
+  },
+  {
+    "pk": 24,
+    "model": "products.product",
+    "fields": {
+      "sku": "pp24",
+      "name": "Pumpkin Body scrub",
+      "short_description": "Fresh, smooth, glowing skin",
+      "description": "This whipped pumpkin body scrub is infused with a 10% skin-smoothing pumpkin blend of natural AHAs, ground pumpkin seeds, and pumpkin enzymes that gently exfoliates and resurfaces skin to reveal a refined texture, that helps stimulate skin’s renewal process while hydrating for fresh, smooth, glowing skin.",
+      "directions": "Apply a generous amount and massage into the skin in circular motions, allow to sit for 2 mins and then wash off with warm water.",
+      "price": 15,
+      "weight": 300,
+      "category": 4,
+      "rating": 4.2,
+      "image": "img11.jpg"
+    }
+  },
+  {
+    "pk": 25,
+    "model": "products.product",
+    "fields": {
+      "sku": "pp25",
+      "name": " Hot Chocolate Body Mask",
+      "short_description": "Revitalising detox",
+      "description": "Body Mask is every chocolate lover's dream. Formulated with shea butter to soften skin and kaolin clay to detox and unclog pores, it revitalises the circulation, helps clear clogged pores and brings a sense of wellbeing. This is a full body treat that smells seriously delicious.",
+      "directions": "Apply to damp skin whilst in the bath and enjoy the wonderfully restorative deep heat as the clay gets to work.",
+      "price": 22,
+      "weight": 225,
+      "category": 5,
+      "rating": 4.5,
+      "image": "img22.jpg"
+    }
+  },
+  {
+    "pk": 26,
+    "model": "products.product",
+    "fields": {
+      "sku": "pp26",
+      "name": "Charcoal Body Mask",
+      "short_description": "Deep cleaned, mattified skin",
+      "description": "charcoal acts like a magnet to attract and suck out dirt, gunk, and oil from the surface of your pores when you slather it on your body, leaving you with cleaner-feeling, less oily, and detoxed skin after you rinse it off.",
+      "directions": "Apply a thick, even layer over your area of choice. Allow to sit and dry for 5 mins, then wash off with warm water.",
+      "price": 12,
+      "weight": 225,
+      "category": 5,
+      "rating": 4.8,
+      "image": "img8.jpg"
+    }
+  },
+  {
+    "pk": 27,
+    "model": "products.product",
+    "fields": {
+      "sku": "pp27",
+      "name": "Radiance Whipped Body Mask",
+      "short_description": "Fresh, smooth, luminous skin",
+      "description": "This airy whipped mask – with a brightening boost of marshmallow root extract – delivers a surge of hydration to instantly reveal a new luminosity. If you want to lift shades of your tan, or want to work that backless dress, why not prep your skin in advance.",
+      "directions": "Smooth a thick layer onto clean, dry skin, avoiding the eye area. Leave on for 10-15 minutes. Rinse thoroughly.",
+      "price": 12,
+      "weight": 225,
+      "category": 5,
+      "rating": 4.2,
+      "image": "img15.jpg"
+    }
+  },
+  {
+    "pk": 28,
+    "model": "products.product",
+    "fields": {
+      "sku": "pp28",
+      "name": "Brightening Mask",
+      "short_description": "Smooth, perfectly-balanced skin",
+      "description": "This clarifying gel body mask, with azelaic acid and green tea extract, creates a deep cleansing veil to help reset skin’s natural balance and visibly smooths out imperfections. This absorbs excess oil without disturbing drier areas. Say hello to a smooth, perfectly-balanced Skin.",
+      "directions": "Smooth a thin layer onto clean dry skin. Let dry, then rinse thoroughly to reveal fresh, smooth, shine-free even skin.",
+      "price": 15,
+      "weight": 225,
+      "category": 5,
+      "rating": 4.2,
+      "image": "img49.jpg"
+    }
+  },
+  {
+    "pk": 29,
+    "model": "products.product",
+    "fields": {
+      "sku": "pp29",
+      "name": "Salicyic Acid Mask",
+      "short_description": "Refreshed, and energized",
+      "description": "This light and refreshing witch hazel body mask with watermelon extract, electrolytes and willow bark transforms tired, stressed skin to replenished, refreshed and energized. This refreshes and replenishes the skin’s barrier, helps rid skin of toxins and dead cells, and respects skin’s natural balance.",
+      "directions": " Smooth a thin layer onto clean dry skin. Let dry, then rinse thoroughly to reveal fresh, smooth.",
+      "price": 12,
+      "weight": 225,
+      "category": 5,
+      "rating": 4.8,
+      "image": "img44.jpg"
+    }
+  },
+  {
+    "pk": 30,
+    "model": "products.product",
+    "fields": {
+      "sku": "pp30",
+      "name": "Satin Skin Body Polish",
+      "short_description": "Energizing pick-me-up",
+      "description": " This luxe lemon sage body mask features super-fine sugar crystals that exfoliate, then melt away, while a rich blend of coconut and jojoba oils leave skin with a silky, satiny shine. Honey and shea butter moisturize to help smooth even the roughest skin. Supremely scented with our iconic Lemon & Sage fragrance for an energizing pick-me-up.",
+      "directions": "Apply a thin layer that cover your treatment area. Allow to sit 15-20mins, then rinse with warm water.",
+      "price": 22,
+      "weight": 225,
+      "category": 5,
+      "rating": 4.8,
+      "image": "img40.jpg"
+    }
+  },
+  {
+    "pk": 31,
+    "model": "products.product",
+    "fields": {
+      "sku": "pp31",
+      "name": "Ultra-Hydration Body Moisturiser",
+      "short_description": "Gentle, light-weight moisture",
+      "description": "Feel this ultra-lightweight hydrating moisturizer transform into water on contact, surging skin with more than 10,000 marine micro-droplets for intense, yet weightless, long-lasting hydration.",
+      "directions": "Smooth on from shoulders to toes.",
+      "price": 13,
+      "weight": 225,
+      "category": 6,
+      "rating": 4.5,
+      "image": "img27.jpg"
+    }
+  },
+  {
+    "pk": 32,
+    "model": "products.product",
+    "fields": {
+      "sku": "pp32",
+      "name": "Vitamin C Body Moisturiser",
+      "short_description": "Hydrate, and tone",
+      "description": " This vegan, high-tech moisturizer contains the most effective, non-irritating form of vitamin C and a patented tri-peptide to boost skin's natural elasticity while delivering intense hydration, and tightening skin.",
+      "directions": " Smooth on from shoulders to toes.",
+      "price": 12,
+      "weight": 225,
+      "category": 6,
+      "rating": 4.8,
+      "image": "img50.jpg"
+    }
+  },
+  {
+    "pk": 33,
+    "model": "products.product",
+    "fields": {
+      "sku": "pp33",
+      "name": "Rose Infused Body Moisturiser",
+      "short_description": "Decadent floral moisture",
+      "description": " This nourishing rose water cream, thoughtfully formulated with gentle ingredients, such as Rose water, Colloidal Gold, German Chamomile, and Jojoba Oil, absorbs instantly for a hydrated, comfortable complexion.",
+      "directions": " Smooth on from shoulders to toes.",
+      "price": 12,
+      "weight": 225,
+      "category": 6,
+      "rating": 4.2,
+      "image": "img4.jpg"
+    }
+  },
+  {
+    "pk": 34,
+    "model": "products.product",
+    "fields": {
+      "sku": "pp34",
+      "name": "Intense Body Moisturiser",
+      "short_description": "Intense replenishment moisture",
+      "description": " A more intense moisturiser, using a more concentrated source of lycopene, this antioxidant-rich fruit extract is known to replenish lost vitamins and minerals as it improves the moisture barrier to help prevent dehydration and water loss.",
+      "directions": " Smooth on from shoulders to toes.",
+      "price": 12,
+      "weight": 225,
+      "category": 6,
+      "rating": 4.2,
+      "image": "img45.jpg"
+    }
+  },
+  {
+    "pk": 35,
+    "model": "products.product",
+    "fields": {
+      "sku": "pp35",
+      "name": "Luxury Body Moisturiser",
+      "short_description": "Plump, rejuvenate and replenish",
+      "description": "This luxurious vegan body oil blend is supercharged with 10% fermented camellia oil to deliver tiny antioxidant-and-moisture-packed molecules that visibly plump, rejuvenate and replenish even the most parched skin types.",
+      "directions": "Smooth on from shoulders to toes.",
+      "price": 12,
+      "weight": 225,
+      "category": 6,
+      "rating": 4.8,
+      "image": "img32.jpg"
+    }
+  },
+  {
+    "pk": 36,
+    "model": "products.product",
+    "fields": {
+      "sku": "pp36",
+      "name": "Luminous Body Moisturiser",
+      "short_description": "Bright, healthy glowing skin",
+      "description": "This velvety, skin-brightening moisturizer with stabilized vitamin C takes skin from dry and lack luster to dewy and luminous in seconds. Advanced Shea Butter nourishes to combat dryness and flaking; powerful botanicals help recharge and protect. Giving a subtle iridescent sheen that provides an instant, healthy glow.",
+      "directions": " Smooth on from shoulders to toes.",
+      "price": 12,
+      "weight": 225,
+      "category": 6,
+      "rating": 4.8,
+      "image": "img6.jpg"
+    }
+  },
+  {
+    "pk": 37,
+    "model": "products.product",
+    "fields": {
+      "sku": "pp37",
+      "name": "Rose and Rosemary Wax beads",
+      "short_description": " Simple, soothing, and effective ",
+      "description": " Rose and Rosemary are used for their natural antioxidant, antiseptic, astringent, rejuvenating, and stimulating properties. The creamy wax grips the hair follicle removing it clean away. Suitable for all skin types but great for mature skin from all areas of the body and its flexible formula makes is great for ease of use.",
+      "directions": "Wax beads have lower melting points and hardens on your skin in seconds. After cooling down you need to peel and pull away with a firm move. Absolutely no strips are required.",
+      "price": 10,
+      "weight": 300,
+      "category": 7,
+      "rating": 4.8,
+      "image": "img2.jpg"
+    }
+  },
+  {
+    "pk": 38,
+    "model": "products.product",
+    "fields": {
+      "sku": "pp38",
+      "name": " Green-Tea and charcoal Wax beads",
+      "short_description": " Simple, calming, and effective ",
+      "description": " Formulated with calming green tea and anti-bacterial charcoal which works like a magnet pulling away debris. The smooth creamy wax grips the hair follicle, removing it clean away. This high-performance wax is suitable for hair removal from all areas of the body and its flexible formula makes is great for ease of use.",
+      "directions": "Wax beads have lower melting points and hardens on your skin in seconds. After cooling down you need to peel and pull away with a firm move. Absolutely no strips are required.",
+      "price": 10,
+      "weight": 300,
+      "category": 7,
+      "rating": 4.8,
+      "image": "img12.jpg"
+    }
+  },
+  {
+    "pk": 39,
+    "model": "products.product",
+    "fields": {
+      "sku": "pp39",
+      "name": " Coconut and Arnica Wax beads",
+      "short_description": " Simple, calming, and effective ",
+      "description": " Coconut and Arnica create a hypoallergenic formula, which is delicately scented with Coconut and infused with Arnica, known for its healing properties perfect for calming inflamed skin making this wax suitable for sensitive skin on all areas of the body and its flexible formula makes is great for ease of use.",
+      "directions": "Wax beads have lower melting points and hardens on your skin in seconds. After cooling down you need to peel and pull away with a firm move. Absolutely no strips are required.",
+      "price": 10,
+      "weight": 300,
+      "category": 7,
+      "rating": 4.8,
+      "image": "img13.jpg"
+    }
+  },
+  {
+    "pk": 40,
+    "model": "products.product",
+    "fields": {
+      "sku": "pp40",
+      "name": " Elder Flower and Lavender Wax beads",
+      "short_description": " Simple, soothing, and effective ",
+      "description": " Elder Flower and Lavender are antiseptic and astringent, and they also treat eczema, psoriasis, and acne. The creamy wax grips the hair follicle removing it clean away. Suitable for all skin types, but is great for oily and dry skin from all areas of the body and its flexible formula makes is great for ease of use.",
+      "directions": "Wax beads have lower melting points and hardens on your skin in seconds. After cooling down you need to peel and pull away with a firm move. Absolutely no strips are required.",
+      "price": 10,
+      "weight": 300,
+      "category": 7,
+      "rating": 4.8,
+      "image": "img16.jpg"
+    }
+  },
+  {
+    "pk": 41,
+    "model": "products.product",
+    "fields": {
+      "sku": "pp41",
+      "name": "Painless Chocolate Wax beads",
+      "short_description": " Simple, luxurious, and effective ",
+      "description": "Chocolate wax is enriched with a plethora of natural ingredients like cocoa, almond oil, soya bean oil, sunflower oil, glycerin, and other skin nourishing compounds and vitamins including vitamin E and minerals. The creamy wax grips the hair follicle removing it clean away. Suitable for all skin types, but is great for those who have a low pain threshold from all areas of the body and its flexible formula makes is great for ease of use.",
+      "directions": "Wax beads have lower melting points and hardens on your skin in seconds. After cooling down you need to peel and pull away with a firm move. Absolutely no strips are required.",
+      "price": 10,
+      "weight": 300,
+      "category": 7,
+      "rating": 4.8,
+      "image": "img18.jpg"
+    }
+  },
+  {
+    "pk": 42,
+    "model": "products.product",
+    "fields": {
+      "sku": "pp42",
+      "name": " Chamomile and Apricot Wax beads",
+      "short_description": " Simple, fruity, and effective ",
+      "description": " A safe, low-temp, no-strip wax hardens quickly making it fast and easy to use; colourful blue formula for precise application. Wax shrink-wraps each follicle to remove even the shortest, coarsest and most stubborn hair from the root, so skin stays smoother longer. Chamomile oil makes it gentle enough for the most sensitive skin, leaving skin soft without irritation.",
+      "directions": "Wax beads have lower melting points and hardens on your skin in seconds. After cooling down you need to peel and pull away with a firm move. Absolutely no strips are required.",
+      "price": 10,
+      "weight": 300,
+      "category": 7,
+      "rating": 4.8,
+      "image": "img25.jpg"
+    }
+  },
+  {
+    "pk": 43,
+    "model": "products.product",
+    "fields": {
+      "sku": "pp43",
+      "name": "Hair-free Longer Moisturizer",
+      "short_description": " Simple, calming, and effective",
+      "description": "Applied daily, this hair inhibitor decreases hair growth while also moisturizing with jojoba oil, vitamin E and plant extracts. All that translates to less irritation from waxing and threading, and more time between painful hair removal.",
+      "directions": "Apply daily to the surface area, massaging until the moisture has been absorbed.",
+      "price": 9,
+      "weight": 250,
+      "category": 8,
+      "rating": 4.5,
+      "image": "img34.jpg"
+    }
+  },
+  {
+    "pk": 44,
+    "model": "products.product",
+    "fields": {
+      "sku": "pp44",
+      "name": "Ingrown Hair Pads",
+      "short_description": "Smoother, bump-free skin",
+      "description": " These single-use ingrown hair pads - with salicylic and glycolic acids - gently exfoliate to help prevent ingrown hairs for smoother bump-free skin. Antioxidant green tea soothes and smooths, straight-from-the-spa secret used in thousands of MuiMui Aesthetics hair removal treatments.",
+      "directions": " Smooth over waxed or shaved areas daily. (Reminder! Be sure to wait 12 hours after shaving, or 24 hours after waxing to allow skin to settle before use.).",
+      "price": 9,
+      "weight": 15,
+      "category": 8,
+      "rating": 4.5,
+      "image": "img52.jpg"
+    }
+  },
+  {
+    "pk": 45,
+    "model": "products.product",
+    "fields": {
+      "sku": "pp45",
+      "name": "Tightening Body Cream",
+      "short_description": " Smoother, firmer skin",
+      "description": " A stimulating all-over body firming formula – powered by caffeine and a mega-blend of botanicals – to visibly tighten, tone and smooth. Helps improve tone and texture with quick and targeted delivery; helps smooth skin for improved body contour Feel skin tighten as it begins to look instantly smoother and firmer.",
+      "directions": " Massage onto desired areas in a circular motion for 20-30 seconds. For optimal results, use AM and PM.",
+      "price": 9,
+      "weight": 240,
+      "category": 8,
+      "rating": 4.5,
+      "image": "img14.jpg"
+    }
+  },
+  {
+    "pk": 46,
+    "model": "products.product",
+    "fields": {
+      "sku": "pp46",
+      "name": "Hair-free Longer Spray",
+      "short_description": " Simple, calming, and effective ",
+      "description": "Applied daily, this hair inhibitor decreases hair growth while also moisturizing with jojoba oil, vitamin E and plant extracts. Easy application with a spay nozzle that translates to less irritation from waxing and threading, and more time between painful hair removal.",
+      "directions": "Apply daily to the surface area, allow moisture to be absorbed.",
+      "price": 12,
+      "weight": 250,
+      "category": 8,
+      "rating": 4.5,
+      "image": "img30.jpg"
+    }
+  },
+  {
+    "pk": 47,
+    "model": "products.product",
+    "fields": {
+      "sku": "pp47",
+      "name": "Hair-free Longer Oil",
+      "short_description": " Simple, nourishing, and effective ",
+      "description": "Applied daily, this hair inhibitor decreases hair growth while also moisturizing with jojoba oil, vitamin E and plant extracts. A syringe dispenser, allows controlled amounts to be used, in effect getting more from your bottle. All that translates to less irritation from waxing and threading, and more time between painful hair removal.",
+      "directions": "Apply daily to the surface area, massaging until the moisture has been absorbed.",
+      "price": 10,
+      "weight": 250,
+      "category": 8,
+      "rating": 4.5,
+      "image": "oil.png"
+    }
+  },
+  {
+    "pk": 48,
+    "model": "products.product",
+    "fields": {
+      "sku": "pp48",
+      "name": "Refreshing Body Wipes",
+      "short_description": " Simple, cooling, and effective ",
+      "description": " Pre-moistened, ultra-soft, cooling body wipes naturally deodorize, refresh and instantly cleanse away dirt, oil and sweat – no rinsing required. Plant-based, aluminum-free deodorant neutralizes and removes odors. Dries quickly with no sticky residue so you’re cool, fresh and ready-to-go; perfect for post-gym, travel or any time you need an instant refresh.",
+      "directions": " Wipe over any area on the body that needs refreshing. Air dry. For body use only. Not an anti-perspirant. Do not flush.",
+      "price": 6,
+      "weight": 15,
+      "category": 8,
+      "rating": 4.5,
+      "image": "img51.jpg"
+    }
+  }
+]
