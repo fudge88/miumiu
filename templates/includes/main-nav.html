@@ -17,9 +17,9 @@
                 Face
             </a>
             <div class="dropdown-menu border-0" aria-labelledby="face-link">
-                <a href="#" class="dropdown-item">Face Masks</a>
-                <a href="#" class="dropdown-item">Exfoliants</a>
-                <a href="#" class="dropdown-item">Moisturisers</a>
+                <a href="{% url 'products' %}?category=face_mask" class="dropdown-item">Face Masks</a>
+                <a href="{% url 'products' %}?category=facial_exfoliant" class="dropdown-item">Exfoliants</a>
+                <a href="{% url 'products' %}?category=facial_moisturiser" class="dropdown-item">Moisturisers</a>
             </div>
         </li>
 
@@ -28,9 +28,9 @@
                 Body
             </a>
             <div class="dropdown-menu border-0" aria-labelledby="body-link">
-                <a href="#" class="dropdown-item">Body Masks</a>
-                <a href="#" class="dropdown-item">Body Scrubs</a>
-                <a href="#" class="dropdown-item">Body Moisturisers</a>
+                <a href="{% url 'products' %}?category=body_scrub" class="dropdown-item">Body Masks</a>
+                <a href="{% url 'products' %}?category=body_mask" class="dropdown-item">Body Scrubs</a>
+                <a href="{% url 'products' %}?category=body_moisturiser" class="dropdown-item">Body Moisturisers</a>
             </div>
         </li>
 
@@ -39,8 +39,8 @@
                 Hair Removal
             </a>
             <div class="dropdown-menu border-0" aria-labelledby="hair-removal-link">
-                <a href="" class="dropdown-item">Painless wax</a>
-                <a href="" class="dropdown-item">Post-Wax Syrums</a>
+                <a href="{% url 'products' %}?category=wax_beads" class="dropdown-item">Painless wax</a>
+                <a href="{% url 'products' %}?category=hair_removal_aftercare" class="dropdown-item">Post-Wax Syrums</a>
             </div>
         </li>
     </ul>
