@@ -157,3 +157,18 @@ h6{
         padding-top: 30px;
     } 
 }
+
+/* pad the top a bit when navbar is collapsed on mobile */
+@media (max-width: 991px) {
+    .header-container {
+        padding-top: 116px;
+    }
+
+    body {
+        height: calc(100vh - 116px);
+    }
+    .mt-3, .my-3 {
+    margin-top: 3rem!important;
+}
+
+}
