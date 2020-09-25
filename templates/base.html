@@ -41,33 +41,7 @@
   </head>
   <body>
     <header class="container-fluid">
-            <!-- small and medium screen banner -->
-        <div id="delivery-banner" class="row text-center d-md-none">
-            <div class="col promo-strip">
-                <div id="carouselPromoIndicators" class="carousel slide w-100" data-ride="carousel">
-                    <div class="carousel-inner">
-                        <div class="carousel-item active">
-                            <a href="" class="promo-strip"><i class="fas fa-truck"></i> Free delivery on orders over £{{ free_delivery_threshold }}!</a>
-                        </div>
-                        <div class="carousel-item">
-                            <a href="" class="promo-strip"><i class="fas fa-check"></i> 30% off all supplements!</a>
-                        </div>
-                        <div class="carousel-item">
-                            <a href="" class="promo-strip"><i class="fas fa-mobile-alt"></i> Become a memeber today.</a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-       <!-- large and extra large banner -->
-       <div id="delivery-banner" class="row promo-strip text-center d-none d-md-block">
-            <ul class="col lg-promo-strip">
-                <li class="mr-5"><i class="fas fa-check"></i> 30% off all supplements!</li> 
-                <li class="mr-5"><i class="fas fa-truck"></i> Free delivery on orders over £{{ free_delivery_threshold }}!</li> 
-                <li><i class="fas fa-mobile-alt"></i> Become a memeber today</li>               
-            </ul>            
-        </div>
-    </header>
+
     <div id="topnav" class="row d-none d-lg-flex">
         <div class="col-12 col-lg-4 my-auto py-1 py-lg-0">
             <form method="GET" action="{% url 'products' %}">
@@ -136,6 +110,32 @@
             {% include 'includes/main-nav.html' %}
         </nav>
     </div>
+                <!-- small and medium screen banner -->
+        <div id="delivery-banner" class="row text-center d-md-none">
+            <div class="col promo-strip">
+                <div id="carouselPromoIndicators" class="carousel slide w-100" data-ride="carousel">
+                    <div class="carousel-inner">
+                        <div class="carousel-item active">
+                            <a href="" class="promo-strip"><i class="fas fa-truck"></i> Free delivery on orders over £{{ free_delivery_threshold }}!</a>
+                        </div>
+                        <div class="carousel-item">
+                            <a href="" class="promo-strip"><i class="fas fa-check"></i> 30% off all supplements!</a>
+                        </div>
+                        <div class="carousel-item">
+                            <a href="" class="promo-strip"><i class="fas fa-mobile-alt"></i> Become a memeber today.</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+       <!-- large and extra large banner -->
+       <div id="delivery-banner" class="row promo-strip text-center d-none d-md-block">
+            <ul class="col lg-promo-strip">
+                <li class="mr-5"><i class="fas fa-check"></i> 30% off all supplements!</li> 
+                <li class="mr-5"><i class="fas fa-truck"></i> Free delivery on orders over £{{ free_delivery_threshold }}!</li> 
+                <li><i class="fas fa-mobile-alt"></i> Become a memeber today</li>               
+            </ul>            
+        </div>
     </header>
 
     {% if messages %}
