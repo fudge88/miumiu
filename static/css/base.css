@@ -49,6 +49,11 @@ img.card-img-top{
     width: auto;
     height: 100px;
 }
+.product-img{
+    justify-content: center;
+    align-items: center;
+    display: flex;
+}
 
 #topnav{
     background-color: white;
@@ -96,6 +101,22 @@ img.card-img-top{
     bottom: 10px;
     right: 10px;
 }
+
+.collapse{
+    padding: 10px;
+}
+
+.product-name{
+    font-family: 'Kristi', cursive;
+    font-size: xx-large;
+    font-weight: 100;
+}
+
+.product-category{
+    color: #000;
+    font-weight: bold;
+}
+
 /* -------------------------------- Media Queries */
 
 /* Slightly larger container on xl screens */
@@ -191,10 +212,15 @@ img.card-img-top{
 
 }
 
-
+/* 
+Animated search box
+coding snow - youtube 
+*/
 .search-box{
     position: absolute;
-    top: -15px;
+    /* top: -15px; */
+    top: 0px;
+    left: 60px;
     background: #000;
     height: 30px;
     padding: 10px;

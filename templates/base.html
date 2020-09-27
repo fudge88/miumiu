@@ -16,7 +16,7 @@
     {% block corecss %}
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
-    <link href="https://fonts.googleapis.com/css2?family=Alex+Brush&family=Playfair+Display&family=Raleway&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Kristi&family=Playfair+Display&family=Raleway:wght@500&display=swap" rel="stylesheet">
     <link href="{% static 'css/base.css' %}" rel="stylesheet">
     {% endblock %}
 
@@ -44,9 +44,12 @@
 
     <div id="topnav" class="row d-none d-lg-flex">
         <div class="col-12 col-lg-4 my-auto py-1 py-lg-0">
+        <div>
+        <a href=""><i class="fas fa-map-marker-alt fa-2x icon"></i></a>
+        </div>
             <form class="search-box" method="GET" action="{% url 'products' %}">
                 <div class="input-group w-100">
-                    <input class="" type="text" name="q" placeholder="Search our site">
+                    <input class="" type="text" name="q" placeholder="Search here..">
                     <div class="input-group-append">
                         <button class="search-btn" type="submit">
                             <span class="icon">
