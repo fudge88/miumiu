@@ -40,17 +40,17 @@
     <title>MiuMiu Aesthetics{% block extra_title %}{% endblock %}</title>
   </head>
   <body>
-    <header class="container-fluid">
+    <header class="container-fluid fixed-top">
 
     <div id="topnav" class="row d-none d-lg-flex">
         <div class="col-12 col-lg-4 my-auto py-1 py-lg-0">
-            <form method="GET" action="{% url 'products' %}">
+            <form class="search-box" method="GET" action="{% url 'products' %}">
                 <div class="input-group w-100">
-                    <input class="form-control" type="text" name="q" placeholder="Search our site">
+                    <input class="" type="text" name="q" placeholder="Search our site">
                     <div class="input-group-append">
-                        <button class="form-control btn btn-black" type="submit">
+                        <button class="search-btn" type="submit">
                             <span class="icon">
-                                <i class="fas fa-search icon"></i>
+                                <i class="fas fa-search"></i>
                             </span>
                         </button>
                     </div>
@@ -58,16 +58,16 @@
             </form>
         </div>
         <div class="col-12 col-lg-4 my-auto py-1 py-lg-0 text-center">
-            <a href="{% url 'home' %}" class="nav-link main-logo-link">
-                <h2 class="logo-font-p1 my-0"><strong>MuiMui </strong></h2><p class="logo-font-p2">Aesthetics</p>
-            </a>
+        <a href="{% url 'home' %}">
+                        <img class=" card-img-top" src="{% static '../media/logo.png' %}" alt="logo">
+                    </a>
         </div>
         <div class="col-12 col-lg-4 my-auto py-1 py-lg-0">
             <ul class="list-inline list-unstyled text-center text-lg-right my-0">
                 <li class="list-inline-item dropdown">
                     <a class="nav-link" href="#" id="user-options" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                         <div class="text-center">
-                            <div><i class="fas fa-user-circle fa-lg icon"></i></div>
+                            <div><i class="fas fa-user-circle fa-2x icon"></i></div>
                         </div>
                     </a>
                     <div class="dropdown-menu border-0" aria-labelledby="user-options">
@@ -86,7 +86,7 @@
                 <li class="list-inline-item">
                     <a class="nav-link" href="#">
                         <div class="text-center">
-                            <div><i class="fas fa-circle fa-lg icon"></i></div>
+                            <div><i class="fas fa-circle fa-2x icon"></i></div>
                             <!-- <p class="my-0">
                                 {% if grand_total %}
                                     £{{ grand_total|floatformat:2 }}
