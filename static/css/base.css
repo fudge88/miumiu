@@ -33,6 +33,10 @@ h6{
     color: #000;
 }
 
+.icon:hover{
+    color: #7CE6D7;
+}
+
 /* navbar styling */
 .nav-link {
     display: block;
@@ -263,11 +267,14 @@ coding snow - youtube
     width: 0px;
 }
 
+.search-box:hover{
+    background-color: #7CE6D7;
+}
+
 .search-box:hover input{
     width: 200px;
     padding: 0 6px;
-
-    background: black;
+    background: #7CE6D7;
     height: 10px;
 }
 
