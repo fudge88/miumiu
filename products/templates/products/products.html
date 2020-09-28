@@ -68,21 +68,22 @@
                     <div class="card-body pb-0">
                         <p class="mb-0 product-name">{{ product.name }}</p>
                         {% if product.category %}
-                        <p class="mt-1 mb-0">
-                            <a class="product-category" href="{% url 'products' %}?category={{ product.category.name }}"><h5>
-                                {{ product.category.friendly_name }}</h5>
+                        <p class="product-card-line-spacing mb-0">
+                            <a class="product-category" href="{% url 'products' %}?category={{ product.category.name }}">
+                                {{ product.category.friendly_name }}
                             </a>
                         </p>
                     {% endif %} 
-                    
-                        <p class="mb-0">{{ product.short_description }}</p>
+                    <hr class="card-line-break">
+                        <p class="product-card-line-spacing mb-0">{{ product.short_description }}</p>
+                        <hr class="card-line-break">
                     </div>
                     
                     <div class="card-footer bg-white pt-0 border-0 text-left">
                         <div class="row">
                             <div class="col">
-                                <p class="lead mb-0 text-left">£{{ product.price }}<small class="text-muted">/ {{ product.weight}}g</small></p>
-                                <span><i class="fas fa-plus-circle"></i></span>
+                                <p class="product-price lead mb-0 text-left">£{{ product.price }}<small class="text-muted">/ {{ product.weight}}g</small></p>
+                                <p class="btn" aria-label=""><i class="quick-add-btn fas fa-plus-circle"></i></p>
                                 <!-- <button type="button" class="btn btn-outline-dark">Add to Basket</button> -->
                             </div>
                         </div>
@@ -90,22 +91,22 @@
                 </div>
             </div>
             {% if forloop.counter|divisibleby:1 %}
-                <div class="col-12 d-sm-none mb-5">
+                <div class="col-12 d-sm-none mb-3">
                     <hr>
                 </div>
             {% endif %}                        
             {% if forloop.counter|divisibleby:2 %}
-                <div class="col-12 d-none d-sm-block d-md-block d-lg-none mb-5">
+                <div class="col-12 d-none d-sm-block d-md-block d-lg-none mb-3">
                     <hr>
                 </div>
             {% endif %}
             {% if forloop.counter|divisibleby:3 %}
-                <div class="col-12 d-none d-lg-block d-xl-none mb-5">
+                <div class="col-12 d-none d-lg-block d-xl-none mb-3">
                     <hr>
                 </div>
             {% endif %}
             {% if forloop.counter|divisibleby:4 %}
-                <div class="col-12 d-none d-xl-block mb-5">
+                <div class="col-12 d-none d-xl-block mb-3">
                     <hr>
                 </div>
             {% endif %}

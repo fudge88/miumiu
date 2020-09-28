@@ -129,17 +129,48 @@ a.home-shop-btn:hover {
 .collapse{
     padding: 10px;
 }
-
+.card-body{
+    padding: 1rem;
+}
 .product-name{
     font-family: 'Kristi', cursive;
-    font-size: xx-large;
-    font-weight: 100;
+    font-size: 1.8rem;
+    font-weight: bold;
 }
 
 .product-category{
     color: #000;
-    font-weight: bold;
     font-size: large;
+    font-family: 'Playfair Display', serif;
+}
+.product-card-line-spacing{
+    margin: 0;
+    padding: 0;
+    line-height: 30px;
+}
+.card-line-break{
+    margin-top: 0;
+    margin-bottom: 0;
+    border: 0;
+    border-top: 1px solid #ffc10763;
+}
+
+.product-price{
+    float: left;
+}
+.quick-add-btn{
+    float: right;
+}
+hr{
+    border-top: 1px solid #ffffff00;
+}
+
+
+.product-detail-name{
+    color: #000;
+    font-size: 2.5rem;
+    font-weight: bold;
+    font-family: 'Kristi', cursive;
 }
 
 /* -------------------------------- Media Queries */
