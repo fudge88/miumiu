@@ -22,6 +22,10 @@ h6{
     font-family: 'Playfair Display', serif;
 }
 
+.logo-font{
+    font-family: 'Kristi', cursive;
+    font-size: 4rem;
+}
 
 /* from Bulma */
 .icon {
@@ -90,7 +94,7 @@ img.nav-img-top{
     z-index: -1;
 }
 
-
+/* home page  */
 .home-page-heading{
     padding-top: 8rem;
 }
@@ -108,11 +112,6 @@ a.home-shop-btn:hover {
     background-color: #7CE6D7;
     text-decoration: none;
     font-weight: bolder;
-}
-
-.card-img-top{
-    width: auto;
-    height: 200px;
 }
 
 .btt-link{
@@ -174,91 +173,47 @@ hr{
 }
 
 /* single prouct page */
-.single-product-header{
-    padding-top: 15px;
-    padding-left: 40px;
-    padding-right: 60px;
-}
+
 .single-product-card{
     background-color: white;
 }
-.image-container{
-    margin-top: -20px;
-    margin-bottom: -20px;
-    padding: 0 50px;
-}
-img .single-card-img-top{
-    justify-content: center;
-    align-items: center;
-    display: flex;
-}
+
 .single-product-description{
-    color: white;
     font-size: 3rem;
     font-family: 'Kristi', cursive;
     margin: 0;
 }
-p.font-white{
-    color: white;
+
+/* .side-by-side{
+    display: inline-block;
+} */
+input.side-by-side {
+    width: 40px;
+    height: 38px;
+    text-align: center;
 }
-.single-product-footer{
-    background-image: linear-gradient(to right top, #e684ec, #aea4ff, #68bdff, #12cfff, #28dcf9, #3fe2e6, #64e7d1, #89e9bc, #9ee9a4, #b9e78d, #d7e377, #f7dc69);
-    padding-bottom: 15px;
-    padding-left: 40px;
-    padding-right: 40px;
-    text-align: -webkit-right;
+
+.social-media{
+    list-style-type: none;
+    float: right;
+    margin-top: 1rem;
+    margin-bottom: 0;
 }
-.side-by-side{
+ul.social-media{
     display: inline-block;
 }
-.select-box select{
-    background-color: black;
-    color: white;
-    border-radius: 50px;
-    height: 35px;
-    width: 40px;
-}
 
-#fullScreenDiv{
-    width:100%;
-    min-height: 100%; 
-   /* Set the height to match that of the viewport. */
-    height: 100vh;
-    width: auto;
-    padding:0!important;
-    margin: 0!important;
-    background-color: gray;
-    position: relative;
-}
-#video{    
-    width: 100vw; 
-    height: auto;
-    object-fit: cover;
-    left: 0px;
-    top: 0px;
-    z-index: 1;
-}
-
-/* The container for our text on the image/video playback */
-#productBox{
-    position: absolute;  top: 0;  left: 50%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 50%;
-    height:60%;
-}
-#descriptionBox{
-    position: absolute;  top: 0;  left: 0;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 50%;
-    height: 60%;
-    padding: 3rem;
+.social-media li{
+    display: inline;
 }
  
-
+.buying-options{
+    text-align: left;
+}
+.buying-options{
+    background-color: rgba(124, 230, 215, 0.4);
+    padding: 10px 20px 15px;
+}
 
 /* -------------------------------- Media Queries */
 
@@ -271,17 +226,6 @@ p.font-white{
 
 /* fixed top navbar only on medium and up */
 @media (min-width: 992px) {
-    #video{
-        display:block;
-    }
-    #videosubstitute{
-        display:none
-        }
-    .small-screen{
-        display: none;
-    }
-}   
-
 
     .fixed-top-desktop-only {
         position: fixed;
@@ -299,8 +243,13 @@ p.font-white{
     }
 
     .navbar-expand-lg .navbar-nav .dropdown-menu {
-        background-color: #fbf4f4;
+        background-color: #e295e6;
+        text-transform: initial;
     }
+    img.card-img-top.img-fluid {
+        padding-right: 50px;
+        padding-top: 50px;
+}
 
 }
 
@@ -333,8 +282,12 @@ p.font-white{
     border-radius: 50%;
 }
 
+div.carousel-item:active{
+    display: inline-block;
+}
 .carousel-item{
-    background-color: #000;
+    margin-top: 15px;
+    background-image: linear-gradient(to right, #e684ec, #aea4ff, #68bdff, #12cfff, #28dcf9, #3fe2e6, #64e7d1, #89e9bc, #9ee9a4, #b9e78d, #d7e377, #f7dc69);
 }
 
 .promo-strip{
@@ -347,23 +300,14 @@ p.font-white{
 
 @media (max-width: 991px) {
     .navbar{
-        padding-top: 30px;
-        background-image: linear-gradient(to right, #e684ec, #aea4ff, #68bdff, #12cfff, #28dcf9, #3fe2e6, #64e7d1, #89e9bc, #9ee9a4, #b9e78d, #d7e377, #f7dc69);
+        padding: 25px 20px 10px;
+        background-color: rgba(124, 230, 215, 0.4);
     } 
+
 }
 
 /* pad the top a bit when navbar is collapsed on mobile */
 @media (max-width: 991px) {
-    #video {
-    display: none;
-  }
-  #videosubstitute{
-      display:block;
-      width:auto;
-      height:100%;
-      }
-
-
 
     .header-container {
         padding-top: 116px;
@@ -375,12 +319,27 @@ p.font-white{
     .mt-3, .my-3 {
     margin-top: 3rem!important;
     }
-    .md-overlay{
-        background-color: #00000040;
-        padding: 20px;
+    .buying-options.my-3 {
+        margin-top: 10px!important;
     }
-
+    hr.card-line-break.my-3 {
+        margin-top: 10px!important;
 }
+}
+@media (max-width: 767px){
+    .lg-single-name{
+        display: none;
+    }
+    .logo-font{
+        font-size: 3rem;
+    }
+}
+@media (min-width: 768px){
+        .sm-single-name{
+        display: none;
+    }
+}
+
 
 /* 
 Animated search box

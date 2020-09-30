@@ -11,76 +11,74 @@
 
 {% block content %}
 <div class="overlay"></div>
-{% include 'includes/small-screen-detail.html' %}
-<div id="fullScreenDiv" class="d-none d-lg-block">
-    <img src="../media/video-img.JPG" id="videosubstitute" alt="Full screen background video">
-    <div id="videoDiv">           
-        <video autoplay poster="../media/video-img.JPG" loop muted width="100%" id="video">
-            <source id="mp4" src="../media/product-vid.mp4" type="video/mp4">
-        </video>
+<div class="container-fluid">
+  <div class="row">
+    <div class="col-12 col-md-6 col-lg-4 offset-lg-2">
+    <div class="sm-single-name">
+    <h1 class="logo-font mb-0">{{ product.name }}</h1>
+    <h3>{{ product.short_description }}</h3>
     </div>
-    <div class="single-contents">
-        <div id="descriptionBox"> 
-            <div class="md-overlay">
-                <p class="single-product-description">{{ product.short_description }}</p>
-                <p class="font-white">
-                {{ product.description }}</p>
-                <br>
-                <p class="font-white mt-3"><strong>How to use:</strong>
-                    {{ product.directions }}</p>
-            </div>
+      <div class="image-container my-5">
+        {% if product.image %}
+        <a href="{{ product.image.url }}" target="_blank">
+          <img
+            class="card-img-top img-fluid"
+            src="{{ product.image.url }}"
+            alt="{{ product.name }}"
+          />
+        </a>
+        {% else %}
+        <a href="">
+          <img
+            class="card-img-top img-fluid"
+            src="{{ MEDIA_URL }}no_image.jpg"
+            alt="{{ product.name }}"
+        /></a>
+        {% endif %}
+      </div>
+    </div>
+    <div class="col-12 col-md-6 col-lg-4">
+      <div class=" mb-5 mt-md-5">
+      <div class="lg-single-name">
+        <h1 class="logo-font mb-0">{{ product.name }}</h1>
+        <h3>{{ product.short_description }}</h3>
+      </div>
+      <div>
+        <h3 class="mb-0 font-weight-bold">£{{ product.price }}/ <small>{{ product.weight }}g</small></h3>
+        {% if product.rating %}
+        <small class="text-muted"
+          ><i class="fas fa-star mr-1"></i>{{ product.rating }} / 5</small>
+        {% else %}
+        <small class="text-muted">No Rating</small>
+        {% endif %}
+      </div>
+        <hr class="card-line-break my-3">
+        {% if product.category %}
+            <p class="small mt-1 mb-0">
+                <a class="text-muted" href="{% url 'products' %}?category={{ product.category.name }}">
+                    {{ product.category.friendly_name }}
+                </a>
+            </p>
+        {% endif %}        
+        <div class="buying-options my-3">
+            <label for="Qtn">Qty:</label>
+                <input type="text" class="side-by-side" maxlength="12" value="1" width="48">
+            <button type="button" class="home-shop-btn mt-2">Add to Basket</button>
+            <ul class="social-media">
+                <li><i class="icon fab fa-instagram fa-lg"></i></li>
+                <li><i class="icon fab fa-snapchat fa-lg"></i></li>
+            </ul>
         </div>
-        <div id="productBox"> 
-            <div>
-                <div class="single-product-card">
-                    <div class="single-product-header">
-                        <h4 class="product-detail-name mb-0">{{ product.name }}</h4>
-                        {% if product.category %}
-                            <p class="">
-                                <a class="product-category" href="{% url 'products' %}?category={{ product.category.name }}">
-                                    {{ product.category.friendly_name }}
-                                </a>
-                            </p>
-                        {% endif %} 
-                    </div>
-                    <div class="single-product-body">
-                        <div class="image-container text-center">
-                        {% if product.image %}
-                            <a href="{{ product.image.url }}" target="_blank">
-                                <img class="single-card-img-top" src="{{ product.image.url }}" alt="{{ product.name }}">
-                            </a>
-                            {% else %}
-                            <a href="{{ product.image.url }}" target="_blank">
-                                <img class="single-card-img-top" src="{{ MEDIA_URL }}noimage.png" alt="{{ product.name }}">
-                            </a>
-                        {% endif %}
-                        </div>
-                        <div>
-                            {% if product.rating %}
-                                <small class="text-muted ml-5"><i class="fas fa-star mr-1"></i>{{ product.rating }} / 5</small>
-                            {% else %}
-                                <small class="text-muted ml-5">No Rating</small>
-                            {% endif %}
-                        </div>
-                    </div>
-                    <div class="single-product-footer mt-2">
-                    <p class="lead mb-0 text-left side-by-side mr-5">£{{ product.price }}<small class="text-muted">/{{ product.weight}}g</small></p>
-                        <div class="select-box side-by-side mt-2 mr-2">
-                            <select class="">
-                                <option value="0">1</option>
-                                <option value="1">1</option>
-                                <option value="2">2</option>
-                                <option value="3">3</option>
-                            </select>
-                        </div>
-                        <button type="button" class="home-shop-btn side-by-side mt-2">Add to Basket</button>
-                    </div>
-                </div>
-            </div>
-        </div>   
+        <div class="">
+            <p class="mb-0"><strong>Description:</strong>
+            {{ product.description }}</p>
+            <br>
+            <p class=""><strong>How to use:</strong>
+                {{ product.directions }}</p>
+        </div>
+      </div>
     </div>
+  </div>
 </div>
-
-
 
 {% endblock %}
