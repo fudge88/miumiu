@@ -16,7 +16,7 @@
         <div class="col">
             <h2>Your basket</h2>
             <hr class="card-line-break">
-    </div>
+        </div>
     </div>
 
     <div class="row">
@@ -26,7 +26,7 @@
 
             </div>
         {% else %}
-            <p class="lead mb-5">There are no items in your basket</p>
+            <h3 class="mb-5">There are no items in your basket</h3>
             <h2>Looks like a good time to <a href="{% url 'products' %}"><strong>start shopping!</strong></a></h2>
             <a href="{% url 'products' %}" class="btn btn-lg">
                 <span class="icon">

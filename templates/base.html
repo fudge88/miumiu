@@ -89,7 +89,11 @@
                 <li class="list-inline-item">
                     <a class="nav-link" href="{% url 'shopping_bag' %}">
                         <div class="text-center">
-                            <div><i class="fas fa-circle fa-2x icon"></i></div>
+                            <span class="fa-stack icon" >
+                                <i class="fas fa-circle fa-stack-2x"></i>
+                                <i class="fa-stack-1x fa-inverse">{{ product_count }}</i>
+                            </span>
+
                             <!-- <p class="my-0">
                                 {% if grand_total %}
                                     £{{ grand_total|floatformat:2 }}

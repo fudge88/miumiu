@@ -154,6 +154,12 @@ a.home-shop-btn:hover {
     border-top: 1px solid #ffc10763;
 }
 
+.fa-inverse{
+    font-style: normal;
+    font-size: large;
+}
+
+
 .product-price{
     float: left;
 }
