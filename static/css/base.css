@@ -247,8 +247,7 @@ ul.social-media{
         text-transform: initial;
     }
     img.card-img-top.img-fluid {
-        padding-right: 50px;
-        padding-top: 50px;
+        padding: 100px 30px;
 }
 
 }
