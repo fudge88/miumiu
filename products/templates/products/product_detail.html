@@ -59,16 +59,19 @@
                     {{ product.category.friendly_name }}
                 </a>
             </h5>
-        {% endif %}        
-        <div class="buying-options my-3">
+        {% endif %} 
+        <form class="form" action="" method="POST">  
+        {% csrf_token %}
+        <div class="buying-options input-group my-3">
             <label for="Qtn">Qty:</label>
-                <input type="text" class="side-by-side" maxlength="12" value="1" width="48">
-            <button type="button" class="home-shop-btn mt-2">Add to Basket</button>
+                <input type="number" class="qty_input side-by-side" value="1" width="48" name="quantity" min="1" max="99" data-item_id="{{ product.id }}" id="id_qty_{{ product.id }}">
+            <input type="submit" class="btn home-shop-btn" value="Add to Basket">
             <ul class="social-media">
                 <li><i class="icon fab fa-instagram fa-lg"></i></li>
                 <li><i class="icon fab fa-snapchat fa-lg"></i></li>
             </ul>
         </div>
+        </form>
         <div class="">
             <p class="mb-0"><strong>Description:</strong>
             {{ product.description }}</p>

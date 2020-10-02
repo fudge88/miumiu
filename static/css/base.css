@@ -102,7 +102,7 @@ img.nav-img-top{
 .home-shop-btn{
     background-color: #F7DC69;
     color: #000;
-    border-radius: 50px;
+    /* border-radius: 50px; */
     border: none;
     padding: 8px;
 }
@@ -190,9 +190,9 @@ hr{
     margin: 0;
 }
 
-/* .side-by-side{
+.side-by-side{
     display: inline-block;
-} */
+}
 input.side-by-side {
     width: 40px;
     height: 38px;
