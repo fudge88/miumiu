@@ -195,8 +195,9 @@ hr{
 }
 input.side-by-side {
     width: 40px;
-    height: 38px;
+    height: 42px;
     text-align: center;
+    border-style: none;
 }
 
 .social-media{
@@ -218,7 +219,7 @@ ul.social-media{
 }
 .buying-options{
     background-color: rgba(124, 230, 215, 0.4);
-    padding: 10px 20px 15px;
+    padding: 15px 20px;
 }
 
 /* -------------------------------- Media Queries */
