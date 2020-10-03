@@ -580,7 +580,7 @@
     "model": "products.product",
     "fields": {
       "sku": "pp37",
-      "name": "Rose and Rosemary Wax beads",
+      "name": "Rose and Rosemary Wax",
       "short_description": " Simple, soothing, and effective ",
       "description": " Rose and Rosemary are used for their natural antioxidant, antiseptic, astringent, rejuvenating, and stimulating properties. The creamy wax grips the hair follicle removing it clean away. Suitable for all skin types but great for mature skin from all areas of the body and its flexible formula makes is great for ease of use.",
       "directions": "Wax beads have lower melting points and hardens on your skin in seconds. After cooling down you need to peel and pull away with a firm move. Absolutely no strips are required.",
@@ -596,7 +596,7 @@
     "model": "products.product",
     "fields": {
       "sku": "pp38",
-      "name": " Green-Tea and charcoal Wax beads",
+      "name": " Green-Tea and charcoal Wax",
       "short_description": " Simple, calming, and effective ",
       "description": " Formulated with calming green tea and anti-bacterial charcoal which works like a magnet pulling away debris. The smooth creamy wax grips the hair follicle, removing it clean away. This high-performance wax is suitable for hair removal from all areas of the body and its flexible formula makes is great for ease of use.",
       "directions": "Wax beads have lower melting points and hardens on your skin in seconds. After cooling down you need to peel and pull away with a firm move. Absolutely no strips are required.",
@@ -612,7 +612,7 @@
     "model": "products.product",
     "fields": {
       "sku": "pp39",
-      "name": " Coconut and Arnica Wax beads",
+      "name": " Coconut and Arnica Wax",
       "short_description": " Simple, calming, and effective ",
       "description": " Coconut and Arnica create a hypoallergenic formula, which is delicately scented with Coconut and infused with Arnica, known for its healing properties perfect for calming inflamed skin making this wax suitable for sensitive skin on all areas of the body and its flexible formula makes is great for ease of use.",
       "directions": "Wax beads have lower melting points and hardens on your skin in seconds. After cooling down you need to peel and pull away with a firm move. Absolutely no strips are required.",
@@ -628,7 +628,7 @@
     "model": "products.product",
     "fields": {
       "sku": "pp40",
-      "name": " Elder Flower and Lavender Wax beads",
+      "name": " Elder Flower and Lavender Wax",
       "short_description": " Simple, soothing, and effective ",
       "description": " Elder Flower and Lavender are antiseptic and astringent, and they also treat eczema, psoriasis, and acne. The creamy wax grips the hair follicle removing it clean away. Suitable for all skin types, but is great for oily and dry skin from all areas of the body and its flexible formula makes is great for ease of use.",
       "directions": "Wax beads have lower melting points and hardens on your skin in seconds. After cooling down you need to peel and pull away with a firm move. Absolutely no strips are required.",
@@ -644,7 +644,7 @@
     "model": "products.product",
     "fields": {
       "sku": "pp41",
-      "name": "Painless Chocolate Wax beads",
+      "name": "Painless Chocolate Wax",
       "short_description": " Simple, luxurious, and effective ",
       "description": "Chocolate wax is enriched with a plethora of natural ingredients like cocoa, almond oil, soya bean oil, sunflower oil, glycerin, and other skin nourishing compounds and vitamins including vitamin E and minerals. The creamy wax grips the hair follicle removing it clean away. Suitable for all skin types, but is great for those who have a low pain threshold from all areas of the body and its flexible formula makes is great for ease of use.",
       "directions": "Wax beads have lower melting points and hardens on your skin in seconds. After cooling down you need to peel and pull away with a firm move. Absolutely no strips are required.",
@@ -660,7 +660,7 @@
     "model": "products.product",
     "fields": {
       "sku": "pp42",
-      "name": " Chamomile and Apricot Wax beads",
+      "name": " Chamomile and Apricot Wax",
       "short_description": " Simple, fruity, and effective ",
       "description": " A safe, low-temp, no-strip wax hardens quickly making it fast and easy to use; colourful blue formula for precise application. Wax shrink-wraps each follicle to remove even the shortest, coarsest and most stubborn hair from the root, so skin stays smoother longer. Chamomile oil makes it gentle enough for the most sensitive skin, leaving skin soft without irritation.",
       "directions": "Wax beads have lower melting points and hardens on your skin in seconds. After cooling down you need to peel and pull away with a firm move. Absolutely no strips are required.",

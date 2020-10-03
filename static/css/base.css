@@ -114,7 +114,9 @@ a.home-shop-btn:hover {
     font-weight: bolder;
 }
 
-.btt-link{
+.btt-link
+.update-link
+.remove-item{
     cursor: pointer;
 }
 .btt-button{
@@ -254,7 +256,7 @@ ul.social-media{
         text-transform: initial;
     }
     img.card-img-top.img-fluid {
-        padding: 100px 30px;
+        padding: 100px 30px 30px;
 }
 
 }
