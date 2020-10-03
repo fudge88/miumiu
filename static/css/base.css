@@ -224,6 +224,37 @@ ul.social-media{
     padding: 15px 20px;
 }
 
+/* toasts */
+.message-container{
+    position: fixed;
+    bottom: 0;
+    right: 15px;
+    z-index: 9999999999;
+}
+
+.custom-toast{
+    overflow: visible;
+}
+
+.toast-header,
+.toast-body {
+    background-color: #c7f7f0;
+    color: #343a40;
+    padding-left: 20px;
+}
+
+
+.toast-capper{
+    height: 2px;
+}
+
+.bag-notification-wrapper {
+    height: 100px;
+    overflow-x: hidden;
+    overflow-y: auto;
+}
+
+
 /* -------------------------------- Media Queries */
 
 /* Slightly larger container on xl screens */
@@ -341,6 +372,9 @@ div.carousel-item:active{
     .logo-font{
         font-size: 3rem;
     }
+    .message-container{
+    right: 0;
+}
 }
 @media (min-width: 768px){
         .sm-single-name{
