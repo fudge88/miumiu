@@ -46,7 +46,8 @@ select option[value=""] {
 }
 
 .order-confirmation-wrapper{
-    background-color: #7CE6D7;
+    background-color: #b5edf33b;
+    padding: 2rem;
 }
 
 #loading-overlay {
