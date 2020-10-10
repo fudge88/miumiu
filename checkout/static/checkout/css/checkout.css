@@ -44,3 +44,7 @@ select:invalid,
 select option[value=""] {
     color: #aab7c4 !important;
 }
+
+.order-confirmation-wrapper{
+    background-color: #7CE6D7;
+}

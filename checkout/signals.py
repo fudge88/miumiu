@@ -15,5 +15,6 @@ def update_on_delete(sender, instance, **kwargs):
     """
     Update order total on lineitem delete
     """
+    print('delete signal recieved')
     instance.order.update_total()
     
