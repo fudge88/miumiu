@@ -223,7 +223,9 @@ ul.social-media{
 .social-media li{
     display: inline;
 }
- 
+input#new-image {
+    background-color: azure;
+}
 .buying-options{
     text-align: left;
 }
