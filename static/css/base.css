@@ -99,6 +99,14 @@ img.nav-img-top{
     padding-top: 8rem;
 }
 
+.product-shop-btn{
+    background-color: #F7DC69;
+    color: #000;
+    font-size: small;
+    border: none;
+    padding: 8px;
+    float: right;
+}
 .home-shop-btn{
     background-color: #F7DC69;
     color: #000;

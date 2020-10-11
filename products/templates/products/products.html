@@ -83,12 +83,12 @@
                         <div class="row">
                             <div class="col">
                                 <p class="product-price lead mb-0 text-left">£{{ product.price }}<small class="text-muted">/ {{ product.weight}}g</small></p>
-                                
-                                  
-
-
-
-                                <button type="button" class="btn home-shop-btn">Quick Add</button>
+                                <form class="form" action="{% url 'add_to_bag' product.id %}" method="POST">
+                                    {% csrf_token %}
+                                    <input name="quantity" type="hidden" value="1">
+                                    <input type="hidden" name="redirect_url" value="{{ request.path }}">
+                                    <input type="submit" class="btn product-shop-btn mr-2" value="Add to Bag">
+                                </form>
                             </div>
                         </div>
                     </div>
