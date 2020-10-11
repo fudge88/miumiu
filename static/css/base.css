@@ -115,6 +115,12 @@ img.nav-img-top{
     padding: 8px;
 }
 
+button{
+    color: #000;
+    border: none;
+    padding: 8px;
+}
+
 a.home-shop-btn:hover {
     color: #1d2124;
     background-color: #7CE6D7;
@@ -238,7 +244,7 @@ input#new-image {
 /* toasts */
 .message-container{
     position: fixed;
-    top: 5rem;
+    top: 11rem;
     right: 15px;
     z-index: 9999999999;
 }
@@ -315,11 +321,10 @@ input#new-image {
     border-color: #222;
 }
 
-.allauth-form-inner-content a {
+a.hyperlink{
 	color:  #e684ec; /* text-info */
 }
-.btn-outline-info{
-     border-color: #e684ec;
+
 }
 a.button.secondaryAction{
     color: black;
