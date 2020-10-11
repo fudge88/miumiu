@@ -83,12 +83,21 @@
                         <div class="row">
                             <div class="col">
                                 <p class="product-price lead mb-0 text-left">£{{ product.price }}<small class="text-muted">/ {{ product.weight}}g</small></p>
+                                
+                                {% if request.user.is_superuser %}
+                                    <small class="ml-3">
+                                        <a href="{% url 'edit_product' product.id %}">Edit</a> | 
+                                        <a class="text-danger" href="{% url 'delete_product' product.id %}">Delete</a>
+                                    </small>
+                                {% else %}
+                                
                                 <form class="form" action="{% url 'add_to_bag' product.id %}" method="POST">
                                     {% csrf_token %}
                                     <input name="quantity" type="hidden" value="1">
                                     <input type="hidden" name="redirect_url" value="{{ request.path }}">
                                     <input type="submit" class="btn product-shop-btn mr-2" value="Add to Bag">
                                 </form>
+                                {% endif %}
                             </div>
                         </div>
                     </div>

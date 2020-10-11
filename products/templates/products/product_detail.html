@@ -60,6 +60,12 @@
                 </a>
             </h5>
         {% endif %} 
+        {% if request.user.is_superuser %}
+            <small class="">
+                <a href="{% url 'edit_product' product.id %}">Edit</a> | 
+                <a class="text-danger" href="{% url 'delete_product' product.id %}">Delete</a>
+            </small>
+        {% else %}
         <form class="form" action="{% url 'add_to_bag' product.id %}" method="POST">  
         {% csrf_token %}
         <div class="buying-options input-group my-3">
@@ -73,6 +79,7 @@
              <input type="hidden" name="redirect_url" value="{{ request.path }}">
         </div>
         </form>
+        {% endif %}
           <div class="col-12 text-center">
             <a href="{% url 'products' %}" class="btn mb-2">
                 <span class="icon">
