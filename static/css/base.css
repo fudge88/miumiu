@@ -235,7 +235,7 @@ ul.social-media{
 /* toasts */
 .message-container{
     position: fixed;
-    bottom: 0;
+    top: 5rem;
     right: 15px;
     z-index: 9999999999;
 }
