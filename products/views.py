@@ -142,5 +142,50 @@ def delete_product(request, product_id):
     return redirect(reverse('products'))
 
 
-def add_product_review(request):
-    return HttpResponse("roduct page")
+
+
+# PRODUCT REVIEWS
+
+def product_review(request, product_id):
+    """ A view to show one product's details """
+
+    product_reviews = ProductReview.objects.filter(pk=product_id).order_by('-created_at')
+    review_form = ProductReviewForm()
+
+    context = {
+        'review_form': review_form,
+        'product_reviews': product_reviews,
+    }
+
+    return render(request, 'products/product_detail.html', context)
+
+
+# def add_product_review(request, product_id):
+#     """
+#     Handles the POST request for review form. Saves the form and redirects
+#     to the product selected page
+#     """
+#     product = get_object_or_404(Product, pk=product_id)
+
+#     if request.method == 'POST': 
+#         review_form = ProductReviewForm(request.POST)
+#         if review_form.is_valid():
+#             review = review_form.save(commit=False)
+#             review.product = product
+#             review.user = request.user
+#             review.save()
+#             messages.info(request, "Your review has been received! Thank you for your interest.")
+#             return redirect(reverse('product_detail', args=[product_id]))
+#         else:
+#             print(review_form.errors)
+            
+#     return redirect(reverse('product_detail', args=[product_id]))
+
+def add_product_review(request, product_id):
+    """
+    Handles the POST request for review form. Saves the form and redirects
+    to the product selected page
+    """
+    product = get_object_or_404(Product, pk=product_id)
+    
+    return render(request, 'products/product_detail.html', context)

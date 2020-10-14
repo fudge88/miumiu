@@ -1,24 +1,49 @@
+<section class="container-fluid">
+        <div class="row">
+            <div class="col col-lg-8 offset-lg-2">
+                <h4 class="logo-font">Reviews</h4>
+                <hr class="">
+            </div>
+        </div>
 <div class="row">
-    <div class="col offset-2">
-        <h2 class="logo-font">Product Review</h2>
+<div class="col-12 col-sm-6 col-md-6 col-lg-4 offset-lg-2 all-reviews mb-4">
+<!-- if statement to go here (reviews) -->
+    <!-- forloop -->
+        <div class="single-review mb-3">
+            <div class="review-heading">
+                <span class="mr-3 text-muted"> USER</span>
+                <span class="text-muted"> CREATED_AT </span>
+                
+                <div class="mt-2"><p><strong>SUBJECT</strong></p></div>
+            </div>
+            <div class="review-body">
+                REVIEW
+            </div>
+        </div>
+        <hr>
+<!-- endfor loop -->
+<!-- else statement to go here (reviews) -->
 
-    </div>
-</div>
+    <p>There are no reviews for this product yet, be the first one to leave a review!</p>
 
-<div class="row">
-    <div class="col-12 col-md-6 col-lg-8 offset-2">
-        <h5 class="">Write a review</h5>
-        <form action="{% url 'add_product_review' %}" method="POST" class="form-group review-form">
-            {% csrf_token %}
-            {{ review_form|crispy }}
-            {% if user.is_authenticated %}
-                <button id="submit-button" class="btn home-shop-btn">
-                    <span class="">Add review</span>
-                </button>
-            {% else %}
-                <p>Logged in to add your reviews! <a href="{% url 'account_login' %}">Login</a>
-                    or <a href="{% url 'account_signup' %}">Register</a></p>
-            {% endif %}
-        </form>
-    </div>
-</div>
+<!-- endif statement to go here (reviews) -->
+            </div>
+            <div class="col-12 col-sm-6 col-md-6 col-lg-4 form-bg p-3">
+                <h5 class="text-uppercase">Write a review</h5>
+                <form action="" method="POST" class="form-group">
+                    {% csrf_token %}
+                    {{ review_form|crispy }}
+                    {% if user.is_authenticated %}
+                        <button id="submit-button" class="btn product-shop-btn">
+                            <span class="">Add review</span>
+                        </button>
+                    {% else %}
+                        <p>Logged in to add your review! 
+                        <a href="{% url 'account_login' %}">Login</a>
+                         or <a href="{% url 'account_signup' %}">Register</a></p>
+                    {% endif %}
+                </form>
+            </div>
+        </div>
+    </section>
+
