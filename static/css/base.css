@@ -196,6 +196,9 @@ hr{
     border-top: 1px solid #ffffff00;
 }
 
+textarea{
+    width: -webkit-fill-available;
+}
 
 .product-detail-name{
     color: #000;
