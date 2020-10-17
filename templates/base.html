@@ -89,7 +89,7 @@
                 <li class="list-inline-item">
                     <a class="nav-link" href="{% url 'shopping_bag' %}">
                         <div class="text-center icon">
-                            <span class="fa-stack" >
+                            <span class="fa-stack">
                                 <i class="fas fa-circle fa-stack-2x"></i>
                                 <i class="fa-stack-1x fa-inverse">{{ product_count }}</i>
                             </span>
@@ -114,13 +114,13 @@
             <div class="col promo-strip">
                 <div id="carouselPromoIndicators" class="carousel slide w-100" data-ride="carousel">
                     <div class="carousel-inner">
-                        <div class="carousel-item active">
+                        <div class="carousel-item carousel-item-strip active">
                             <a href="" class="promo-strip"><i class="fas fa-truck"></i> Free delivery on orders over £{{ free_delivery_threshold }}!</a>
                         </div>
-                        <div class="carousel-item">
+                        <div class="carousel-item carousel-item-strip">
                             <a href="" class="promo-strip"><i class="fas fa-check"></i> 30% off members only!</a>
                         </div>
-                        <div class="carousel-item">
+                        <div class="carousel-item carousel-item-strip">
                             <a href="" class="promo-strip"><i class="fas fa-mobile-alt"></i> Become a memeber today.</a>
                         </div>
                     </div>

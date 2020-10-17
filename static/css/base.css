@@ -110,9 +110,22 @@ img.nav-img-top{
 .home-shop-btn{
     background-color: #F7DC69;
     color: #000;
-    /* border-radius: 50px; */
     border: none;
     padding: 8px;
+}
+.quick-add-btn{
+    color: #e684ec;
+    border-radius: 50px;
+    border: solid #e684ec;
+    padding: 8px;
+    font-weight: bolder;
+    background-color: #fff;
+}
+.quick-add-btn:hover,
+.quick-add-btn:active{
+    color: #fff;
+    border: none;
+    background-color: #7CE6D7;
 }
 
 button{
@@ -444,7 +457,7 @@ a.button.secondaryAction{
 div.carousel-item:active{
     display: inline-block;
 }
-.carousel-item{
+.carousel-item-strip{
     margin-top: 15px;
     background-image: linear-gradient(to right, #e684ec, #aea4ff, #68bdff, #12cfff, #28dcf9, #3fe2e6, #64e7d1, #89e9bc, #9ee9a4, #b9e78d, #d7e377, #f7dc69);
 }

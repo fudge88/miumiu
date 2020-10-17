@@ -1,36 +1,7 @@
 {% extends "base.html" %}
 {% load static %}
 {% block page_header %}
-<div class="container header-container h-150">
-    <div class="row h-100">
-        <div class="col text-center">
-        <h2 class="mt-5">Our products that may interest you</h2>
-            <div class="product-promo-container mt-2">
-                <!-- <div class="row mt-1 mb-2"></div> -->
-                <div class="row">
-                {% for product in random_products %}
-                    <div class="col col-md-4 col-lg-3 col-xl-3">
-                        <div class="py-4">
-                        {% if product.image %}
-                            <a href="{% url 'product_detail' product.id %}" class="">
-                                <img class="promo-img" src="{{ product.image.url }}" alt="{{ product.name }}">
-                            </a>
-                        {% else %}
-                            <a href="{% url 'product_detail' product.id %}">
-                                <img class="promo-img" src="{{ MEDIA_URL }}noimg.png" alt="{{ product.name }}">
-                            </a>
-                        {% endif %}
-                            <div class="pb-0">
-                                <p class="product-name mb-0">{{ product.name }}</p>
-                            </div>
-                        </div>
-                    </div>
-                {% endfor %}
-                </div>
-            </div>
-        </div>
-    </div>
-</div>
+{% include 'products/includes/product_promo.html' %}
 
 {% endblock %}
 <br><br><br>
@@ -125,7 +96,7 @@
                                     {% csrf_token %}
                                         <input name="quantity" type="hidden" value="1">
                                         <input type="hidden" name="redirect_url" value="{{ request.path }}">
-                                        <input type="submit" class="btn product-shop-btn mr-2" value="Add to Bag">
+                                        <input type="submit" class="btn quick-add-btn mr-2" value="Add">
                                     </form>
                                     {% endif %}
                                 </div>
