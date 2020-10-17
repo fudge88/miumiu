@@ -88,8 +88,8 @@
                 </li>
                 <li class="list-inline-item">
                     <a class="nav-link" href="{% url 'shopping_bag' %}">
-                        <div class="text-center">
-                            <span class="fa-stack icon" >
+                        <div class="text-center icon">
+                            <span class="fa-stack" >
                                 <i class="fas fa-circle fa-stack-2x"></i>
                                 <i class="fa-stack-1x fa-inverse">{{ product_count }}</i>
                             </span>
@@ -118,7 +118,7 @@
                             <a href="" class="promo-strip"><i class="fas fa-truck"></i> Free delivery on orders over £{{ free_delivery_threshold }}!</a>
                         </div>
                         <div class="carousel-item">
-                            <a href="" class="promo-strip"><i class="fas fa-check"></i> 30% off all supplements!</a>
+                            <a href="" class="promo-strip"><i class="fas fa-check"></i> 30% off members only!</a>
                         </div>
                         <div class="carousel-item">
                             <a href="" class="promo-strip"><i class="fas fa-mobile-alt"></i> Become a memeber today.</a>
@@ -130,7 +130,7 @@
        <!-- large and extra large banner -->
        <div id="delivery-banner" class="row promo-strip text-center d-none d-md-block">
             <ul class="col lg-promo-strip">
-                <li class="mr-5"><i class="fas fa-check"></i> 30% off all supplements!</li> 
+                <li class="mr-5"><i class="fas fa-check"></i> 30% off members only!</li> 
                 <li class="mr-5"><i class="fas fa-truck"></i> Free delivery on orders over £{{ free_delivery_threshold }}!</li> 
                 <li><i class="fas fa-mobile-alt"></i> Become a memeber today</li>               
             </ul>            

@@ -44,7 +44,7 @@
             </div>
         </li>
 
-        <li class="nav-item dropdown">
+        <li class="nav-item dropdown d-lg-none">
             <a class="nav-link mr-5" href="#" id="account-link" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                 Account
             </a>
@@ -63,16 +63,3 @@
         </li>
     </ul>
 </div>
-
-                    <div class="dropdown-menu border-0" aria-labelledby="user-options">
-                        {% if request.user.is_authenticated %}
-                            {% if request.user.is_superuser %}
-                                <a href="{% url 'add_product' %}" class="dropdown-item">Product Management</a>
-                            {% endif %}
-                            <a href="{% url 'profile' %}" class="dropdown-item">My Profile</a>
-                            <a href="{% url 'account_logout' %}" class="dropdown-item">Logout</a>
-                        {% else %}
-                            <a href="{% url 'account_signup' %}" class="dropdown-item">Register</a>
-                            <a href="{% url 'account_login' %}" class="dropdown-item">Login</a>
-                        {% endif %}
-                    </div>

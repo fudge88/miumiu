@@ -4,7 +4,7 @@
             <div><i class="fas fa-search fa-lg icon"></i></div>
         </div>
     </a>
-    <div class="dropdown-menu w-100" aria-labelledby="mobile-search">
+    <div class="dropdown-menu w-100 mobile-search-box" aria-labelledby="mobile-search">
         <form class="form" method="GET" action="{% url 'products' %}">
             <div class="input-group w-100">
                 <input class="form-control border" type="text" name="q" placeholder="Looking for something?">
@@ -19,29 +19,13 @@
         </form>
     </div>
 </li>
-<!-- <li class="list-inline-item dropdown">
-    <a class="nav-link d-block d-lg-none" href="#" id="user-options" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+ <li class="list-inline-item d-block d-lg-none">
+    <a class="nav-link" href="{% url 'shopping_bag' %}">
         <div class="text-center">
-            <div><i class="fas fa-user-circle fa-lg icon"></i></div>
-        </div>
-    </a>
-    <div class="dropdown-menu" aria-labelledby="user-options">
-        {% if request.user.is_authenticated %}
-            {% if request.user.is_superuser %}
-                <a href="{% url 'add_product' %}" class="dropdown-item">Product Management</a>
-            {% endif %}
-            <a href="{% url 'profile' %}" class="dropdown-item">My Profile</a>
-            <a href="{% url 'account_logout' %}" class="dropdown-item">Logout</a>
-        {% else %}
-            <a href="{% url 'account_signup' %}" class="dropdown-item">Register</a>
-            <a href="{% url 'account_login' %}" class="dropdown-item">Login</a>
-        {% endif %}
-    </div>
-</li> -->
-<li class="list-inline-item">
-    <a class="nav-link d-block d-lg-none" href="{% url 'shopping_bag' %}">
-        <div class="text-center">
-            <div><i class="fas fa-circle fa-lg icon"></i></div>
+            <span class="fa-stack icon" >
+                <i class="fas fa-circle fa-stack-2x"></i>
+                <i class="fa-stack-1x fa-inverse">{{ product_count }}</i>
+            </span>
         </div>
     </a>
 </li>

@@ -200,6 +200,11 @@ textarea{
     width: -webkit-fill-available;
 }
 
+.mobile-search-box.w-100.show {
+    padding: 20px 20px 10px;
+    background-color: azure;
+}
+
 .product-detail-name{
     color: #000;
     font-size: 2.5rem;
