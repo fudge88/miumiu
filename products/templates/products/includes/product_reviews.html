@@ -1,49 +1,64 @@
 <section class="container-fluid">
-        <div class="row">
-            <div class="col col-lg-8 offset-lg-2">
-                <h4 class="logo-font">Reviews</h4>
-                <hr class="">
-            </div>
+    <div class="row">
+        <div class="col col-lg-8 offset-lg-2">
+            <h4 class="logo-font">Reviews</h4>
+            <hr class="">
         </div>
-<div class="row">
-<div class="col-12 col-sm-6 col-md-6 col-lg-4 offset-lg-2 all-reviews mb-4">
-<!-- if statement to go here (reviews) -->
-    <!-- forloop -->
-        <div class="single-review mb-3">
-            <div class="review-heading">
-                <span class="mr-3 text-muted"> USER</span>
-                <span class="text-muted"> CREATED_AT </span>
-                
-                <div class="mt-2"><p><strong>SUBJECT</strong></p></div>
+    </div>
+    <div class="row">
+        <div class="col-12 col-sm-6 col-md-6 col-lg-4 offset-lg-2 all-reviews mb-4">
+            <!-- if statement to go here (reviews) -->
+            <!-- forloop -->
+            {% for r in product_reviews %}
+            <div class="single-review mb-3">
+                <div class="review-heading">
+                    <span class="mr-3"><strong>{{r.User.username}}</strong></span>
+                    <span class="text-muted">{{r.created_at}} </span>
+                    <!--
+                    <div class="mt-2">
+                        <p><strong>SUBJECT: {{r.subject}}</strong></p>
+                    </div>
+                    -->
+                </div>
+                <div class="review-body">
+                    {{r.review}}
+                </div>
             </div>
-            <div class="review-body">
-                REVIEW
-            </div>
-        </div>
-        <hr>
-<!-- endfor loop -->
-<!-- else statement to go here (reviews) -->
+            <hr>
+            {% endfor %}
+            <!-- endfor loop -->
+            <!-- else statement to go here (reviews) -->
+            {% if reviews_count < 1 %}
 
-    <p>There are no reviews for this product yet, be the first one to leave a review!</p>
+            <p>There are no reviews for this product yet, be the first one to leave a review!</p>
+            {% endif %}
 
-<!-- endif statement to go here (reviews) -->
-            </div>
-            <div class="col-12 col-sm-6 col-md-6 col-lg-4 form-bg p-3">
-                <h5 class="text-uppercase">Write a review</h5>
-                <form action="" method="POST" class="form-group">
-                    {% csrf_token %}
-                    {{ review_form|crispy }}
-                    {% if user.is_authenticated %}
-                        <button id="submit-button" class="btn product-shop-btn">
-                            <span class="">Add review</span>
-                        </button>
-                    {% else %}
-                        <p>Logged in to add your review! 
-                        <a href="{% url 'account_login' %}">Login</a>
-                         or <a href="{% url 'account_signup' %}">Register</a></p>
-                    {% endif %}
-                </form>
-            </div>
+            <!-- endif statement to go here (reviews) -->
         </div>
-    </section>
+
+        <div class="col-12 col-sm-6 col-md-6 col-lg-4 form-bg p-3">
+            <h5 class="text-uppercase">Write a review:</h5>
+            <form action="{% url 'product_detail' product.id %}" method="POST" class="form-group">
+                {% csrf_token %}
+                {{ review_form|crispy }}
+                {% if user.is_authenticated %}
+                <!--
+                <label for="subject">Subject:</label>
+                <input type="text" name="subject">
+                -->
+                <textarea id="review" name="review" rows="4" cols="60">
+
+                </textarea>
+                <button id="submit-button" class="btn product-shop-btn" type="submit">
+                    <span class="">Add review</span>
+                </button>
+                {% else %}
+                <p>Logged in to add your review!
+                    <a href="{% url 'account_login' %}">Login</a>
+                    or <a href="{% url 'account_signup' %}">Register</a></p>
+                {% endif %}
+            </form>
+        </div>
+    </div>
+</section>
 

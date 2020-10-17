@@ -147,6 +147,16 @@ a.home-shop-btn:hover {
 .card-body{
     padding: 1rem;
 }
+
+.promo-img{
+    width: 200px;
+    height: auto;
+}
+.product-promo-container{
+    padding: 10px, 20px;
+    border: solid #e684ec;
+}
+
 .product-name{
     font-family: 'Kristi', cursive;
     font-size: 1.8rem;

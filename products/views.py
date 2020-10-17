@@ -18,9 +18,10 @@ def all_products(request):
 
     products = Product.objects.all()
     try:
-        random_products_no =  random.sample(range(0, len(products)), 4)
+        random_products_no = random.sample(range(0, len(products)), 4)
     except:
-        random_products_no =  random.sample(range(0, len(products)), len(products))
+        random_products_no = random.sample(
+            range(0, len(products)), len(products))
     print(random_products_no)
     random_products = []
     for r in random_products_no:
