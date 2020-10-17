@@ -11,7 +11,7 @@
             <!-- if statement to go here (reviews) -->
             <!-- forloop -->
             {% for r in product_reviews %}
-            <div class="single-review mb-3">
+            <div class="single-review mt-3 mb-3">
                 <div class="review-heading">
                     <span class="mr-3"><strong>{{r.User.username}}</strong></span>
                     <span class="text-muted">{{r.created_at}} </span>
@@ -25,7 +25,8 @@
                     {{r.review}}
                 </div>
             </div>
-            <hr>
+            
+            <hr class="card-line-break mt-3">
             {% endfor %}
             <!-- endfor loop -->
             <!-- else statement to go here (reviews) -->
