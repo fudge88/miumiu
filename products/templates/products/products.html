@@ -83,7 +83,7 @@
                         <div class="card-footer bg-white pt-0 border-0 text-left">
                             <div class="row">
                                 <div class="col">
-                                    <p class="product-price lead mb-0 text-left">£{{ product.price }}<small class="text-muted">/ {{ product.weight}}g</small></p>
+                                    <p class="product-price lead mb-0 text-left mt-2">£{{ product.price }}<small class="text-muted">/ {{ product.weight}}g</small></p>
 
                                     {% if request.user.is_superuser %}
                                         <small class="ml-3">
@@ -96,7 +96,7 @@
                                     {% csrf_token %}
                                         <input name="quantity" type="hidden" value="1">
                                         <input type="hidden" name="redirect_url" value="{{ request.path }}">
-                                        <input type="submit" class="btn quick-add-btn mr-2" value="+">
+                                        <input type="submit" class="btn quick-add-btn mr-2 mt-2" value="+">
                                     </form>
                                     <a href="{% url 'product_detail' product.id %}" class="info-link mr-3">i</a>
                                     {% endif %}

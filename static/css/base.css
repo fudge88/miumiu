@@ -126,11 +126,11 @@ img.nav-img-top{
     border-radius: 50px;
     border: solid #e684ec;
     padding: 8px;
-    font-weight: bolder;
     background-color: #fff;
-    font-size: xxx-large;
-    height: 40px;
+    font-size: xx-large;
+    height: 35px;
 }
+
 .info-link{
     float: right;
     font-size: xx-large;
