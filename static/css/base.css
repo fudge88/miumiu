@@ -228,8 +228,9 @@ select#sort-selector {
 
 .fa-inverse{
     font-style: normal;
-    font-size: large;
+    font-size: larger;
 }
+
 
 .product-price{
     float: left;
@@ -434,7 +435,9 @@ a.button.secondaryAction{
 
 /* fixed top navbar only on medium and up */
 @media (min-width: 992px) {
-
+i.fa-stack-1x.fa-inverse{
+    padding-left: 12px;
+}
     .fixed-top-desktop-only {
         position: fixed;
         top: 0;
