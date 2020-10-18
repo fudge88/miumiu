@@ -423,6 +423,29 @@ a.button.secondaryAction{
     border-color: #dc3545;
     border-radius: 0;
 }
+.address-container{
+    list-style-type: none;
+    font-size: x-large;
+}
+.opening-hours{
+    list-style-type: none;
+}
+
+
+/* ============map */
+.map-container-5{
+overflow:hidden;
+padding-bottom:56.25%;
+position:relative;
+height:0;
+}
+.map-container-5 iframe{
+left:0;
+top:0;
+height:100%;
+width:100%;
+position:absolute;
+}
 
 /* -------------------------------- Media Queries */
 

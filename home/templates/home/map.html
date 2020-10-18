@@ -1,12 +1,49 @@
 {% extends "base.html" %}
 {% load static %}
-
+{% block page_header %}
+    <div class="container header-container">
+        <div class="row">
+            <div class="col"></div>
+        </div>
+    </div>
+{% endblock %}
 {% block content %}
+<div class="container">
+    <div class="overlay"></div>
+        <div class="row">
+            <div class="col-md-6 mb-4 mt-5">
+                <div class="card mt-3">
+                    <div id="map-container-google-1" class="z-depth-1-half map-container" style="height: 500px">
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d4967.56147792222!2d-0.162866!3d51.498891!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4876053f71d6742b%3A0x148b6729d644e18e!2s87-135%20Brompton%20Rd%2C%20Knightsbridge%2C%20London%20SW1X%207XL%2C%20UK!5e0!3m2!1sen!2sin!4v1602896801852!5m2!1sen!2sin"
+                        width="100%" height="100%" frameborder="0" style="border:0" allowfullscreen="" aria-hidden="false" tabindex="0">
+                    </iframe>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6 mb-4 mt-5">
+            <div>
+            <h1 class="logo-font ml-4">Where to find us:</h1>
+                <ul class="address-container">
+                    <li>Harrods (Consessions)</li>
+                    <li>87-135 Brompton Road</li>
+                    <li>Knightsbridge</li>
+                    <li>London</li>
+                    <li>SW1X 7XL</li>
+                    <br>
+                    <li>Call us on: 020 1234 5678</li>
+                </ul>
+                <ul class="opening-hours">
+                    <li><strong>Opening hours:</strong></li>
+                    <li>Monday to Wednesday 9.30am – 8pm</li>
+                    <li>Thursday 9.30am – 9pm</li>
+                    <li>Friday 9.30am – 8pm</li>
+                    <li>Saturday 9am – 7pm</li>
+                    <li>Sunday 11am – 5pm</li>
+                    <li>Bank Holidays 10am – 6pm</li>
+                </ul>
+            </div>
+        </div>
+</div>
 
-<iframe
-src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d4967.56147792222!2d-0.162866!3d51.498891!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4876053f71d6742b%3A0x148b6729d644e18e!2s87-135%20Brompton%20Rd%2C%20Knightsbridge%2C%20London%20SW1X%207XL%2C%20UK!5e0!3m2!1sen!2sin!4v1602896801852!5m2!1sen!2sin"
-width="100%" height="700" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false"
 
-tabindex="0">
-</iframe>
 {% endblock %}
