@@ -136,7 +136,9 @@ img.nav-img-top{
     font-size: xx-large;
     font-family: 'Kristi', cursive;
 }
-
+.fa-circle:before{
+    font-size: larger;
+}
 .quick-add-btn:hover,
 .quick-add-btn:active{
     color: #fff;
@@ -183,15 +185,30 @@ a.home-shop-btn:hover {
 }
 .product-promo-container{
     padding: 10px, 20px;
-    border: solid #e684ec;
+    border: solid 1px #e684ec;
 }
+
+#glow{
+    margin:50px 50px;
+    animation: glow .5s infinite alternate;
+    -webkit-box-shadow:0 0 20px #e684ec; 
+    -moz-box-shadow: 0 0 20px #e684ec; 
+    box-shadow:0 0 20px #e684ec;
+}
+@keyframes glow {
+    to {
+        box-shadow: 0 0 10px #e684ec;
+    }
+} 
 
 .product-name{
     font-family: 'Kristi', cursive;
     font-size: 1.8rem;
     font-weight: bold;
 }
-
+select#sort-selector {
+    border: 1px solid #ffc107!important;
+}
 .product-category{
     color: #000;
     font-size: large;
@@ -213,7 +230,6 @@ a.home-shop-btn:hover {
     font-style: normal;
     font-size: large;
 }
-
 
 .product-price{
     float: left;
