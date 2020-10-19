@@ -47,6 +47,7 @@ def edit_bag(request, item_id):
     request.session['bag'] = bag
     return redirect(reverse('shopping_bag'))
 
+
 def remove_item(request, item_id):
     """ Remove item from shopping bag"""
     product = Product.objects.get(pk=item_id)
