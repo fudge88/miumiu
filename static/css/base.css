@@ -189,7 +189,7 @@ a.home-shop-btn:hover {
 }
 
 #glow{
-    margin:50px 50px;
+    margin:10px 50px;
     animation: glow .5s infinite alternate;
     -webkit-box-shadow:0 0 20px #e684ec; 
     -moz-box-shadow: 0 0 20px #e684ec; 

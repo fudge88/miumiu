@@ -2,9 +2,11 @@ from django.shortcuts import render, get_object_or_404
 from django.contrib import messages
 from django.contrib.auth.decorators import login_required
 from .models import UserProfile
+from products.models import Product
 from .forms import UserProfileForm
 
 from checkout.models import Order
+import random
 
 
 @login_required
@@ -34,6 +36,17 @@ def profile(request):
 
 
 def order_history(request, order_number):
+    products = Product.objects.all()
+    try:
+        random_products_no = random.sample(range(0, len(products)), 12)
+    except:
+        random_products_no = random.sample(
+            range(0, len(products)), len(products))
+    print(random_products_no)
+    random_products = []
+    for r in random_products_no:
+        random_products.append(products[r])
+
     order = get_object_or_404(Order, order_number=order_number)
 
     messages.info(request, (
@@ -45,6 +58,7 @@ def order_history(request, order_number):
     context = {
         'order': order,
         'from_profile': True,
+        'random_products': random_products
     }
 
     return render(request, template, context)
