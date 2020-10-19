@@ -1,0 +1,1 @@
+web: gunicorn miumiu.wsgi:application
