@@ -21,12 +21,12 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 # See https://docs.djangoproject.com/en/3.1/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = '+2&a+_67pvlg-_fiu0!%$jg$zs$^zb)q3@mvw!o2ehw+b)e4vy'
+MMA_SECRET_KEY = os.environ.get('MMA_SECRET_KEY', '')
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = 'DEVELOPMENT'
 
-ALLOWED_HOSTS = ['miumiuaesthetics.herokuap.com', 'localhost']
+ALLOWED_HOSTS = ['miumiuaesthetics.herokuapp.com', 'localhost']
 
 
 # Application definition
@@ -121,7 +121,7 @@ WSGI_APPLICATION = 'miumiu.wsgi.application'
 
 if 'DATABASE_URL' in os.environ:
     DATABASE = {
-        'default': dj_database_url.parse(os.environ.get('DATBASE'))
+        'default': dj_database_url.parse(os.environ.get('DATBASE_URL'))
     }
 else:
     DATABASES = {
