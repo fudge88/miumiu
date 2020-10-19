@@ -225,13 +225,15 @@ select#sort-selector {
     border: 0;
     border-top: 1px solid #ffc10763;
 }
-
+.page-link{
+    border: 1px solid #ffc10763;
+}
 .fa-inverse{
     font-style: normal;
     font-size: larger;
 }
-.pagination-position{
-    padding: 10px 50px;
+ul.pagination {
+    justify-content: center;
 }
 .table td, .table th {
     border-top: 1px solid #ffc10763;

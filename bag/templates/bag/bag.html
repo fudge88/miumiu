@@ -106,12 +106,21 @@
                         </span>
                         <span class="text-uppercase">Keep Shopping</span>
                     </a>
+                    {% if user.is_authenticated %}
                     <a href="{% url 'checkout' %}" class="btn yellow-to-pink-btn">
                         <span class="text-uppercase">Secure Checkout</span>
                         <span class="icon">
                             <i class="fas fa-lock"></i>
                         </span>
                     </a>
+                    {% else %}
+                    <a href="{% url 'account_login' %}" class="btn yellow-to-pink-btn">
+                        <span class="text-uppercase">Login to checkout</span>
+                        <span class="icon">
+                            <i class="fas fa-lock"></i>
+                        </span>
+                    </a>
+                    {% endif %}
                 </td>
             </tr>
         </table>
