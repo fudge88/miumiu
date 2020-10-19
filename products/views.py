@@ -3,6 +3,7 @@ from django.contrib import messages
 from django.contrib.auth.decorators import login_required
 from django.db.models import Q
 from django.db.models.functions import Lower
+from django.core.paginator import Paginator, EmptyPage, PageNotAnInteger
 import random
 
 from .models import Product, Category, ProductReview
@@ -14,7 +15,7 @@ from .forms import ProductForm, ProductReviewForm
 
 def all_products(request):
     """ A view to show all products, including sorting and search queries """
-
+# pulls random products from db
     products = Product.objects.all()
     try:
         random_products_no = random.sample(range(0, len(products)), 12)
@@ -26,11 +27,25 @@ def all_products(request):
     for r in random_products_no:
         random_products.append(products[r])
 
+# pagination
+    post_list = Product.objects.all()
+    paginator = Paginator(post_list, 12)
+    page = request.GET.get('page')
+ 
+    try:
+        posts = paginator.get_page(page)
+    except PageNotAnInteger:
+        posts = paginator.get_page(1)
+ 
+    except EmptyPage:
+        posts = paginator.get_page(paginator.num_pages)
+
     query = None
     categories = None
     sort = None
     direction = None
 
+#sorting options
     if request.GET:
         if 'sort' in request.GET:
             sortkey = request.GET['sort']
@@ -67,7 +82,9 @@ def all_products(request):
         'search_term': query,
         'current_categories': categories,
         'current_sorting': current_sorting,
-        'random_products': random_products
+        'random_products': random_products,
+        'page': page,
+        'posts': posts
     }
 
     return render(request, 'products/products.html', context)
