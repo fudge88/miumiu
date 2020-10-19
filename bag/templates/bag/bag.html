@@ -18,7 +18,6 @@
     <div class="row">
         <div class="col">
             <h2 class="mb-3">Your basket</h2>
-            <hr class="card-line-break mb-3">
         </div>
     </div>
 
@@ -28,11 +27,11 @@
     <div class="table-responsive card-line-break">
         <table class="table table-sm table-borderless">
             <thead class="text-black ">
-                <tr>
-                    <th scope="col">Product</th>
-                    <th scope="col"></th>
-                    <th scope="col">Quantity</th>
-                    <th scope="col">Price</th>
+                <tr class="yellow-table">
+                    <th scope="col" style="border-bottom: solid 2px #ffc10763">Product</th>
+                    <th scope="col" style="border-bottom: solid 2px #ffc10763"></th>
+                    <th scope="col" style="border-bottom: solid 2px #ffc10763">Quantity</th>
+                    <th scope="col" style="border-bottom: solid 2px #ffc10763">Price</th>
                 </tr>
             </thead>
             {% for item in bag_items %}

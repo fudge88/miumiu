@@ -231,6 +231,9 @@ select#sort-selector {
     font-size: larger;
 }
 
+.table td, .table th {
+    border-top: 1px solid #ffc10763;
+}
 
 .product-price{
     float: left;
