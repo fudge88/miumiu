@@ -2,16 +2,18 @@
     <div class="row">
         <div class="col col-lg-8 offset-lg-2">
         
+            <hr>
+            <h2 class="logo-font">Reviews for: </h2>
+            <h3>{{ product.name }}</h3>
             <hr class="card-line-break mt-3 mb-3">
-            <h4 class="logo-font">Reviews</h4>
         </div>
     </div>
     <div class="row">
-        <div class="col-12 col-sm-6 col-md-6 col-lg-4 offset-lg-2 all-reviews mb-4">
+        <div class="col-12 col-md-6 col-lg-4 offset-lg-2 all-reviews mb-4">
             <!-- if statement to go here (reviews) -->
             <!-- forloop -->
             {% for r in product_reviews %}
-            <div class="single-review mt-3 mb-3">
+            <div class="single-review mt-3 mb-4">
                 <div class="review-heading">
                     <span class="mr-3"><strong>{{r.User.username}}</strong></span>
                     <span class="text-muted">{{r.created_at}} </span>
@@ -38,7 +40,7 @@
             <!-- endif statement to go here (reviews) -->
         </div>
 
-        <div class="col-12 col-sm-6 col-md-6 col-lg-4 form-bg p-3">
+        <div class="col-12 col-md-6 col-lg-4 form-bg p-3">
             <h5 class="text-uppercase">Write a review:</h5>
             <form action="{% url 'product_detail' product.id %}" method="POST" class="form-group">
                 {% csrf_token %}
@@ -51,7 +53,7 @@
                 <textarea id="review" name="review" rows="4" cols="60" required ="true">
 
                 </textarea>
-                <button id="submit-button" class="btn product-shop-btn" type="submit">
+                <button id="submit-button" class="btn yellow-to-pink-btn" type="submit">
                     <span class="">Add review</span>
                 </button>
                 {% else %}

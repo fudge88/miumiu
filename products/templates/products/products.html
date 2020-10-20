@@ -16,7 +16,7 @@
             <hr class="card-line-break mt-5">
                 <h2 class="mt-5">Products</h2>
                 {% for c in current_categories %}
-                <a class="text-decoration-none" href="{% url 'products' %}?category={{ c.name }}">
+                <a class="text-decoration-none hyperlink" href="{% url 'products' %}?category={{ c.name }}">
                     <h4 class="p-2 mt-2">{{ c.friendly_name }}</h4>
                 </a>
                 {% endfor %}
@@ -40,7 +40,7 @@
                     <div class="col-12 col-md-6 order-md-first">
                         <p class="text-muted mt-3 text-center text-md-left">
                         {% if search_term or current_categories or current_sorting != 'None_None' %}
-                            <span class="small"><a href="{% url 'products' %}">Products Home</a> | </span>
+                            <span class="small"><a href="{% url 'products' %}" class="hyperlink">Products Home</a> | </span>
                         {% endif %}
                         {{ products|length }} Products{% if search_term %} found for <strong>"{{ search_term }}"</strong>{% endif %}
                         </p>
