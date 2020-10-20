@@ -14,6 +14,7 @@ from bag.contexts import bag_contents
 
 import stripe
 import json
+import random
 
 
 @require_POST
@@ -79,14 +80,16 @@ def checkout(request):
 
             # Save the info to the user's profile if all is well
             request.session['save_info'] = 'save-info' in request.POST
-            return redirect(reverse('checkout_success', args=[order.order_number]))
+            return redirect(reverse('checkout_success', args=[
+                order.order_number]))
         else:
             messages.error(request, 'There was an error with your form. \
                 Please double check your information.')
     else:
         bag = request.session.get('bag', {})
         if not bag:
-            messages.error(request, "There's nothing in your bag at the moment")
+            messages.error(
+                request, "There's nothing in your bag at the moment")
             return redirect(reverse('products'))
 
         current_bag = bag_contents(request)
@@ -136,6 +139,17 @@ def checkout_success(request, order_number):
     """
     Handle successful checkouts
     """
+    products = Product.objects.all()
+    try:
+        random_products_no = random.sample(range(0, len(products)), 12)
+    except:
+        random_products_no = random.sample(
+            range(0, len(products)), len(products))
+    print(random_products_no)
+    random_products = []
+    for r in random_products_no:
+        random_products.append(products[r])
+
     save_info = request.session.get('save_info')
     order = get_object_or_404(Order, order_number=order_number)
 
@@ -170,6 +184,7 @@ def checkout_success(request, order_number):
     template = 'checkout/checkout_success.html'
     context = {
         'order': order,
+        'random_products': random_products
     }
 
     return render(request, template, context)
