@@ -4,7 +4,7 @@
             <a class="nav-link mr-5" href="#" id="all-products-link" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                 Shop
             </a>
-            <div class="dropdown-menu border-0" aria-labelledby="all-products-link">
+            <div class="dropdown-menu mobile-ddm" aria-labelledby="all-products-link">
                 <a href="{% url 'products' %}?sort=price&direction=asc" class="dropdown-item">By Price</a>
                 <a href="{% url 'products' %}?sort=rating&direction=asc" class="dropdown-item ">By Rating</a>
                 <a href="{% url 'products' %}?sort=category&direction=asc" class="dropdown-item ">By Category</a>
@@ -16,7 +16,7 @@
             <a class="nav-link mr-5" href="#" id="face-link" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                 Face
             </a>
-            <div class="dropdown-menu border-0" aria-labelledby="face-link">
+            <div class="dropdown-menu mobile-ddm" aria-labelledby="face-link">
                 <a href="{% url 'products' %}?category=face_mask" class="dropdown-item">Face Masks</a>
                 <a href="{% url 'products' %}?category=facial_exfoliant" class="dropdown-item">Exfoliants</a>
                 <a href="{% url 'products' %}?category=facial_moisturiser" class="dropdown-item">Moisturisers</a>
@@ -27,7 +27,7 @@
             <a class="nav-link mr-5" href="#" id="body-link" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                 Body
             </a>
-            <div class="dropdown-menu border-0" aria-labelledby="body-link">
+            <div class="dropdown-menu mobile-ddm" aria-labelledby="body-link">
                 <a href="{% url 'products' %}?category=body_scrub" class="dropdown-item">Body Masks</a>
                 <a href="{% url 'products' %}?category=body_mask" class="dropdown-item">Body Scrubs</a>
                 <a href="{% url 'products' %}?category=body_moisturiser" class="dropdown-item">Body Moisturisers</a>
@@ -38,7 +38,7 @@
             <a class=" nav-link" href="#" id="hair-removal-link" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                 Hair Removal
             </a>
-            <div class="dropdown-menu border-0" aria-labelledby="hair-removal-link">
+            <div class="dropdown-menu mobile-ddm" aria-labelledby="hair-removal-link">
                 <a href="{% url 'products' %}?category=waxing_beads" class="dropdown-item">Painless wax</a>
                 <a href="{% url 'products' %}?category=hair_removal_aftercare" class="dropdown-item">Post-Wax Syrums</a>
             </div>
@@ -48,7 +48,7 @@
             <a class="nav-link mr-5" href="#" id="account-link" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                 Account
             </a>
-            <div class="dropdown-menu border-0" aria-labelledby="account-link">
+            <div class="dropdown-menu mobile-ddm" aria-labelledby="account-link">
                 {% if request.user.is_authenticated %}
                     {% if request.user.is_superuser %}
                         <a href="{% url 'add_product' %}" class="dropdown-item">Product Management</a>

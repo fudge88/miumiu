@@ -75,8 +75,7 @@ img.nav-img-top{
 }
 
 .dropdown-menu.show {
-    padding-left: 30px;
-    padding-right: 20px;
+    margin: 30px;
 }
 
 .w-100{
@@ -483,11 +482,30 @@ i.fa-stack-1x.fa-inverse{
     .main-logo-link{
         margin-top: 30px;
     }
+
+    /* .dropdown-menu a.dropdown-item */
+.dropdown-menu.border-0.show{
+    padding-top: 0;
+    padding-bottom: 0;
+}
+
+
     a.dropdown-item,
     .navbar-expand-lg .navbar-nav .dropdown-menu {
-        background-color: #e295e6;
+        background-color: #7CE6D7;
         text-transform: initial;
+        left: -60px;
     }
+   
+    a.dropdown-item:hover,
+     a.dropdown-item:active,
+    .navbar-expand-lg .navbar-nav .dropdown-menu:hover,
+    .navbar-expand-lg .navbar-nav .dropdown-menu:active {
+        background-color: #7CE6D7;
+        font-weight: 800;
+        color: #F7DC69;
+    }
+
     img.card-img-top.img-fluid {
         padding: 50px 30px 30px;
 }
