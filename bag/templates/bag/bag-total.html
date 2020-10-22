@@ -1,0 +1,13 @@
+
+<h6><strong>Basket Total: £{{ total|floatformat:2 }}</strong></h6>
+    {% if free_delivery_delta > 0 %}
+<h6>Delivery: £{{ delivery|floatformat:2 }}</h6>
+    {% else %}
+<h6 class="text-uppercase">Free Delivery</h6>
+    {% endif %}
+<h4 class="mt-4"><strong>Total: £{{ bag_total|floatformat:2 }}</strong></h4>
+    {% if free_delivery_delta > 0 %}
+<p class="mb-1">
+    Spend<strong> £{{ free_delivery_delta }}</strong> more to get Free UK delivery | Free Delivery when you spend over £30 
+</p>
+    {% endif %}

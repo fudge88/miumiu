@@ -314,8 +314,9 @@ input#new-image {
 /* toasts */
 .message-container{
     position: fixed;
-    top: 11rem;
-    right: 15px;
+    text-align: center;
+    width: -webkit-fill-available;
+    top: 9.2rem;
     z-index: 9999999999;
 }
 
@@ -591,7 +592,11 @@ div.carousel-item:active{
         font-size: 3rem;
     }
     .message-container{
-    right: 0;
+    top: 4rem;
+}
+.checkout-btn{
+    width: 100%;
+    border: solid 1px #F7DC69;
 }
 }
 @media (min-width: 768px){

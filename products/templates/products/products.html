@@ -86,7 +86,7 @@
                                     <p class="product-price lead mb-0 text-left mt-2">£{{ product.price }}<small class="text-muted">/ {{ product.weight}}g</small></p>
 
                                     {% if request.user.is_superuser %}
-                                        <small class="ml-3">
+                                        <small class="ml-3 mt-2">
                                             <a href="{% url 'edit_product' product.id %}">Edit</a> |
                                             <a class="text-danger" href="{% url 'delete_product' product.id %}">Delete</a>
                                         </small>

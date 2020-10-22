@@ -27,18 +27,6 @@ def all_products(request):
     for r in random_products_no:
         random_products.append(products[r])
 
-# pagination
-    post_list = Product.objects.all()
-    paginator = Paginator(post_list, 12)
-    page = request.GET.get('page')
- 
-    try:
-        posts = paginator.get_page(page)
-    except PageNotAnInteger:
-        posts = paginator.get_page(1)
- 
-    except EmptyPage:
-        posts = paginator.get_page(paginator.num_pages)
 
     query = None
     categories = None
@@ -76,6 +64,19 @@ def all_products(request):
             products = products.filter(queries)
 
     current_sorting = f'{sort}_{direction}'
+
+    # pagination
+    post_list = products
+    paginator = Paginator(post_list, 12)
+    page = request.GET.get('page')
+ 
+    try:
+        posts = paginator.get_page(page)
+    except PageNotAnInteger:
+        posts = paginator.get_page(1)
+ 
+    except EmptyPage:
+        posts = paginator.get_page(paginator.num_pages)
 
     context = {
         'products': products,
