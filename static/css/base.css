@@ -483,10 +483,8 @@ i.fa-stack-1x.fa-inverse{
         margin-top: 30px;
     }
 
-    /* .dropdown-menu a.dropdown-item */
-.dropdown-menu.border-0.show{
-    padding-top: 0;
-    padding-bottom: 0;
+.dropdown-menu.border-0.mt-3.show {
+    padding: 0;
 }
 
 
