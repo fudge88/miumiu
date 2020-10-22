@@ -43,7 +43,7 @@ class ProductReview(models.Model):
     Product = models.ForeignKey(Product, on_delete=models.CASCADE)
     User = models.ForeignKey(User, on_delete=models.CASCADE)
     subject = models.CharField(max_length=50, blank=True)
-    review = models.CharField(max_length=250, blank=True)
+    review = models.TextField(max_length=250, blank=False, null=False)
     rate = models.IntegerField(default=1)
     created_at = models.DateTimeField(auto_now=True)
 
