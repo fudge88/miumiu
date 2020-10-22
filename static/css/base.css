@@ -649,6 +649,7 @@ coding snow - youtube
 .search-box input:focus{
     width: 240px;
     padding: 0 6px;
+    height: 10px;
 }
 
 .search-btn{
