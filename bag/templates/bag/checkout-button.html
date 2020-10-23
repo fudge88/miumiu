@@ -1,23 +1,25 @@
+<!-- buttons to continue shopping (redirected back to products), or checkout, checkout button only shows 
+to authenticated users, otherwise the users are redireted to the login page -->
 <div class="checkout">
-<a href="{% url 'products' %}" class="hyperlink btn btn-outline-dark checkout-btn">
-    <span class="icon">
-        <i class="fas fa-chevron-left"></i>
-    </span>
-    <span class="text-uppercase ">Keep Shopping</span>
-</a>
-{% if user.is_authenticated %}
-<a href="{% url 'checkout' %}" class="btn yellow-to-pink-btn checkout-btn">
-    <span class="text-uppercase">Secure Checkout</span>
-    <span class="icon">
-        <i class="fas fa-lock"></i>
-    </span>
-</a>
-{% else %}
-<a href="{% url 'account_login' %}" class="btn yellow-to-pink-btn checkout-btn">
-    <span class="text-uppercase">Login to checkout</span>
-    <span class="icon">
-        <i class="fas fa-lock"></i>
-    </span>
-</a>
-{% endif %}
+    <a href="{% url 'products' %}" class="hyperlink btn btn-outline-dark checkout-btn">
+        <span class="icon">
+            <i class="fas fa-chevron-left"></i>
+        </span>
+        <span class="text-uppercase ">Keep Shopping</span>
+    </a>
+    {% if user.is_authenticated %}
+    <a href="{% url 'checkout' %}" class="btn yellow-to-pink-btn checkout-btn">
+        <span class="text-uppercase">Secure Checkout</span>
+        <span class="icon">
+            <i class="fas fa-lock"></i>
+        </span>
+    </a>
+    {% else %}
+    <a href="{% url 'account_login' %}" class="btn yellow-to-pink-btn checkout-btn">
+        <span class="text-uppercase">Login to checkout</span>
+        <span class="icon">
+            <i class="fas fa-lock"></i>
+        </span>
+    </a>
+    {% endif %}
 </div>

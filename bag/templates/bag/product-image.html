@@ -1,5 +1,6 @@
+<!-- image of the products selected by the users, if teh product has no image a default image will display -->
 {% if item.product.image %}
-    <img class="img-fluid rounded" src="{{ item.product.image.url }}" alt="{{ product.name }}">
+<img class="img-fluid rounded" src="{{ item.product.image.url }}" alt="{{ product.name }}">
 {% else %}
-    <img class="img-fluid rounded" src="{{ MEDIA_URL }}noimg.png" alt="{{ product.name }}">
+<img class="img-fluid rounded" src="{{ MEDIA_URL }}noimg.png" alt="{{ product.name }}">
 {% endif %}

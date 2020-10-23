@@ -12,29 +12,31 @@
 
 
 {% block content %}
+<!-- white backdrop -->
 <div class="overlay"></div>
-
-<div class="container">
+<!-- page header -->
+<div class="container mb-2">
     <div class="row">
         <div class="col">
-        <br>
-            <h2 class="mb-3">Your basket</h2>
+            <br>
+            <h2 class="mb-3 heading-top-spacing">Your basket</h2>
         </div>
     </div>
-
+    <!-- displaying bag items -->
     <div class="row">
         <div class="col">
         {% if bag_items %}
+        <!-- small screens only -->
             <div class="d-block d-md-none">
                 <div class="row">
                     <div class="col">
-                    {% include "bag/bag-total.html" %}
+                        {% include "bag/bag-total.html" %}
                     </div>
                 </div>
                 <div class="row">
                     <div class="col mt-2">
-                    {% include "bag/checkout-button.html" %}
-                    <p class="test-muted mt-2 mb-2">A summary of your bag contents:</p>
+                        {% include "bag/checkout-button.html" %}
+                        <p class="test-muted mt-2 mb-2">A summary of your bag contents:</p>
                     </div>
                 </div>
                 {% for item in bag_items %}
@@ -57,57 +59,59 @@
                 </div>
                 {% endfor %}
             </div>
-    <div class="table-responsive card-line-break d-none d-md-block">
-        <table class="table table-sm table-borderless">
-            <thead class="text-black ">
-                <tr class="yellow-table">
-                    <th scope="col" style="border-bottom: solid 2px #ffc10763">Product</th>
-                    <th scope="col" style="border-bottom: solid 2px #ffc10763"></th>
-                    <th scope="col" style="border-bottom: solid 2px #ffc10763">Quantity</th>
-                    <th scope="col" style="border-bottom: solid 2px #ffc10763">Price</th>
-                </tr>
-            </thead>
-            {% for item in bag_items %}
-            <tr>
-             
-                <td class="p-3 w-25">
-{% include "bag/product-image.html" %}
-                </td>
-                <td class="py-3">
-{% include "bag/product-info.html" %}
-                </td>
-                <td class="py-3">
-{% include "bag/quantity-form.html" %}
-                </td>
-                <td class="py-3">
-                    <p class="my-0">£{{ item.product.price | calc_subtotal:item.quantity }}</p>
-                </td>
-            </tr>
-            {% endfor %}
-            <tr>
-                <td colspan="5" class="pt-5 text-right">
-{% include "bag/bag-total.html" %}
-                </td>
-            </tr>
-            <tr>
-                <td colspan="5" class="text-right">
-{% include "bag/checkout-button.html" %}
-                </td>
-            </tr>
-        </table>
-    </div>
-    {% else %}
-        <h3 class="mb-5">There are no items in your basket</h3>
-        <h2>Looks like a good time to <a href="{% url 'products' %}" class="hyperlink"><strong>start shopping!</strong></a></h2>
-        <a href="{% url 'products' %}" class="btn btn-lg hyperlink">
-            <span class="icon">
-                <i class="fas fa-chevron-left"></i>
-            </span>
-            <span class="text-uppercase">Back to Products</span>
-        </a>
-    {% endif %}
+            <!-- medium screens and above -->
+            <div class="table-responsive card-line-break d-none d-md-block">
+                <table class="table table-sm table-borderless">
+                    <thead class="text-black ">
+                        <tr class="yellow-table">
+                            <th scope="col" style="border-bottom: solid 2px #ffc10763">Product</th>
+                            <th scope="col" style="border-bottom: solid 2px #ffc10763"></th>
+                            <th scope="col" style="border-bottom: solid 2px #ffc10763">Quantity</th>
+                            <th scope="col" style="border-bottom: solid 2px #ffc10763">Price</th>
+                        </tr>
+                    </thead>
+                    {% for item in bag_items %}
+                    <tr>
+                        <td class="p-3 w-25">
+                            {% include "bag/product-image.html" %}
+                        </td>
+                        <td class="py-3">
+                            {% include "bag/product-info.html" %}
+                        </td>
+                        <td class="py-3">
+                            {% include "bag/quantity-form.html" %}
+                        </td>
+                        <td class="py-3">
+                            <p class="my-0">£{{ item.product.price | calc_subtotal:item.quantity }}</p>
+                        </td>
+                    </tr>
+                    {% endfor %}
+                    <tr>
+                        <td colspan="5" class="pt-5 text-right">
+                            {% include "bag/bag-total.html" %}
+                        </td>
+                    </tr>
+                    <tr>
+                        <td colspan="5" class="text-right">
+                            {% include "bag/checkout-button.html" %}
+                        </td>
+                    </tr>
+                </table>
+            </div>
+        {% else %}
+            <h3 class="mb-5">There are no items in your basket</h3>
+            <h2>Looks like a good time to <a href="{% url 'products' %}" class="hyperlink"><strong>start shopping!</strong></a></h2>
+            <a href="{% url 'products' %}" class="btn btn-lg hyperlink">
+                <span class="icon">
+                    <i class="fas fa-chevron-left"></i>
+                </span>
+                <span class="text-uppercase">Back to Products</span>
+            </a>
+        {% endif %}
+        </div>
     </div>
 </div>
+<!-- back to the top button -->
 <div class="btt-button shadow-sm rounded-0 border border-black">
     <a class="btt-link d-flex h-100">
         <i class="fas fa-angle-double-up mx-auto my-auto"></i>

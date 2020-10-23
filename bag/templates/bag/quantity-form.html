@@ -1,3 +1,4 @@
+<!-- this form allow steh user to increase or reduce the number of the same item in their bag -->
 <form class="form update-form" method="POST" action="{% url 'edit_bag' item.item_id %}">
     {% csrf_token %}
     <div class="form-group">
@@ -11,12 +12,12 @@
                 </button>
             </div>
             <input class="form-control form-control-sm qty_input" type="number"
-            name="quantity" value="{{ item.quantity }}" min="1" max="5"
-            data-item_id="{{ item.item_id }}"
-            id="id_qty_{{ item.item_id }}">
+                name="quantity" value="{{ item.quantity }}" min="1" max="5"
+                data-item_id="{{ item.item_id }}"
+                id="id_qty_{{ item.item_id }}">
             <div class="input-group-append">
                 <button class="increment-qty btn btn-sm "
-                data-item_id="{{ item.item_id }}" id="increment-qty_{{ item.item_id }}">
+                    data-item_id="{{ item.item_id }}" id="increment-qty_{{ item.item_id }}">
                     <span>
                         <i class="fas fa-plus fa-sm"></i>
                     </span>
@@ -25,6 +26,7 @@
         </div>
     </div>
 </form>
+<!-- update and remove buttons for user to adjust bag-->
 <a class="update-link text-info"><small>Update</small></a>
 <a class="remove-item text-danger float-right" id="remove_{{ item.item_id }}"><small>Remove</small></a>
                     
