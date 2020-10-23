@@ -3,11 +3,9 @@ from django.contrib import messages
 
 from products.models import Product
 
-# Create your views here.
-
 
 def shopping_bag(request):
-    """ view to return the hsopping bag page"""
+    """ renders shopping bag page"""
     return render(request, 'bag/bag.html')
 
 
@@ -21,7 +19,8 @@ def add_to_bag(request, item_id):
 
     if item_id in list(bag.keys()):
         bag[item_id] += quantity
-        messages.success(request, f'Updated {product.name} quantity to {bag[item_id]}')
+        messages.success(
+            request, f'Updated {product.name} quantity to {bag[item_id]}')
     else:
         bag[item_id] = quantity
         messages.success(request, f'Added {product.name} to your basket')
@@ -31,7 +30,7 @@ def add_to_bag(request, item_id):
 
 
 def edit_bag(request, item_id):
-    """Adjust the quantity of the specified product to the specified amount"""
+    """Adjust the quantity of the specified product in the bag"""
 
     product = get_object_or_404(Product, pk=item_id)
     quantity = int(request.POST.get('quantity'))
@@ -39,7 +38,8 @@ def edit_bag(request, item_id):
 
     if quantity > 0:
         bag[item_id] = quantity
-        messages.success(request, f'Updated {product.name} quantity to {bag[item_id]}')
+        messages.success(
+            request, f'Updated {product.name} quantity to {bag[item_id]}')
     else:
         bag.pop(item_id)
         messages.success(request, f'Removed {product.name} from your basket')
@@ -49,7 +49,7 @@ def edit_bag(request, item_id):
 
 
 def remove_item(request, item_id):
-    """ Remove item from shopping bag"""
+    """ Removes item from shopping bag"""
     product = Product.objects.get(pk=item_id)
 
     try:

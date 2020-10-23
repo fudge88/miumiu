@@ -1,20 +1,25 @@
 {% extends "base.html" %} 
 {% load static %} 
 {% block page_header %}
-<div class="container header-container h-100">
-  <div class="row h-100">
-    <div class="col home-page-heading">
-        <h1>Self Love First, Babe.
-        <br>
-        Self Love First.</h1>
-        <p>All the products you could <strong class="text-uppercase">ever</strong> need.</p>
-        <a href="{% url 'products' %}" class="yellow-to-pink-btn" >Shop Now</a>
-    </div>
-    
+<div class="container header-container">
+  <div class="row">
+    <div class="col"></div>
   </div>
 </div>
 {% endblock %} 
 
-
 {% block content %}
+<!-- home page heading and welcoming statement -->
+<div class="container header-container h-100">
+  <div class="row h-100">
+    <div class="col">
+        <h1>Self Love First, Babe.
+        <br>
+        Self Love First.</h1>
+        <p>All the products you could <strong class="text-uppercase">ever</strong> need.</p>
+        <!-- action button -->
+        <a href="{% url 'products' %}" class="yellow-to-pink-btn" >Shop Now</a>
+    </div>
+  </div>
+</div>
 {% endblock %} 

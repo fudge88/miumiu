@@ -14,16 +14,18 @@
 {% endblock %}
 
 {% block content %}
+<!-- white backdrop -->
 <div class="overlay"></div>
+<!-- page header -->
 <div class="container">
     <div class="row">
         <div class="col">
-            <hr>
-            <h2 class="logo-font mb-4">Thank You</h2>
-            <hr class="card-line-break mt-3 mb-4">
-            <p class="text-black">Your order information is below. A confirmation email will be sent to <strong>{{ order.email }}</strong>.</p>
+            <h2 class="heading-top-spacing logo-font">Your basket</h2>
+            <hr class="d-block d-md-none card-line-break mt-2 mb-4">
+            <p>Your order information is below. A confirmation email will be sent to <strong>{{ order.email }}</strong>.</p>
         </div>
     </div>
+    <!-- confirmation of order summary -->
     <div class="row">
         <div class="col-12 col-lg-6">
             <div class="order-confirmation-wrapper">
@@ -174,12 +176,14 @@
                 </div>
             </div>
         </div>
+        <!-- in house product promotion -->
         <div class="col-12 col-lg-6 d-none d-md-block">
             <div class="row">
-            {% include 'checkout/includes/product_promo.html' %}
+                {% include 'checkout/includes/product_promo.html' %}
             </div>
         </div>
     </div>
+    <!-- action buttons -->
     <div class="row">
         <div class="col-12 col-lg-6 text-right">
             {% if from_profile %}

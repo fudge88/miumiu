@@ -28,6 +28,6 @@ urlpatterns = [
     path('bag/', include('bag.urls')),
     path('checkout/', include('checkout.urls')),
     path('profile/', include('profiles.urls')),
-    path('favicon.png', RedirectView.as_view(url=staticfiles_storage.url
-                                             ('static/favicon/favicon(1).ico'))),
+    path('favicon.png', RedirectView.as_view(url=staticfiles_storage.url(
+        'static/favicon/favicon(1).ico'))),
 ] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)

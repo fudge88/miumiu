@@ -2,102 +2,99 @@
 {% load static %}
 
 {% block page_header %}
-    <div class="container header-container">
-        <div class="row ">
-        </div>
+<div class="container header-container">
+    <div class="row">
+        <div class="col"></div>
     </div>
-    
-{% endblock %}z
+</div>
+{% endblock %}
 
 {% block content %}
+<!-- white backdrop -->
 <div class="overlay"></div>
 <div class="container-fluid">
-  <div class="row">
-    <div class="col-12 col-md-6 col-lg-4 offset-lg-2">
-    <div class="sm-single-name">
-    <h1 class="logo-font mb-0">{{ product.name }}</h1>
-    <h3>{{ product.short_description }}</h3>
-    </div>
-      <div class="image-container my-5">
-        {% if product.image %}
-        <a href="{{ product.image.url }}" target="_blank">
-          <img
-            class="card-img-top img-fluid"
-            src="{{ product.image.url }}"
-            alt="{{ product.name }}"
-          />
-        </a>
-        {% else %}
-        <a href="">
-          <img
-            class="card-img-top img-fluid"
-            src="{{ MEDIA_URL }}noimg.png"
-            alt="{{ product.name }}"
-        /></a>
-        {% endif %}
-      </div>
-    </div>
-    <div class="col-12 col-md-6 col-lg-4">
-      <div class=" mb-5 mt-md-5">
-      <div class="lg-single-name">
-        <h1 class="logo-font mb-0">{{ product.name }}</h1>
-        <h3>{{ product.short_description }}</h3>
-      </div>
-      <div>
-        <h3 class="mb-0 font-weight-bold">£{{ product.price }}/ <small>{{ product.weight }}g</small></h3>
-        {% if product.rating %}
-        <small class="text-muted"
-          ><i class="fas fa-star mr-1"></i>{{ product.rating }} / 5</small>
-        {% else %}
-        <small class="text-muted">No Rating</small>
-        {% endif %}
-      </div>
-        <hr class="card-line-break my-3">
-        {% if product.category %}
-            <h5 class="small mt-1 mb-0">
-                <a class="text-muted" href="{% url 'products' %}?category={{ product.category.name }}">
-                    {{ product.category.friendly_name }}
-                </a>
-            </h5>
-        {% endif %} 
-        {% if request.user.is_superuser %}
-            <small class="">
-                <a href="{% url 'edit_product' product.id %}">Edit</a> | 
-                <a class="text-danger" href="{% url 'delete_product' product.id %}">Delete</a>
-            </small>
-        {% else %}
-        <form class="form" action="{% url 'add_to_bag' product.id %}" method="POST">  
-        {% csrf_token %}
-        <div class="buying-options input-group my-3">
-            <label class="mt-2 pr-2" for="Qty">Qty:</label>
-                <input type="number" class="qty_input side-by-side" value="1" width="48" name="quantity" min="1" max="99" data-item_id="{{ product.id }}" id="id_qty_{{ product.id }}">
-            <input type="submit" class="btn yellow-to-pink-btn mr-3" value="Add to Basket">
-            <ul class="social-media">
-                <li><a href="https://www.instagram.com/" target="_blank"><i class="icon fab fa-instagram fa-lg"></i></a></li>
-                <li><a href="https://www.snapchat.com/" target="_blank"><i class="icon fab fa-snapchat fa-lg"></i></a></li>
-            </ul>
-             <input type="hidden" name="redirect_url" value="{{ request.path }}">
+    <div class="row">
+        <!-- specified product image -->
+        <div class="col-12 col-md-6 col-lg-4 offset-lg-2">
+            <div class="image-container my-5">
+                {% if product.image %}
+                    <a href="{{ product.image.url }}" target="_blank">
+                        <img class="card-img-top img-fluid" src="{{ product.image.url }}" alt="{{ product.name }}"/>
+                    </a>
+                {% else %}
+                    <a href="{{ product.image.url }}" target="_blank">
+                        <img class="card-img-top img-fluid" src="{{ MEDIA_URL }}noimg.png" alt="{{ product.name }}" />
+                    </a>
+                {% endif %}
+            </div>
         </div>
-        </form>
-        {% endif %}
-          <div class="col-12 pl-0">
-            <a href="{% url 'products' %}" class="btn mb-2 hyperlink pl-0">
-                <span class="icon">
-                    <i class="fas fa-chevron-left"></i>
-                </span>Go back to 
-                <span>Continue Shopping</span>
-            </a>
-          </div>
-        <div class="">
-            <p class="mb-0"><strong>Description:</strong>
-            {{ product.description }}</p>
-            <br>
-            <p class=""><strong>How to use:</strong>
-                {{ product.directions }}</p>
+        <!-- specifid prodcut detail -->
+        <div class="col-12 col-md-6 col-lg-4">
+            <div class=" mb-5 mt-md-5">
+                <div class="lg-single-name">
+                    <h1 class="logo-font mb-0">{{ product.name }}</h1>
+                    <h3>{{ product.short_description }}</h3>
+                </div>
+                <div>
+                    <h3 class="mb-0 font-weight-bold">£{{ product.price }}/ <small>{{ product.weight }}g</small></h3>
+                    {% if product.rating %}
+                        <small class="text-muted" ><i class="fas fa-star mr-1"></i>{{ product.rating }} / 5</small>
+                    {% else %}
+                        <small class="text-muted">No Rating</small>
+                    {% endif %}
+                </div>
+                <hr class="card-line-break my-3">
+                {% if product.category %}
+                <h5 class="small mt-1 mb-0">
+                    <a class="text-muted" href="{% url 'products' %}?category={{ product.category.name }}">
+                        {{ product.category.friendly_name }}
+                    </a>
+                </h5>
+                {% endif %} 
+                <!-- edit or delete buttons displayed only for superuser -->
+                {% if request.user.is_superuser %}
+                <small>
+                    <a href="{% url 'edit_product' product.id %}">Edit</a> | 
+                    <a class="text-danger" href="{% url 'delete_product' product.id %}">Delete</a>
+                </small>
+                {% else %}
+                <!-- form to input quantity of product, and add-to-bag button -->
+                <form class="form" action="{% url 'add_to_bag' product.id %}" method="POST">  
+                    {% csrf_token %}
+                    <div class="buying-options input-group my-3">
+                        <label class="mt-2 pr-2" for="Qty" id="qty_input">Qty:</label>
+                        <input type="number" class="qty_input side-by-side" value="1" width="48" name="quantity" min="1" max="99" data-item_id="{{ product.id }}" id="id_qty_{{ product.id }}">
+                        <!-- action button -->
+                        <input type="submit" class="btn yellow-to-pink-btn mr-3" value="Add to Basket">
+                        <!-- social media links-->
+                        <ul class="social-media">
+                            <li><a href="https://www.instagram.com/" target="_blank"><i class="icon fab fa-instagram fa-lg"></i></a></li>
+                            <li><a href="https://www.snapchat.com/" target="_blank"><i class="icon fab fa-snapchat fa-lg"></i></a></li>
+                        </ul>
+                        <input type="hidden" name="redirect_url" value="{{ request.path }}">
+                    </div>
+                </form>
+                {% endif %}
+                <!-- action button -->
+                <div class="col-12 pl-0">
+                    <a href="{% url 'products' %}" class="btn mb-2 hyperlink pl-0">
+                        <span class="icon">
+                            <i class="fas fa-chevron-left"></i>
+                        </span>Go back to 
+                        <span>Continue Shopping</span>
+                    </a>
+                </div>
+                <!-- description and directions product detail -->
+                <div>
+                    <p class="mb-0"><strong>Description:</strong> {{ product.description }}</p>
+                    <br>
+                    <p><strong>How to use:</strong> {{ product.directions }}</p>
+                </div>
+            </div>
         </div>
-      </div>
     </div>
-  </div>
 </div>
+<!-- product revies associated to the product -->
 {% include 'products/includes/product_reviews.html' %}
+
 {% endblock %}

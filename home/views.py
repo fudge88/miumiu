@@ -1,5 +1,5 @@
 from django.shortcuts import render
-from django.views.generic import TemplateView
+# from django.views.generic import TemplateView
 
 
 def index(request):
@@ -8,4 +8,5 @@ def index(request):
 
 
 def location(request):
+    """ view for location/map"""
     return render(request, 'home/map.html')

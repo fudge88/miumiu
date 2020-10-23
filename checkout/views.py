@@ -78,7 +78,7 @@ def checkout(request):
                     order.delete()
                     return redirect(reverse('shopping_bag'))
 
-            # Save the info to the user's profile if all is well
+            # Save the info to the user's profile if everything is ok
             request.session['save_info'] = 'save-info' in request.POST
             return redirect(reverse('checkout_success', args=[
                 order.order_number]))
@@ -137,8 +137,9 @@ def checkout(request):
 
 def checkout_success(request, order_number):
     """
-    Handle successful checkouts
+    Handle successful checkouts, random selection from database, and pagination
     """
+    # random product selection from database
     products = Product.objects.all()
     try:
         random_products_no = random.sample(range(0, len(products)), 12)
