@@ -52,7 +52,7 @@
     </div>
     <!-- product display -->
     <div class="row">
-        <div class="product-container col-10 offset-1">
+        <div class="product-container col">
             <div class="row mt-1 mb-2"></div>
             <div class="row">
             {% for product in posts %}
@@ -84,22 +84,24 @@
                         <div class="row">
                             <div class="col">
                                 <p class="product-price lead mb-0 text-left mt-2">£{{ product.price }}<small class="text-muted">/ {{ product.weight}}g</small></p>
-                                <!-- edit and delete hyperlinked options for superuser only -->
-                                {% if request.user.is_superuser %}
-                                    <small class="ml-3 mt-2">
-                                        <a href="{% url 'edit_product' product.id %}">Edit</a> |
-                                        <a class="text-danger" href="{% url 'delete_product' product.id %}">Delete</a>
-                                    </small>
-                                {% else %}
-                                <!-- quick-add action button for user, also product information hyperlink -->
-                                <form class="form" action="{% url 'add_to_bag' product.id %}" method="POST">
-                                {% csrf_token %}
-                                    <input name="quantity" type="hidden" value="1">
-                                    <input type="hidden" name="redirect_url" value="{{ request.path }}">
-                                    <input type="submit" class="btn quick-add-btn mr-2 mt-2" value="+">
-                                </form>
-                                <a href="{% url 'product_detail' product.id %}" class="info-link mr-3">i</a>
-                                {% endif %}
+                            </div>
+                            <div class="product-card-action">
+                            <!-- edit and delete hyperlinked options for superuser only -->
+                            {% if request.user.is_superuser %}
+                                <small class="ml-3 mt-3">
+                                    <a href="{% url 'edit_product' product.id %}">Edit</a> |
+                                    <a class="text-danger" href="{% url 'delete_product' product.id %}">Delete</a>
+                                </small>
+                            {% else %}
+                            <!-- quick-add action button for user, also product information hyperlink -->
+                            <a href="{% url 'product_detail' product.id %}" class="info-link mr-3">i</a>
+                            <form class="form" action="{% url 'add_to_bag' product.id %}" method="POST">
+                            {% csrf_token %}
+                                <input name="quantity" type="hidden" value="1">
+                                <input type="hidden" name="redirect_url" value="{{ request.path }}">
+                                <input type="submit" class="btn quick-add-btn mr-2 mt-2" value="+">
+                            </form>
+                            {% endif %}
                             </div>
                         </div>
                     </div>
