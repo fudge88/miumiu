@@ -16,6 +16,10 @@
     <div class="row">
         <!-- specified product image -->
         <div class="col-12 col-md-6 col-lg-4 offset-lg-2">
+            <div class="sm-single-name">
+                <h1 class="logo-font mb-0">{{ product.name }}</h1>
+                <h3>{{ product.short_description }}</h3>
+            </div>
             <div class="image-container my-5">
                 {% if product.image %}
                     <a href="{{ product.image.url }}" target="_blank">
@@ -62,15 +66,17 @@
                 <form class="form" action="{% url 'add_to_bag' product.id %}" method="POST">  
                     {% csrf_token %}
                     <div class="buying-options input-group my-3">
+                    <div>
                         <label class="mt-2 pr-2" for="Qty" id="qty_input">Qty:</label>
-                        <input type="number" class="qty_input side-by-side" value="1" width="48" name="quantity" min="1" max="99" data-item_id="{{ product.id }}" id="id_qty_{{ product.id }}">
+                        <input type="number" class="qty_input" value="1" width="48" name="quantity" min="1" max="99" data-item_id="{{ product.id }}" id="id_qty_{{ product.id }}">
                         <!-- action button -->
-                        <input type="submit" class="btn yellow-to-pink-btn mr-3" value="Add to Basket">
+                        <input type="submit" class="btn yellow-to-pink-btn mr-2" value="Add to Basket">
+                    </div>
                         <!-- social media links-->
-                        <ul class="social-media">
-                            <li><a href="https://www.instagram.com/" target="_blank"><i class="icon fab fa-instagram fa-lg"></i></a></li>
-                            <li><a href="https://www.snapchat.com/" target="_blank"><i class="icon fab fa-snapchat fa-lg"></i></a></li>
-                        </ul>
+                        <div class="social-media mt-2">
+                            <a href="https://www.instagram.com/" target="_blank"><i class="icon fab fa-instagram fa-lg"></i></a>
+                            <a href="https://www.snapchat.com/" target="_blank"><i class="icon fab fa-snapchat fa-lg"></i></a>
+                        </div>
                         <input type="hidden" name="redirect_url" value="{{ request.path }}">
                     </div>
                 </form>
