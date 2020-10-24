@@ -2,7 +2,6 @@
 <!doctype html>
 <html lang="en">
     <head>
-
         {% block meta %}
             <!-- Required meta tags -->
             <meta http-equiv="X-UA-Compatible" content="ie=edge">
@@ -114,19 +113,20 @@
                     {% include 'includes/main-nav.html' %}
                 </nav>
             </div>
+
             <!-- small and medium screen banner -->
             <div id="delivery-banner" class="row text-center d-md-none">
                 <div class="col promo-strip">
                     <div id="carouselPromoIndicators" class="carousel slide w-100" data-ride="carousel">
                         <div class="carousel-inner">
                             <div class="carousel-item carousel-item-strip active">
-                                <a href="" class="promo-strip"><i class="fas fa-truck"></i> Free delivery on orders over £{{ free_delivery_threshold }}!</a>
+                                <a href="#" class="promo-strip"><i class="fas fa-truck"></i> Free delivery on orders over £{{ free_delivery_threshold }}!</a>
                             </div>
                             <div class="carousel-item carousel-item-strip">
-                                <a href="" class="promo-strip"><i class="fas fa-check"></i> 30% off members only!</a>
+                                <a href="#" class="promo-strip"><i class="fas fa-check"></i> 30% off members only!</a>
                             </div>
                             <div class="carousel-item carousel-item-strip">
-                                <a href="" class="promo-strip"><i class="fas fa-mobile-alt"></i> Become a member today.</a>
+                                <a href="#" class="promo-strip"><i class="fas fa-mobile-alt"></i> Become a member today.</a>
                             </div>
                         </div>
                     </div>
@@ -166,6 +166,10 @@
 
         {% block content %}
         {% endblock %}
+
+        <footer>
+            {% include 'includes/footer.html' %}
+        </footer>
 
         {% block postloadjs %}
         <script type="text/javascript">

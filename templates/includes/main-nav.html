@@ -1,3 +1,4 @@
+<!-- main navigation down down for small and medium screen sizes -->
 <div class="collapse navbar-collapse" id="main-nav">
     <ul class="navbar-nav w-auto mx-auto">
         <li class="nav-item dropdown">
@@ -11,7 +12,6 @@
                 <a href="{% url 'products' %}" class="dropdown-item">All Products</a>
             </div>
         </li>
-
         <li class="nav-item dropdown">
             <a class="nav-link mr-5" href="#" id="face-link" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                 Face
@@ -22,7 +22,6 @@
                 <a href="{% url 'products' %}?category=facial_moisturiser" class="dropdown-item">Moisturisers</a>
             </div>
         </li>
-
         <li class="nav-item dropdown">
             <a class="nav-link mr-5" href="#" id="body-link" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                 Body
@@ -33,7 +32,6 @@
                 <a href="{% url 'products' %}?category=body_moisturiser" class="dropdown-item">Body Moisturisers</a>
             </div>
         </li>
-
         <li class="nav-item dropdown">
             <a class=" nav-link" href="#" id="hair-removal-link" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                 Hair Removal
@@ -43,7 +41,6 @@
                 <a href="{% url 'products' %}?category=hair_removal_aftercare" class="dropdown-item">Post-Wax Syrums</a>
             </div>
         </li>
-
         <li class="nav-item dropdown d-lg-none">
             <a class="nav-link mr-5" href="#" id="account-link" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                 Account
@@ -53,15 +50,15 @@
                     {% if request.user.is_superuser %}
                         <a href="{% url 'add_product' %}" class="dropdown-item">Product Management</a>
                     {% endif %}
-                    <a href="{% url 'profile' %}" class="dropdown-item">My Profile</a>
-                    <a href="{% url 'account_logout' %}" class="dropdown-item">Logout</a>
+                        <a href="{% url 'profile' %}" class="dropdown-item">My Profile</a>
+                        <a href="{% url 'account_logout' %}" class="dropdown-item">Logout</a>
                 {% else %}
-                    <a href="{% url 'account_signup' %}" class="dropdown-item">Register</a>
-                    <a href="{% url 'account_login' %}" class="dropdown-item">Login</a>
+                        <a href="{% url 'account_signup' %}" class="dropdown-item">Register</a>
+                        <a href="{% url 'account_login' %}" class="dropdown-item">Login</a>
                 {% endif %}
             </div>
         </li>
-        <li class="nav-item dropdown">
+        <li class="nav-item dropdown d-lg-none">
             <a class="nav-link mr-5" href="{% url 'location' %}">
                 Where to find us
             </a>

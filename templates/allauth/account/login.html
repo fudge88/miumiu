@@ -18,13 +18,14 @@
 of your existing third party accounts. Or, <a href="{{ signup_url }}">sign up</a>
 for a {{ site_name }} account and sign in below:{% endblocktrans %}</p>
 
+<!-- google login -->
 <div class="socialaccount_ballot">
 
   <div class="socialaccount_providers">
     {% include "socialaccount/snippets/provider_list.html" with process="login" %}
   </div>
 
-  <div class="login-or">{% trans 'or' %}</div>
+  <div class="login-or mt-2 mb-2">{% trans 'or' %}</div>
 
 </div>
 
@@ -43,12 +44,8 @@ for a {{ site_name }} account and sign in below:{% endblocktrans %}</p>
   {% endif %}
 
   <a class="btn btn-outline-dark" href="{% url 'home' %}">Home</a>
-  <!-- ===============================testing here -->
-{% if from_bag %}
-  <a class="btn btn-outline-dark" href="{% url 'checkout' %}">Sign In</a>
-  {% else %}
   <button class="primaryAction" type="submit">Sign In</button>
-  {% endif %}
+ 
   <p class="mt-2">
     <a class="button secondaryAction hyperlink" href="{% url 'account_reset_password' %}">Forgot Password</a>
   </p>

@@ -10,6 +10,18 @@
 
 <p>{% blocktrans %}Already have an account? Then please <a class="hyperlink" href="{{ login_url }}">sign in</a>.{% endblocktrans %}</p>
 
+<!-- google login -->
+<div class="socialaccount_ballot">
+
+  <div class="socialaccount_providers">
+    {% include "socialaccount/snippets/provider_list.html" with process="login" %}
+  </div>
+
+  <div class="login-or mt-2 mb-2">{% trans 'or register below:' %}</div>
+
+</div>
+
+
 <form class="signup" id="signup_form" method="post" action="{% url 'account_signup' %}">
   {% csrf_token %}
   {{ form|crispy }}
