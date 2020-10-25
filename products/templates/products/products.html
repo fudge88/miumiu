@@ -88,7 +88,7 @@
                             <div class="product-card-action">
                             <!-- edit and delete hyperlinked options for superuser only -->
                             {% if request.user.is_superuser %}
-                                <small class="ml-3 mt-3">
+                                <small class="pt-3">
                                     <a href="{% url 'edit_product' product.id %}"><i class="fas fa-edit"></i> Edit</a> |
                                     <a class="text-danger" data-toggle="modal" data-target="#AllProducts"><i class="fas fa-trash-alt"></i> Delete</a>
                                 </small>
@@ -153,32 +153,6 @@
 
 {% block postloadjs %}
 {{ block.super }}
-<script type="text/javascript">
-$('.btt-link').click(function(e) {
-window.scrollTo(0,0)
-})
-</script>
-
-<script type="text/javascript">
-$('#sort-selector').change(function() {
-var selector = $(this);
-var currentUrl = new URL(window.location);
-
-var selectedVal = selector.val();
-if(selectedVal != "reset"){
-var sort = selectedVal.split("_")[0];
-var direction = selectedVal.split("_")[1];
-
-currentUrl.searchParams.set("sort", sort);
-currentUrl.searchParams.set("direction", direction);
-
-window.location.replace(currentUrl);
-} else {
-currentUrl.searchParams.delete("sort");
-currentUrl.searchParams.delete("direction");
-
-window.location.replace(currentUrl);
-}
-})
-</script>
+<script src="{% static 'js/scroll.js' %}"></script>
+<script src="{% static 'js/sort.js' %}"></script>
 {% endblock %}

@@ -21,11 +21,11 @@ for a {{ site_name }} account and sign in below:{% endblocktrans %}</p>
 <!-- google login -->
 <div class="socialaccount_ballot">
 
-  <div class="socialaccount_providers">
-    {% include "socialaccount/snippets/provider_list.html" with process="login" %}
-  </div>
+    <div class="socialaccount_providers">
+        {% include "socialaccount/snippets/provider_list.html" with process="login" %}
+    </div>
 
-  <div class="login-or mt-2 mb-2">{% trans 'or' %}</div>
+    <div class="login-or mt-2 mb-2">{% trans 'or' %}</div>
 
 </div>
 
@@ -37,18 +37,18 @@ for a {{ site_name }} account and sign in below:{% endblocktrans %}</p>
 {% endif %}
 
 <form class="login" method="POST" action="{% url 'account_login' %}">
-  {% csrf_token %}
-  {{ form|crispy }}
-  {% if redirect_field_value %}
-  <input type="hidden" name="{{ redirect_field_name }}" value="{{ redirect_field_value }}" />
-  {% endif %}
+    {% csrf_token %}
+    {{ form|crispy }}
+    {% if redirect_field_value %}
+    <input type="hidden" name="{{ redirect_field_name }}" value="{{ redirect_field_value }}" />
+    {% endif %}
 
-  <a class="btn btn-outline-dark" href="{% url 'home' %}">Home</a>
-  <button class="primaryAction" type="submit">Sign In</button>
- 
-  <p class="mt-2">
-    <a class="button secondaryAction hyperlink" href="{% url 'account_reset_password' %}">Forgot Password</a>
-  </p>
+    <a class="btn btn-outline-dark" href="{% url 'home' %}">Home</a>
+    <button class="primaryAction" type="submit">Sign In</button>
+    
+    <p class="mt-2">
+        <a class="button secondaryAction hyperlink" href="{% url 'account_reset_password' %}">Forgot Password</a>
+    </p>
 </form>
 
 
