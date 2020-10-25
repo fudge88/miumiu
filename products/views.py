@@ -27,13 +27,12 @@ def all_products(request):
     for r in random_products_no:
         random_products.append(products[r])
 
-
     query = None
     categories = None
     sort = None
     direction = None
 
-#sorting options
+# sorting options
     if request.GET:
         if 'sort' in request.GET:
             sortkey = request.GET['sort']
@@ -57,10 +56,13 @@ def all_products(request):
         if 'q' in request.GET:
             query = request.GET['q']
             if not query:
-                messages.error(request, "You didn't enter any search criteria!")
+                messages.error(
+                    request, "You didn't enter any search criteria!"
+                    )
                 return redirect(reverse('products'))
 
-            queries = Q(name__icontains=query) | Q(description__icontains=query)
+            queries = Q(
+                name__icontains=query) | Q(description__icontains=query)
             products = products.filter(queries)
 
     current_sorting = f'{sort}_{direction}'
@@ -69,12 +71,12 @@ def all_products(request):
     post_list = products
     paginator = Paginator(post_list, 12)
     page = request.GET.get('page')
- 
+
     try:
         posts = paginator.get_page(page)
     except PageNotAnInteger:
         posts = paginator.get_page(1)
- 
+
     except EmptyPage:
         posts = paginator.get_page(paginator.num_pages)
 
@@ -107,7 +109,8 @@ def product_detail(request, product_id):
         product_review_obj.save()
         print('saved')
 
-    product_reviews = ProductReview.objects.filter(Product=product).order_by('-created_at')
+    product_reviews = ProductReview.objects.filter(
+        Product=product).order_by('-created_at')
 
     context = {
         'product': product,
@@ -133,7 +136,9 @@ def add_product(request):
             messages.success(request, 'Successfully added product!')
             return redirect(reverse('product_detail', args=[product.id]))
         else:
-            messages.error(request, 'Failed to add product. Please ensure the form is valid.')
+            messages.error(
+                request, 'Failed to add product. Check the form is valid.'
+                )
     else:
         form = ProductForm()
 
@@ -160,7 +165,9 @@ def edit_product(request, product_id):
             messages.success(request, 'Successfully updated product!')
             return redirect(reverse('product_detail', args=[product.id]))
         else:
-            messages.error(request, 'Failed to update product. Please ensure the form is valid.')
+            messages.error(
+                request, 'Failed to update product. Check the form is valid.'
+                )
     else:
         form = ProductForm(instance=product)
         messages.info(request, f'You are editing {product.name}')
@@ -190,19 +197,9 @@ def delete_product(request, product_id):
 # PRODUCT REVIEWS
 @login_required
 def product_review(request, product_id):
-    """ A view to show one product's details """
-    if request.method == "POST":
-        product = Product.objects.get(id=product_id)
-        review = request.POST['review']
-        product_review_obj = ProductReview(
-            Product=product,
-            User=request.user,
-            review=review
-        )
-        product_review_obj.save()
-        print('saved')
-
-    product_reviews = ProductReview.objects.filter(pk=product_id).order_by('-created_at')
+    """ shows product reviews """
+    product_reviews = ProductReview.objects.filter(
+        pk=product_id).order_by('-created_at')
     print(product_reviews)
     review_form = ProductReviewForm()
 
@@ -214,12 +211,22 @@ def product_review(request, product_id):
     return render(request, 'products/product_detail.html', context)
 
 
+@login_required
 def add_product_review(request, product_id):
 
     """
-    Handles the POST request for review form. Saves the form and redirects
-    to the product selected page
+    Handles the POST request for review form.
     """
     product = get_object_or_404(Product, pk=product_id)
+    if request.method == "POST":
+        product = Product.objects.get(id=product_id)
+        review = request.POST['review']
+        product_review_obj = ProductReview(
+            Product=product,
+            User=request.user,
+            review=review
+        )
+        product_review_obj.save()
+        print('saved')
 
-    return render(request, 'products/product_detail.html', context)
+    return render(request, 'products/product_detail.html')

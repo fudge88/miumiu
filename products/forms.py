@@ -1,5 +1,4 @@
 from django import forms
-from django.forms import Textarea
 from .widgets import CustomClearableFileInput
 from .models import Product, Category, ProductReview
 
@@ -10,7 +9,9 @@ class ProductForm(forms.ModelForm):
         model = Product
         fields = '__all__'
 
-    image = forms.ImageField(label='Image', required=False, widget=CustomClearableFileInput)
+    image = forms.ImageField(
+        label='Image', required=False, widget=CustomClearableFileInput
+        )
 
     def __init__(self, *args, **kwargs):
         super().__init__(*args, **kwargs)

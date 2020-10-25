@@ -24,7 +24,8 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = os.environ.get('SECRET_KEY', '')
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True #'DEVELOPMENT' in os.environ
+DEBUG = True
+# 'DEVELOPMENT' in os.environ
 
 ALLOWED_HOSTS = ['miumiu-aesthetics.herokuapp.com', 'localhost']
 
@@ -49,7 +50,7 @@ INSTALLED_APPS = [
     'checkout',
     'profiles',
 
-    #other
+    # other
     'crispy_forms',
     'storages',
 ]
@@ -212,7 +213,7 @@ if 'USE_AWS' in os.environ:
     STATIC_URL = f'https://{AWS_S3_CUSTOM_DOMAIN}/{STATICFILES_LOCATION}/'
     MEDIA_URL = f'https://{AWS_S3_CUSTOM_DOMAIN}/{MEDIAFILES_LOCATION}/'
 
-#stripe
+# stripe
 FREE_DELIVERY_THRESHOLD = 30
 STANDARD_DELIVERY_PERCENTAGE = 10
 
