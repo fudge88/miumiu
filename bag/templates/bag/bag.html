@@ -19,7 +19,7 @@
     <div class="row">
         <div class="col">
             <h2 class="heading-top-spacing logo-font">Your basket</h2>
-            <hr class="d-block d-md-none card-line-break mt-2 mb-4">
+            <hr class="card-line-break mt-2 mb-4">
         </div>
     </div>
     <!-- displaying bag items -->
@@ -99,7 +99,7 @@
                 </table>
             </div>
         {% else %}
-            <h3 class="mb-5">There are no items in your basket</h3>
+            <h3 class="mb-5 mt-3">There are no items in your basket</h3>
             <h2>Looks like a good time to <a href="{% url 'products' %}" class="hyperlink"><strong>start shopping!</strong></a></h2>
             <a href="{% url 'products' %}" class="btn btn-lg hyperlink">
                 <span class="icon">

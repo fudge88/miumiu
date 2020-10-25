@@ -58,8 +58,8 @@
                 <!-- edit or delete buttons displayed only for superuser -->
                 {% if request.user.is_superuser %}
                 <small>
-                    <a href="{% url 'edit_product' product.id %}">Edit</a> | 
-                    <a class="text-danger" href="{% url 'delete_product' product.id %}">Delete</a>
+                    <a href="{% url 'edit_product' product.id %}"><i class="fas fa-edit"></i> Edit</a> | 
+                    <a class="text-danger" data-toggle="modal" data-target="#productDetail"><i class="fas fa-trash-alt"></i> Delete</a>
                 </small>
                 {% else %}
                 <!-- form to input quantity of product, and add-to-bag button -->
@@ -102,5 +102,26 @@
 </div>
 <!-- product revies associated to the product -->
 {% include 'products/includes/product_reviews.html' %}
+
+<!-- modal -->
+<div class="modal fade" id="productDetail" data-backdrop="static" data-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="staticBackdropLabel">Delete Product</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        Are you sure you wish to delete {{ product.name }}?
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-outline-dark" data-dismiss="modal">Cancel</button>
+        <a class="btn btn-danger" href="{% url 'delete_product' product.id %}">Delete</a>
+      </div>
+    </div>
+  </div>
+</div>
 
 {% endblock %}

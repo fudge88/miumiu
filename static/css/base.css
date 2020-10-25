@@ -41,7 +41,6 @@ hr {
 }
 
 /* =========================== navbar styling */
-
 .w-100 {
    padding: 0;
    margin-top: -10px;
@@ -83,9 +82,7 @@ img.nav-img-top {
     background-color: azure;
 }
 
-
 /* =============== animated search box coding snow (youtube) */
-
 .search-box {
     position: absolute;
     top: 0px;
@@ -149,7 +146,6 @@ img.nav-img-top {
 }
 
 /* ==================== promotion strip (carouse/sm non-carousel/lg */
-
 .carousel-indicators {
     position: absolute;
     right: 0;
@@ -267,7 +263,6 @@ div.carousel-item:active {
 }
 
 /* ============================= all products page (card styling) */
-
 .product-img {
     justify-content: center;
     align-items: center;
@@ -323,7 +318,6 @@ img.card-img-top.img-fluid {
 }
 
 /* ============================== product detail */
-
 .product-detail-name {
     color: #000;
     font-size: 2.5rem;
@@ -366,7 +360,6 @@ input#new-image {
 }
 
 /* ============================== pagination */
-
 .page-link{
     border: 1px solid #ffc10763;
 }
@@ -376,13 +369,12 @@ ul.pagination {
 }
 
 /* ============================== table styling */
-
 .table td, .table th {
     border-top: 1px solid #ffc10763;
 }
 
 /* ============================== buttons */
-
+.text-danger,
 .btt-link
 .update-link
 .remove-item {
@@ -432,7 +424,6 @@ ul.pagination {
 }
 
 /* ========================== drop down filter */
-
 select#sort-selector {
     border: 1px solid #ffc107!important;
 }
@@ -462,7 +453,6 @@ select#sort-selector {
 }
 
 /* ==========================allauth form formatting */
-
 .allauth-form-inner-content p {
     margin-top: 1.5rem; 
     color: #6c757d; 
@@ -508,6 +498,7 @@ select#sort-selector {
     background-color: #e684ec;
     border-color: #e684ec;
 }
+
 a.page-link:hover,
 a.page-link:active,
 a.hyperlink:hover,
@@ -553,7 +544,6 @@ a.button.secondaryAction {
 }
 
 /* ========================================= Media Queries */
-
 /* minimums */
 @media (min-width: 1200px) {
     .container {

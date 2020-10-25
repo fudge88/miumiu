@@ -89,8 +89,8 @@
                             <!-- edit and delete hyperlinked options for superuser only -->
                             {% if request.user.is_superuser %}
                                 <small class="ml-3 mt-3">
-                                    <a href="{% url 'edit_product' product.id %}">Edit</a> |
-                                    <a class="text-danger" href="{% url 'delete_product' product.id %}">Delete</a>
+                                    <a href="{% url 'edit_product' product.id %}"><i class="fas fa-edit"></i> Edit</a> |
+                                    <a class="text-danger" data-toggle="modal" data-target="#AllProducts"><i class="fas fa-trash-alt"></i> Delete</a>
                                 </small>
                             {% else %}
                             <!-- quick-add action button for user, also product information hyperlink -->
@@ -145,6 +145,10 @@
         <i class="fas fa-angle-double-up mx-auto my-auto"></i>
     </a>
 </div>
+
+<!-- delete modal -->
+{% include 'products/includes/products_modal.html' %}
+
 {% endblock %}
 
 {% block postloadjs %}
