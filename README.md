@@ -76,7 +76,8 @@ use. Thus achieving the business goals.
 The design of MuiMui is simple and allows focus on the products. The design gives the user  
 the right amount of information with the emphasis on the key areas.  
 
-### **Colors:**
+### **Colors:**   
+![colour scheme](/wireframes/colors.png)   
 The colour scheme has been kept consistent throughout the website, where all significant buttons  
 are yellow, and others are outlined in black.
   
@@ -85,25 +86,31 @@ consistency. These colours were used to accent the website, opposed to over-usin
 Transparent gradients of the block shades were used as a background to highlight key areas or  
 key information. 
 
-I have used the [mycolor](https://mycolor.space/gradient) to create the gradient colours
-Font:
-  
-https://fonts.google.com/specimen/Kristi?query=krist&preview.text=MuiMui%20Aesthetics&preview.text_type=custom
- 
-https://fonts.google.com/specimen/Playfair+Display?query=play&preview.text=MuiMui%20Aesthetics&preview.text_type=custom&preview.size=34
+I have used the [mycolor](https://mycolor.space/gradient) to create the gradient colours   
 
-https://fonts.google.com/specimen/Raleway?query=raleway&preview.text=MuiMui%20Aesthetics&preview.text_type=custom&preview.size=34
+### **Fonts:**  
+  
+[Google Fonts- Kristi](https://fonts.google.com/specimen/Kristi?query=krist&preview.text=MuiMui%20Aesthetics&preview.text_type=custom) was used for significant headings.  
+![Kristi](/wireframes/kristi.png)   
+
+[Google Fonts- Playfair Display](https://fonts.google.com/specimen/Playfair+Display?query=play&preview.text=MuiMui%20Aesthetics&preview.text_type=custom&preview.size=34) was used for general headings.   
+![Playfair Display](/wireframes/playfair.png)  
+
+[Google Fonts- Raleway](https://fonts.google.com/specimen/Raleway?query=raleway&preview.text=MuiMui%20Aesthetics&preview.text_type=custom&preview.size=34) was used for the body of the website.   
+![Raleway](/wireframes/raleway.png)   
 
 **Icons:**
 I have used [fontawesome](https://fontawesome.com/) as an icon library, I used their documentation to layer the basket  
 total over the circle icon, I have also used font awesome’s inline icon sizing.
 
 **Logo:**
-I used [canva](https://www.canva.com/design/DAEI-qYTGTI/2wbWJ9r5C8LP8SRndrMFSg/edit?category=tACZCvjI6mE) to create my business logo
+I used [canva](https://www.canva.com/design/DAEI-qYTGTI/2wbWJ9r5C8LP8SRndrMFSg/edit?category=tACZCvjI6mE) to create my business logo.  
+![logo](/media/logo.PNG) 
 
 **Favicon:**
-I used [favicon](https://www.favicon.cc/?) to create a favicon 
+I used [favicon](https://www.favicon.cc/?) to create a favicon.  
 
+---
 
 ## **Mock-ups:**
 
@@ -122,6 +129,8 @@ and compact version of the site.
 ---
 
 ## **Features:**  
+![home page](/wireframes/screenshots/home.PNG)   
+
 ### **NavBar**  
 **Navigation Large Screen:**  
 The navigation bar on the large screen consists of a header and a menu bar.  
@@ -153,6 +162,7 @@ Simple, relevant hero image of a female pampering herself. Simple message in the
 to the user directly, with a shop now button that redirects to all products.  
 
 ### **Product Page:**  
+![home page](/wireframes/screenshots/products.PNG)   
 **Product promotion:**  
 On a large screen this carousel displays 4 random products at a time from the database as a form  
 of in-house advertising to the user; on a smaller screen this carousel is hidden.  
@@ -175,6 +185,7 @@ Pagination, has been used to restrict the display of items to no more than 10 pe
 the user an indication of how many pages to view all products opposed to endlessly scrolling.  
 
 ### **Product Detail:**  
+![home page](/wireframes/screenshots/product-detail.PNG)   
 - This page shows individual product detail, and shows all the details associated to that product.  
 - when the user clicks on the image, the image opens up on a new tab.  
 - There’s a light blue block which nests a quantity input field that allows the user to type the  
