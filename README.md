@@ -1,4 +1,7 @@
+<h5 id=miumiu-aesthetics></h5>   
+
 # **MuiMui Aesthetics**  
+
 People want to look and feel better longer; we have lots of literature, and many studies to  
 support that ‘if you look good, you feel good’. As social media has boomed, the ‘influencer’  
 markets have increased in followers, and the demand of people wanting to treat themselves with  
@@ -10,36 +13,46 @@ glowing skin: exfoliate, mask, and moisturise. MuiMui does sell additional produ
 for all your hair removal needs, but retains the focus on your face, body, and soul!
 
 ---  
+<h5 id=contents></h5>  
+
 ## **Contents:**  
-- [**MuiMui Aesthetics**](#--muimui-aesthetics--)
-  * [**Contents:**](#--contents---)
-  * [**UX:**](#--ux---)
-  * [**User stories:**](#--user-stories---)
-      - [Navigation](#navigation)
-      - [Registration and Accounts](#registration-and-accounts)
-      - [Sorting and Searching](#sorting-and-searching)
-      - [Purchasing and Checkout](#purchasing-and-checkout)
-    + [**Strategy Plane:**](#--strategy-plane---)
-  * [**Design**](#--design--)
-    + [**Colors:**](#--colors---)
-    + [**Fonts:**](#--fonts---)
-  * [**Mock-ups:**](#--mock-ups---)
-  * [**Features:**](#--features---)
-    + [**NavBar**](#--navbar--)
-    + [**Toast:**](#--toast---)
-    + [**Product Page:**](#--product-page---)
-    + [**Product Detail:**](#--product-detail---)
-    + [**Shopping basket:**](#--shopping-basket---)
-    + [**Checkout page:**](#--checkout-page---)
-    + [**Checkout Success:**](#--checkout-success---)
-  * [**Features left to implement:**](#--features-left-to-implement---)
-  * [**Technologies used:**](#--technologies-used---)
-  * [**Testing:**](#--testing---)
-  * [**Local Deployment:**](#--local-deployment---)
-  * [**Deploy to Heroku**](#--deploy-to-heroku--)
-  * [**Credits:**](#--credits---)
+
+- [**MiuMiu Aesthetics**](#miumiu-aesthetics)
+  * [**Contents**](#contents)
+  * [**UX**](#ux)
+  * [**User stories**](#user-stories)
+  * [**Strategy & Scope**](#strategy)
+  * [**Design**](#design)
+    + [**Colors**](#colors)
+    + [**Fonts**](#fonts)
+  * [**Mock-ups**](#mock-ups)
+  * [**Features**](#features)
+    + [**NavBar**](#navbar)
+    + [**Toast**](#toast)
+    + [**Product Page**](#product-page)
+    + [**Product Detail**](#product-detail)
+    + [**Shopping basket**](#shopping-basket)
+    + [**Checkout page**](#checkout-page)
+    + [**Checkout Success**](#checkout-success)
+  * [**Features left to implement**](#features-left-to-implement)
+  * [**Technologies used**](#technologies-used)
+  * [**Testing**](#testing)
+  * [**Deployment**](#deployment)
+    + [**Local Deployment**](#local-deployment)
+    + [**Deploy to Heroku**](#deploy-to-heroku)
+  * [**Credits**](#credits)
+
 
 ---
+## **_NOTE: When testing this app, at checkout please use the following credentials:_**
+> **Card Number:** 4242 4242 4242 4242  
+> **Expiry Date:** Any future date  
+> **Security Pin:** Any 3 numbers  
+> **Zip:** Any 5 numbers
+
+---
+
+<h5 id=ux></h5>   
 
 ## **UX:**
 A light and fruitful design, with a simple, sleek look; and an easy-to-navigate tools including  
@@ -53,70 +66,83 @@ their previous purchases.
 
 On the other hand, the website also allows a ‘superuser’, who in effect is the business admin,  
 to add, edit and delete products for future updates. Thus, allowing the business owner to manage  
-their online presence and product line, independently.
+their online presence and product line, independently.  
 
-## **User stories:**
+<h5 id=user-stories></h5>   
+
+## **User stories:**  
+
 #### Navigation
 > **All Users:**  
->> - view products  
->> - view product details  
->> - view the number of items and the cost of their basket  
+>> - As a user i would like to be able to view all products 
+>> - As a user i would liek to be able to view specified product details  
+>> - As a user i would like to view the number of items in my basket and the incurred cost  
 
 #### Registration and Accounts
 > **User:**  
->> - easily register  
->> - easily login and out  
->> - easily recover PW’s just in case,  
->> - receive emails in relation to my activity, confirmation emails, welcoming emails  
->> - a profile so I can manage my details and view my purchases  
+>> - As a user i would like to register easily  
+>> - As a user i would like to easily login and out  
+>> - As a user i would like to easily recover PW’s (just in case)  
+>> - As a user i would want to receive emails in relation to my activity, such as: confirmation emails
+>> - As a user i would like a profile page where I can manage my details and view my purchases    
 
 #### Sorting and Searching
-> **Shopper:**  
->> - filter my search preference  
->> - have more than one way to specify my search  
->> - easy-to-follow navigation  
+> **Customer:**  
+>> - As a customer i would like to be able to filter my search preference  
+>> - As a customer i would like to have more than one way to specify my search  
+>> - As a customer i would like an easy-to-follow navigation   
 
 #### Purchasing and Checkout
-> **Shopper:**  
->> - Able to alter my basket, delete items, increase quantity
->> - Simple to follow checkout
->> - Successful checkout page with a summary of my order
->> - Pre-filled details address
+> **Customer:**  
+>> - As a customer i would like to be able to alter my basket
+>> - As a customer i would like a quick and simple to follow checkout
+>> - As a customer i would like a successful payment page with a summary of my order
+>> - As a customer i would like a pre-filled form for my details at checkout
 
----
+---  
 
-### **Strategy Plane:**
-MuiMui Aesthetics provides its users with a catalogue of products to choose from. With the  
+<h5 id=strategy></h5>   
+
+## **Strategy/Scope:**
+**MuiMui Aesthetics** provides its users with a catalogue of products to choose from. With the  
 transformation of the way business is conducted, there is now a huge focus on social media  
 and its followers. As more and more influencers share their skin and beauty routines the public  
 have a better and a more personal insight on how to care for themselves.  
 
-Skincare should be for all ages, and all genders! but finding the right product should be unique  
-to your needs, MuiMui offers a variety of concoctions in each product, but also offers a short  
-description of the outcome for regular use.  
+**Users** generally like being offered categories, and multiple search options, as thisgives users more  
+control and make the site more search specific to them. The more efficient a website is, the more  
+likely customers will complete the cycle of purchase.  
 
-I believe by offering categories, and multiple search options to users will give them more  
-control and make the site more search specific to them. The more efficient a website is,  
-the more users you would have, who would complete the cycle of purchase through the ease of  
-use. Thus achieving the business goals.  
+**Admin** would be able to control the content on the websites, from users, products, and reviews.  
+There is a facility to edit and delete existing products. Orders are available for the admin to  
+see along with all the additional details the user would have provided, ready for shipment. The admin  
+is also able to add and remove from orders.
 
----
+---  
+<h5 id=design></h5>   
 
 ## **Design**
 The design of MuiMui is simple and allows focus on the products. The design gives the user  
 the right amount of information with the emphasis on the key areas.  
 
+<h5 id=colors></h5>   
+
 ### **Colors:**   
-![colour scheme](/wireframes/colors.png)   
+   
 The colour scheme has been kept consistent throughout the website, where all significant buttons  
-are yellow, and others are outlined in black.
+are yellow, and others are outlined in black.  
+
+![colour scheme](/wireframes/colors.png)
   
 The colours in the business logo are used in the promotion strip to inject some colour and keep  
 consistency. These colours were used to accent the website, opposed to over-using colour blocks.  
+
 Transparent gradients of the block shades were used as a background to highlight key areas or  
 key information. 
 
-I have used the [mycolor](https://mycolor.space/gradient) to create the gradient colours   
+I have used the [mycolor](https://mycolor.space/gradient) to create the gradient colours.     
+
+<h5 id=fonts></h5>   
 
 ### **Fonts:**  
   
@@ -129,37 +155,54 @@ I have used the [mycolor](https://mycolor.space/gradient) to create the gradient
 [Google Fonts- Raleway](https://fonts.google.com/specimen/Raleway?query=raleway&preview.text=MuiMui%20Aesthetics&preview.text_type=custom&preview.size=34) was used for the body of the website.   
 ![Raleway](/wireframes/raleway.png)   
 
+<h5 id=icons></h5>   
+
 **Icons:**
 I have used [fontawesome](https://fontawesome.com/) as an icon library, I used their documentation to layer the basket  
-total over the circle icon, I have also used font awesome’s inline icon sizing.
+total over the circle icon, I have also used font awesome’s inline icon sizing.  
+
+<h5 id=logo></h5>   
 
 **Logo:**
-I used [canva](https://www.canva.com/design/DAEI-qYTGTI/2wbWJ9r5C8LP8SRndrMFSg/edit?category=tACZCvjI6mE) to create my business logo.  
-![logo](/media/logo.PNG) 
+I used [canva](https://www.canva.com/design/DAEI-qYTGTI/2wbWJ9r5C8LP8SRndrMFSg/edit?category=tACZCvjI6mE) to create my 
+business logo, sticking to the color theme.  
+![logo](/media/logo.PNG)  
+
+<h5 id=favicon></h5>   
 
 **Favicon:**
 I used [favicon](https://www.favicon.cc/?) to create a favicon.  
 
----
+---  
+
+<h5 id=mock-ups></h5>   
 
 ## **Mock-ups:**
 
 The use of wireframes helps to create a visual format of the end product, this is a rough guide of  
 how the finished site should aim to look.  
 
+You can find my wireframes [here](https://github.com/fudge88/miumiu/tree/master/wireframes/wireframes).
+
 These wireframes were created using [moqups.com](https://www.moqups.com) this allowed me to create a computer 
 and a mobile  
 mock-up of what MuiMui Aesthetics would look like. The main difference between the different screen sizes  
-is the number of columns used to display the products.  
+is the number of columns used to display the products.   
+
 Structurally the major difference between the small and large screen is the navigation system. A more  
 compact navbar is introduced on screen sizes 991px and below.  
+
 In-house promotions are displayed on the larger screen, and hidden on the mobile view, to give a more neat  
 and compact version of the site.  
 
 ---
 
+<h5 id=features></h5>   
+
 ## **Features:**  
 ![home page](/wireframes/screenshots/home.PNG)   
+
+<h5 id=navbar></h5>   
 
 ### **NavBar**  
 **Navigation Large Screen:**  
@@ -179,17 +222,21 @@ search bar and the basket count icon.
 - The search icon opens an input field under the navbar  
 - The basket count icon appears and functions in the same way is does in the large screen  
 
-### **Toast:**
-This displays a little pop up message that appears on the top-right of the screen confirming actions  
-made by the user, i.e. added item to bag, deleted item from bag, etc.  
+**Home:**   
+Simple, relevant hero image of a female pampering herself. Simple message in the heading font speaking  
+to the user directly, with a shop now button that redirects to all products.  
 
 **Promotion Bar:**  
 All information appears on the same strip on large screen, the smaller screen breaks down the information  
 and uses a carousal to rotate the information.  
 
-**Home:**   
-Simple, relevant hero image of a female pampering herself. Simple message in the heading font speaking  
-to the user directly, with a shop now button that redirects to all products.  
+<h5 id=toast></h5>   
+
+### **Toast:**
+This displays a little pop up message that appears on the top-right of the screen confirming actions  
+made by the user, i.e. added item to bag, deleted item from bag, etc.  
+
+<h5 id=product-page></h5>   
 
 ### **Product Page:**  
 ![home page](/wireframes/screenshots/products.PNG)   
@@ -214,6 +261,8 @@ quantity of 1, without redirecting the user to another page.
 Pagination, has been used to restrict the display of items to no more than 10 per page, this gives  
 the user an indication of how many pages to view all products opposed to endlessly scrolling.  
 
+<h5 id=product-detail></h5>   
+
 ### **Product Detail:**  
 ![home page](/wireframes/screenshots/product-detail.PNG)   
 - This page shows individual product detail, and shows all the details associated to that product.  
@@ -225,12 +274,16 @@ There are also social media icons in this block, that open the links on a new ta
 - At the bottom of this page there are reviews for that product, all users can read this, and only  
 authenticated users are able to add a review, which are time stamped should they wish to.  
 
+<h5 id=shopping-basket></h5>   
+
 ### **Shopping basket:**  
 - This page displays a summary of your order, each product is displayed on a separate row  
 - This page shows the product quantity total, basket total, delivery charge (if any) and the total  
 of all costs combined  
 - The user is able to change the quantity of each item, and also remove the item from their basket   
 altogether.
+
+<h5 id=checkout-page></h5>   
 
 ### **Checkout page:**
 - This page displays the items in your basket on the right of the page for large screens, and on top  
@@ -240,6 +293,8 @@ information. If the user updates their details in their profile, the input field
 page would be prefilled, saving them the hassle of entering information every time they choose to  
 purchase products.  
 - Only displays checkout button to users who are logged-in, otherwise the user is redirected to login.  
+
+<h5 id=checkout-success></h5>   
 
 ### **Checkout Success:**  
 - Once the payments complete, the order summary is presented to the user; and email will also be sent  
@@ -251,18 +306,18 @@ the mobile app minimal for ease of use and understanding.
 the user views this page from their profile, the back to profile button with show, else it will offer  
 to go back to all products.  
 
-**Profile:**
+### **Profile:**
 - The user has a profile, where they can update their delivery information.  
 - The user can also view their order history, by clicking on hyperlinked order numbers which would redirect  
 the user to the checkout success page for full details of that order.  
 
-**Login:**  
+### **Login:**  
 - Field for the user to login using their own username or password  
 - User has an option to login using their social network login details, this enhances the users  
 experience, i.e. not having to have to remember another password; a one-click login using the likes  
 of google.
 
-**Admin:** 
+### **Admin:** 
 - The admin is able to add products by selecting ‘project management’ from their profile drop down.  
 There are also options to edit and delete from the product page and the product detail page. The delete  
 function triggers a modal response to confirm if the admin wished to delete a product.
@@ -270,6 +325,8 @@ function triggers a modal response to confirm if the admin wished to delete a pr
 their new or edited product accordingly.  
 
 ---
+
+<h5 id=features-left-to-implement></h5>   
 
 ## **Features left to implement:**  
 Due to time contains I was unable to factor in the following features; however, I do intend to give some  
@@ -289,6 +346,8 @@ I would like to add a functioning ‘star’ review system to replace the static
 this would use the average ratings for each product to display a true reading.  
 
 ---
+
+<h5 id=technologies-used></h5>   
 
 ## **Technologies used:**  
 **Languages, Libraries and Frameworks:**  
@@ -323,13 +382,20 @@ this would use the average ratings for each product to display a true reading.
 
 ---
 
+<h5 id=testing></h5>   
+
 ## **Testing:**
 
-Interesting finds/bugs:
+Interesting finds/bugs:   
 
 ---
+<h5 id=deployment></h5>  
 
-## **Local Deployment:**  
+## **Deployment:**
+
+<h5 id=local-deployment></h5>   
+
+### **Local Deployment:**  
 This repository can be cloned directly, by pasting the following command into the terminal:  
 > `Git clone https://github.com/fudge88/miumiu`
 
@@ -377,7 +443,9 @@ credentials follwo indtructions:
 > `python3 manage.py runserver`
 11.	To access the admin interface, key in **_‘/admin’_** at the end of your locally deployed url.
 
-## **Deploy to Heroku**
+<h5 id=deploy-to-heroku></h5>   
+
+### **Deploy to Heroku**
 **Note: the above process must be completed before deploying to Heroku.**
 1.	your requirement.txt file will need to contain all your project dependencies, key in the  
 following to load this folder with additional dependencies you may have added.  
@@ -441,8 +509,11 @@ from this point any `push` you make in the terminal will update your app in hero
 as the two are now linked.
 
 ---
- 
+
+<h5 id=credits></h5>   
+
 ## **Credits:**  
+
 **Code**  
 Alot of the content was used  from the [code institude](https://courses.codeinstitute.net/program/FullstackWebDeveloper) lessons, especially  from the mini project 'Boutique Ado';   
 however, this code was customised and enhanced to fit the purpose of teh project.  
