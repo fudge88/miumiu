@@ -103,7 +103,8 @@ their online presence and product line, independently.
 
 <h5 id=strategy></h5>   
 
-## **Strategy/Scope:**
+## **Strategy/Scope:**  
+
 **MuiMui Aesthetics** provides its users with a catalogue of products to choose from. With the  
 transformation of the way business is conducted, there is now a huge focus on social media  
 and its followers. As more and more influencers share their skin and beauty routines the public  
@@ -119,6 +120,7 @@ see along with all the additional details the user would have provided, ready fo
 is also able to add and remove from orders.
 
 ---  
+
 <h5 id=design></h5>   
 
 ## **Design**
@@ -386,7 +388,7 @@ this would use the average ratings for each product to display a true reading.
 
 ## **Testing:**
 
-Interesting finds/bugs:   
+Testing information can be found [here](https://github.com/fudge88/miumiu/tree/master/TESTING.md).  
 
 ---
 <h5 id=deployment></h5>  
