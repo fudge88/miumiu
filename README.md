@@ -9,6 +9,36 @@ for their skin goals. The business breaks down the 3 elements to achieve the ult
 glowing skin: exfoliate, mask, and moisturise. MuiMui does sell additional products, such as wax,  
 for all your hair removal needs, but retains the focus on your face, body, and soul!
 
+---  
+## **Contents:**  
+- [**MuiMui Aesthetics**](#--muimui-aesthetics--)
+  * [**Contents:**](#--contents---)
+  * [**UX:**](#--ux---)
+  * [**User stories:**](#--user-stories---)
+      - [Navigation](#navigation)
+      - [Registration and Accounts](#registration-and-accounts)
+      - [Sorting and Searching](#sorting-and-searching)
+      - [Purchasing and Checkout](#purchasing-and-checkout)
+    + [**Strategy Plane:**](#--strategy-plane---)
+  * [**Design**](#--design--)
+    + [**Colors:**](#--colors---)
+    + [**Fonts:**](#--fonts---)
+  * [**Mock-ups:**](#--mock-ups---)
+  * [**Features:**](#--features---)
+    + [**NavBar**](#--navbar--)
+    + [**Toast:**](#--toast---)
+    + [**Product Page:**](#--product-page---)
+    + [**Product Detail:**](#--product-detail---)
+    + [**Shopping basket:**](#--shopping-basket---)
+    + [**Checkout page:**](#--checkout-page---)
+    + [**Checkout Success:**](#--checkout-success---)
+  * [**Features left to implement:**](#--features-left-to-implement---)
+  * [**Technologies used:**](#--technologies-used---)
+  * [**Testing:**](#--testing---)
+  * [**Local Deployment:**](#--local-deployment---)
+  * [**Deploy to Heroku**](#--deploy-to-heroku--)
+  * [**Credits:**](#--credits---)
+
 ---
 
 ## **UX:**
@@ -421,11 +451,12 @@ I found [codeloop](https://codeloop.org/django-pagination-complete-example/) to 
 extreamly   
 helpful with applying the logic for a favicon. [Django project components (Yuksel CELIK, PhD):](https://www.youtube.com/channel/UCtdM2qlDnpNr9bTKjVGEWkg) 
 supported the  
-implementation of reviews for the products.  
-[Stackoverflow](https://stackoverflow.com/questions/48079216/add-limit-for-list-in-for-loop-django-template) proved 
-extreamly useful on numerous occassions, again, helping me to understand ho to slice   
-through data using jinja templating. the [Allauth Documentation](https://django-allauth.readthedocs.io/en/latest/templates.html) was very easy to follow when implementing social   
-network login (google). I also used [youtube](https://www.youtube.com/watch?v=56w8p0goIfs) to help me navigate through the implementation of this.
+implementation of reviews for the products. [Platform-kooperativa](http://platforma-kooperativa.org/media/uploads/article-documents/beginning_django_e-commerce.pdf) helped me further with the views and   
+models of of my project. [Stackoverflow](https://stackoverflow.com/questions/48079216/add-limit-for-list-in-for-loop-django-template) proved 
+extreamly useful on numerous occassions, again, helping me to   
+understand how to slice through data using jinja templating. the [Allauth Documentation](https://django-allauth.readthedocs.io/en/latest/templates.html) was very easy to   
+follow when implementing social network login (google). I also used [youtube](https://www.youtube.com/watch?v=56w8p0goIfs), to help me navigate through the   
+implementation of this.
 
 **Content and Media:**  
 I used [canva](https://www.canva.com/) to create a logo for my site, and used the design to to create a [Favicon](https://www.favicon.cc/).
