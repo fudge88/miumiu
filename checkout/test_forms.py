@@ -3,6 +3,7 @@ from checkout.forms import OrderForm
 
 
 class TestOrderForm(TestCase):
+
     def test_email_address_required(self):
         form = OrderForm({'email': ''})
         self.assertFalse(form.is_valid())
