@@ -16,4 +16,3 @@ class OrderTestCase(TestCase):
         p2 = Order.objects.get(order_number=101)
         self.assertEqual(p1.order_total, 500)
         self.assertEqual(p2.order_total, 5000)
-

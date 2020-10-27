@@ -27,7 +27,7 @@ def add_to_bag(request, item_id):
         messages.success(request, f'Added {product.name} to your basket')
 
     request.session['bag'] = bag
-    return redirect(redirect_url)
+    return redirect(reverse('shopping_bag'))
 
 
 def edit_bag(request, item_id):
@@ -63,5 +63,6 @@ def remove_item(request, item_id):
         return HttpResponse(status=200)
 
     except Exception as e:
+        print(f"ERROR: {e}")
         messages.error(request, f'Error removing item from your basket: {e}')
         return HttpResponse(status=500)

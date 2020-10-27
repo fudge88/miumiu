@@ -3,9 +3,16 @@
 
 <!-- in-house product promotion carousel -->
 {% block page_header %}
-{% include 'products/includes/product_promo.html' %}
+    {% if current_categories %}
+        <div class="container header-container">
+            <div class="row">
+                <div class="col"></div>
+            </div>
+        </div>
+    {% else %}
+        {% include 'products/includes/product_promo.html' %}
+    {% endif %}
 {% endblock %}
-
 
 {% block content %}
 <!-- white backdrop -->
