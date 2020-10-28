@@ -81,7 +81,105 @@ i.e '{% endblock %} expected'.
 
 <h5 id=compatibility></h5>  
 
-## **Compatibility** 
+## **Compatibility**  
+
+Not all users will use the same browsers, nor will they use the same device. Therefore it is   
+important to check compatibility with all brosers (or atleast the most popular ones), and to also   
+test against various screen sizes. Not all people shop from a desktop, as the internet continues   
+to grow, the demand to shop on the go is increasing. Therefore it is important to create a good UX  
+by simplifying applications to render neatly, and clearly on mobile devices too.
+
+The following table illustrates the compatibility on various screen sizes and browsers:
+
+<table>
+<tbody><tr>
+<th>Device</th>
+<th>Images</th>
+<th>Links</th>
+<th>Navbar</th>
+<th>Formatting Error</th>
+<th>Notes</th>
+</tr>
+<th>Desktop W/Screen</th>
+<td>yes</td>
+<td>yes</td>
+<td>yes</td>
+<td>No Error</td>
+<td>Works ok</td>
+</tr>
+<tr>
+<th>Desktop</th>
+<td>yes</td>
+<td>yes</td>
+<td>yes</td>
+<td>No Error</td>
+<td>Works ok</td>
+</tr>
+<tr>
+<th>Laptop</th>
+<td>yes</td>
+<td>yes</td>
+<td>yes</td>
+<td>No Error</td>
+<td>Works ok</td>
+</tr>
+<tr>
+<th>IPad</th>
+<td>yes</td>
+<td>yes</td>
+<td>yes</td>
+<td>No Error</td>
+<td>Works ok</td>
+</tr>
+<tr>
+<th>IPhone X</th>
+<td>yes</td>
+<td>yes</td>
+<td>yes</td>
+<td>No Error</td>
+<td>Works ok</td>
+</tr>
+<tr>
+<th>IPhone 5</th>
+<td>yes</td>
+<td>yes</td>
+<td>yes</td>
+<td>Some Errors</td>
+<td>Works ok</td>
+</tr>
+<tr>
+<th>Samsung</th>
+<td>yes</td>
+<td>yes</td>
+<td>yes</td>
+<td>No Error</td>
+<td>Works ok</td>
+</tr>
+<tr>
+<th>Explorer</th>
+<td>yes</td>
+<td>yes</td>
+<td>yes</td>
+<td>No Error</td>
+<td>Slight zoomed out appearance</td>
+</tr>
+<tr>
+<th>Safari</th>
+<td>yes</td>
+<td>yes</td>
+<td>yes</td>
+<td>No Error</td>
+<td>Works ok</td>
+</tr>
+<tr>
+<th>Chrome</th>
+<td>yes</td>
+<td>yes</td>
+<td>yes</td>
+<td>No Error</td>
+<td>Zoomed in appearance</td>
+</tr>
+</tbody></table>
 
 ---  
 
@@ -113,4 +211,4 @@ Python
 All the Python files were tested using 'flake8' which lists all errors in relation to Python on every  
 page of your application. I had a few indentation erros, and 'line too long' errors. I corrected these   
 where possible. I also used [PEP8 online](http://pep8online.com/) and further changes were made to make the code  
-PEP8 compliant where possible.  
+PEP8 compliant where possible.
