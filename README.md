@@ -450,7 +450,7 @@ credentials follwo indtructions:
 > `python3 manage.py createsuperuser`  
 
 9. After migrations are complete, change database configurations to:  
-> ``    if 'DATABASE_URL' in os.environ:``  
+> ``     if 'DATABASE_URL' in os.environ:``  
 > ``             DATABASES = {``  
 > ``            'default': dj_database_url.parse(os.environ.get('DATABASE_URL'))``  
 > ``        }``  
@@ -474,7 +474,7 @@ and select **_enable automatic deploys_**.
 > `Git add .`  
 > `git commit -m “<your message”`  
 > `git push` to push to your GitHub repository  
-> `git push Heroku master` to push to heroku  
+> `git push Heroku master` to push to Heroku  
 
 from this point any `push` you make in the terminal will update your app in heroku,  
 as the two are now linked.
