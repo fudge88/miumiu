@@ -41,6 +41,10 @@ hr {
     z-index: -1;
 }
 
+.text-grey{
+    color: #6c757d;
+}
+
 /* =========================== navbar styling */
 .w-100 {
    padding: 0;
