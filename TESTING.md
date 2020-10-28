@@ -8,6 +8,8 @@
   * [**Automated Testing**](#automated)
   * [**Development Testing**](#development)
   * [**Manual Testing**](#manual)
+    + [**Home**](#home)
+    + [**Login/Registration Page**](#login)
     + [**Products**](#products)
     + [**Product Detail**](#detail)
     + [**basket**](#basket)
@@ -48,34 +50,69 @@ i.e '{% endblock %} expected'.
 <h5 id=manual></h5>  
 
 ## **Manual Testing**   
+Manual testing, is where each feature is tested on various screen sizes and browsers to check  
+if the app responds as it should. I will use the 'user stories' to guide the testing; however,  
+otherfactors will be considered.
+
+<h5 id=home></h5>  
+
+### **Home Page**  
+**_User Stories_** 
+- As a user i would like to view the number of items in my basket and the cost  
+- As a customer i would like to be able to filter my search preference  
+- As a customer i would like an easy-to-follow navigation   
+
+<h5 id=login></h5>  
+
+### **Login/Registration Page**
+**_User Stories_** 
+- As a user i would like to register easily  
+- As a user i would like to easily login and out  
+- As a user i would like to easily recover PW’s (just in case)  
+- As a user i would want to receive emails in relation to my activity, such as: confirmation emails
 
 <h5 id=products></h5>  
 
-**Products Page**  
+### **Products Page**  
+**_User Stories_**  
+- As a user i would like to be able to view all products 
+- As a customer i would like to have more than one way to filter my search  
 
 <h5 id=detail></h5>  
 
-**Product Detail Page**
+### **Product Detail Page**
+**_User Stories_**  
+- As a user i would like to be able to view specific product details  
 
 <h5 id=basket></h5>  
 
-**basket Page**
+### **basket Page**
+**_User Stories_**  
+- As a customer i would like to be able to alter my basket
 
 <h5 id=checkout></h5>  
 
-**Checkout Page**
+### **Checkout Page**
+**_User Stories_**  
+- As a customer i would like a quick and simple checkout process  
+- As a customer i would like a pre-filled details at checkout
 
 <h5 id=success></h5>  
 
-**Checkout Success Page**
+### **Checkout Success Page**
+**_User Stories_**  
+- As a customer i would like a successful payment page with a summary of my order
 
 <h5 id=profile></h5>  
 
-**Profile Page**
+### **Profile Page**  
+**_User Stories_**  
+- As a user i would like a profile page where I can manage my details and view my purchases    
 
 <h5 id=location></h5>  
 
-**Where to find us Page**
+### **Where to find us Page**
+**_User Stories_** 
 
 ---  
 
