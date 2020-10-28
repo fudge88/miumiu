@@ -21,7 +21,7 @@
 <div class="container mb-2">
     <div class="row">
         <div class="col text-center">
-            <h2 class="heading-top-spacing logo-font">Products</h2>
+            <h2 class="products-top-spacing heading-top-spacing logo-font">Products</h2>
                 {% for c in current_categories %}
                 <a class="text-decoration-none hyperlink" href="{% url 'products' %}?category={{ c.name }}">
                     <h4 class="p-2">{{ c.friendly_name }}</h4>
