@@ -32,11 +32,16 @@
 <h5 id=development></h5>  
 
 ## **Development Testing**  
-Debug=True
-The app was constantly testing with debugger locally: debug=True throughout all the development process.  
-Every time when there was an error (when app crashed), the debugger displayed an error message to the view,  
-that allowed me to find the location of the error and fix it.  
+Django give the user many gimmicks, one that is particulally useful in development is setting   
+'Debug' in the settings.py file to 'True':  
 
+> settings.py
+>> `DEBUG=True`  
+
+This allows the app in progress to be tested with debugger locally. Where there is an error in   
+the code, or if there is code missing, the locally rendered app would crash displaying a very   
+specific error message, detailing where the error can be found and possibly how to fix it,  
+i.e '{% endblock %} expected'.
  
 ---  
 
@@ -84,19 +89,28 @@ that allowed me to find the location of the error and fix it.
 
 ## **Validators**
 HTML
-All the HTML files were tested through W3C Markup Validation Service. Since it does not recognize Jinja2  
-templating language, it showed a number of errors. There were also few minor errors and warning that can be  
-safely ignored. Apart from that, no other errors were found across the html pages.  
+All HTML files were tested through [W3C Markup Validation](https://validator.w3.org/), by direct input.  
+This lists errors and warnings in relation to your HTML code specifying lines and elements/attributes effected.  
+My application used Jinja templating language, that is entwind with the HTML content, whih is which is why i  
+had many 'bad value' errors. There were a few minor errors such as not specifying `<!DOCTYPE html>`,  
+but these errors can safely be ignored as this is included in the base.  
+No other significant errors were found.
 
 CSS
-All the CSS files were tested through W3C CSS Validation Service. Since it does not recognize CSS variables  
-(colours and fonts variables were used), there were several Parse Errors found. These errors can be safely  
-ignored as they are not errors in fact. The rest of the CSS files was completely valid.  
+All the CSS files were tested through [W3C CSS Validation](https://jigsaw.w3.org/css-validator/validator), by direct input.  
+This lists errors and warnings in relation to your CSS code specifying lines and the errors found. I   
+recieved a few errors in relation to webkit as an unknown vendor. I also got errors notifying me that some  
+of my styling choices such as the border colours and backgrounds to be of the same colours. However, these   
+errors can safely be ignored as this is included in the base.  
+No other errors were found.
 
 JavaScript
-All the JS files were tested through Esprima and JSHint validators, code was syntactically valid. "$" was not  
-defined by JSHint.  
+All the JS files were tested through [Esprima](https://esprima.org/demo/validate.html) by direct input.  
+If there was a syntax error, a squiggly red line would appear under the code which would reveal the errors   
+once hovered over. All code was syntactically valid.
 
 Python
-All the Python files were tested through PEP8 Online validator and further changes were made to make the code  
+All the Python files were tested using 'flake8' which lists all errors in relation to Python on every  
+page of your application. I had a few indentation erros, and 'line too long' errors. I corrected these   
+where possible. I also used [PEP8 online](http://pep8online.com/) and further changes were made to make the code  
 PEP8 compliant where possible.  
