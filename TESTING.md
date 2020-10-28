@@ -26,6 +26,43 @@
 <h5 id=automated></h5>  
 
 ## **Automated Testing**  
+Automated test, better known as [Unit testing](https://docs.python.org/3/library/unittest.html), is a softare testing method.  
+Here individial units of code are put under tests to determine the quality of your code. Here the   
+code that has been written for an application has small test scripts written for the units, to check if  
+the code behaves as expected. 
+The aim to get atleast 70% coverage of the website tested through unit tests.  
+I have created a test folder under each app with significant code. The folder/file structure is as follows:  
+- tests  
+    + test_forms.py
+    + test_models.py
+    + test_views.py  
+
+Each file has been split to test functions of teh views, models and the form code.    
+To test each app you can key in the following and change the path as required:  
+
+> `python3 manage.py test bag.test`  
+
+This can further be specified with an extention of the specific test you wish to test alone:  
+
+> `python3 manage.py test bag.test.test_views.<test_name>`  
+
+The tests should pass to show:  
+
+- . (a dot) in the terminal for each test passed  
+- E in the terminal for each test that returns an error 
+- F in the terminal for each test that returns as failed 
+
+We can use an application called [coverage.py](https://coverage.readthedocs.io/en/coverage-5.3/) to run our tests 
+and to see how much of our app we have tested.  
+
+To run coverage add the following commands in your terminal:  
+> `coverage run manage.py test`  
+
+To get a report on the application you have just ran:  
+> `coverage report`  
+
+To create this report in HTML:  
+> `coverage.HTML`
  
 ---  
 
@@ -35,8 +72,8 @@
 Django give the user many gimmicks, one that is particulally useful in development is setting   
 'Debug' in the settings.py file to 'True':  
 
-> settings.py
->> `DEBUG=True`  
+- settings.py
+    + `DEBUG=True`  
 
 This allows the app in progress to be tested with debugger locally. Where there is an error in   
 the code, or if there is code missing, the locally rendered app would crash displaying a very   
