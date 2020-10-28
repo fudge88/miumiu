@@ -19,9 +19,7 @@
     + [**Where to find us**](#location)
   * [**Compatibility**](#compatibility)
   * [**Validators**](#validators)
-
-
-<h5 id=developemnt></h5>  
+  * [**Bugs and Finds**](#bugs)
 
 ---  
 
@@ -62,6 +60,11 @@ otherfactors will be considered.
 - As a customer i would like to be able to filter my search preference  
 - As a customer i would like an easy-to-follow navigation   
 
+**_Tests_**   
+
+**_Results_**  
+
+
 <h5 id=login></h5>  
 
 ### **Login/Registration Page**
@@ -71,6 +74,11 @@ otherfactors will be considered.
 - As a user i would like to easily recover PW’s (just in case)  
 - As a user i would want to receive emails in relation to my activity, such as: confirmation emails
 
+**_Tests_**   
+
+**_Results_**  
+
+
 <h5 id=products></h5>  
 
 ### **Products Page**  
@@ -78,17 +86,32 @@ otherfactors will be considered.
 - As a user i would like to be able to view all products 
 - As a customer i would like to have more than one way to filter my search  
 
+**_Tests_**   
+
+**_Results_**  
+
+
 <h5 id=detail></h5>  
 
 ### **Product Detail Page**
 **_User Stories_**  
 - As a user i would like to be able to view specific product details  
 
+**_Tests_**   
+
+**_Results_**  
+
+
 <h5 id=basket></h5>  
 
 ### **basket Page**
 **_User Stories_**  
 - As a customer i would like to be able to alter my basket
+
+**_Tests_**   
+
+**_Results_**  
+
 
 <h5 id=checkout></h5>  
 
@@ -97,11 +120,21 @@ otherfactors will be considered.
 - As a customer i would like a quick and simple checkout process  
 - As a customer i would like a pre-filled details at checkout
 
+**_Tests_**   
+
+**_Results_**  
+
+
 <h5 id=success></h5>  
 
 ### **Checkout Success Page**
 **_User Stories_**  
 - As a customer i would like a successful payment page with a summary of my order
+
+**_Tests_**   
+
+**_Results_**  
+
 
 <h5 id=profile></h5>  
 
@@ -109,10 +142,19 @@ otherfactors will be considered.
 **_User Stories_**  
 - As a user i would like a profile page where I can manage my details and view my purchases    
 
+**_Tests_**   
+
+**_Results_**  
+
+
 <h5 id=location></h5>  
 
 ### **Where to find us Page**
-**_User Stories_** 
+Although no user stories, still a nice feature to have. 
+**_Tests_**   
+
+**_Results_**  
+
 
 ---  
 
@@ -249,3 +291,11 @@ All the Python files were tested using 'flake8' which lists all errors in relati
 page of your application. I had a few indentation erros, and 'line too long' errors. I corrected these   
 where possible. I also used [PEP8 online](http://pep8online.com/) and further changes were made to make the code  
 PEP8 compliant where possible.
+
+
+## **Bugs and Finds**  
+When testing the application i found when clicking on teh search icon, a bloack thick out of line border would   
+appear. After searching online i found the solution, the suggestions were to add `outline:0 !important;`  
+to the CSS property for the icon, and it worked.
+
+

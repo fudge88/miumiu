@@ -131,13 +131,13 @@ img.nav-img-top {
 .search-btn {
     border: none;
     background: none;
-    outline: none;
     width: 10px;
     margin-top: -21px;
     display: flex;
     justify-content: center;
     align-items: center;
     cursor: pointer;
+    outline:0 !important;
 }
 
 .search-btn i {
