@@ -27,7 +27,7 @@ def add_to_bag(request, item_id):
         messages.success(request, f'Added {product.name} to your basket')
 
     request.session['bag'] = bag
-    return redirect(reverse('shopping_bag'))
+    return redirect(redirect_url)
 
 
 def edit_bag(request, item_id):

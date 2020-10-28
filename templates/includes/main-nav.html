@@ -63,5 +63,12 @@
                 Where to find us
             </a>
         </li>
+        {% if bag_items > 0 %}
+        <li class="nav-item dropdown">
+            <a class="nav-link mr-5" href="{% url 'shopping_bag' %}">
+                Go to Checkout
+            </a>
+        </li>
+        {% endif %}
     </ul>
 </div>

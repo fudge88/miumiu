@@ -22,8 +22,8 @@ h6 {
 }
 
 .logo-font {
-    font-family: 'Kristi', cursive;
-    font-size: 4rem;
+    font-family: 'Rock Salt', cursive;
+    font-style: italic;
 }
 
 hr {
@@ -275,8 +275,9 @@ img.card-img-top.img-fluid {
 
 .info-link {
     float: right;
+    font-family: 'Rock Salt', cursive;
     font-size: xx-large;
-    font-family: 'Kristi', cursive;
+    font-style: italic;
 }
 
 .collapse {
@@ -288,8 +289,8 @@ img.card-img-top.img-fluid {
 }
 
 .product-name {
-    font-family: 'Kristi', cursive;
-    font-size: 1.8rem;
+    font-family: 'Rock Salt', cursive;
+    font-style: italic;
     font-weight: bold;
 }
 
@@ -320,9 +321,9 @@ img.card-img-top.img-fluid {
 /* ============================== product detail */
 .product-detail-name {
     color: #000;
-    font-size: 2.5rem;
     font-weight: bold;
-    font-family: 'Kristi', cursive;
+    font-style: italic;
+    font-family: 'Rock Salt', cursive;
 }
 
 
@@ -331,8 +332,8 @@ img.card-img-top.img-fluid {
 }
 
 .single-product-description {
-    font-size: 3rem;
-    font-family: 'Kristi', cursive;
+    font-family: 'Rock Salt', cursive;
+    font-style: italic;
     margin: 0;
 }
 .buying-options {
@@ -631,6 +632,9 @@ a.button.secondaryAction {
     
     hr.card-line-break.my-3 {
         margin-top: 10px!important;
+    }
+    .heading-top-spacing{
+        margin-top: 8rem;
     }
 }
 
