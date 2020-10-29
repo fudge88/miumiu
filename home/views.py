@@ -4,9 +4,21 @@ from django.shortcuts import render
 
 def index(request):
     """ view to return index page"""
-    return render(request, 'home/index.html')
+    bag = request.session.get('bag', {})
+    bag_item = len(bag)
+
+    context = {
+        'bag_item': bag_item
+    }
+    return render(request, 'home/index.html', context)
 
 
 def location(request):
     """ view for location/map"""
-    return render(request, 'home/map.html')
+    bag = request.session.get('bag', {})
+    bag_item = len(bag)
+
+    context = {
+        'bag_item': bag_item
+    }
+    return render(request, 'home/map.html', context)

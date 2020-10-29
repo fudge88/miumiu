@@ -7,7 +7,13 @@ from products.models import Product
 
 def shopping_bag(request):
     """ renders shopping bag page"""
-    return render(request, 'bag/bag.html')
+    bag = request.session.get('bag', {})
+    bag_item = len(bag)
+
+    context = {
+        'bag_item': bag_item
+    }
+    return render(request, 'bag/bag.html', context)
 
 
 def add_to_bag(request, item_id):
@@ -15,7 +21,7 @@ def add_to_bag(request, item_id):
 
     product = get_object_or_404(Product, pk=item_id)
     quantity = int(request.POST.get('quantity'))
-    redirect_url = request.POST.get('redirect_url')
+    # redirect_url = request.POST.get('redirect_url')
     bag = request.session.get('bag', {})
 
     if item_id in list(bag.keys()):
@@ -27,14 +33,17 @@ def add_to_bag(request, item_id):
         messages.success(request, f'Added {product.name} to your basket')
 
     request.session['bag'] = bag
-    return redirect(redirect_url)
+    return redirect(reverse('shopping_bag'))
 
 
 def edit_bag(request, item_id):
     """Adjust the quantity of the specified product in the bag"""
 
     product = get_object_or_404(Product, pk=item_id)
-    quantity = int(request.POST.get('quantity'))
+    try:
+        quantity = int(request.POST.get('quantity'))
+    except:
+        quantity = 1
     bag = request.session.get('bag', {})
 
     if quantity > 0:

@@ -32,6 +32,7 @@
         </div>
         <!-- option for the user to write a reviews -->
         <div class="col-12 col-md-6 col-lg-4 form-bg p-3">
+            {% if previous_order == True %}
             <h5 class="text-uppercase">Write a review:</h5>
             <form action="{% url 'product_detail' product.id %}" method="POST" class="form-group">
                 {% csrf_token %}
@@ -50,6 +51,7 @@
                     <a href="{% url 'account_signup' %}">Register</a></p>
                 {% endif %}
             </form>
+            {% endif %}
         </div>
     </div>
 </section> 

@@ -7,6 +7,8 @@ from django.core.paginator import Paginator, EmptyPage, PageNotAnInteger
 import random
 
 from .models import Product, Category, ProductReview
+from checkout.models import Order, OrderLineItem
+from profiles.models import UserProfile
 from .forms import ProductForm, ProductReviewForm
 
 
@@ -80,6 +82,9 @@ def all_products(request):
     except EmptyPage:
         posts = paginator.get_page(paginator.num_pages)
 
+    bag = request.session.get('bag', {})
+    bag_item = len(bag)
+
     context = {
         'products': products,
         'search_term': query,
@@ -87,7 +92,8 @@ def all_products(request):
         'current_sorting': current_sorting,
         'random_products': random_products,
         'page': page,
-        'posts': posts
+        'posts': posts,
+        'bag_item': bag_item
     }
 
     return render(request, 'products/products.html', context)
@@ -96,6 +102,26 @@ def all_products(request):
 def product_detail(request, product_id):
     """ A view to show individual product details """
     product = get_object_or_404(Product, pk=product_id)
+
+    order_objs = Order.objects.filter(
+        user_profile=UserProfile.objects.get(user=request.user)
+        )
+    previous_order = False
+
+    for i in order_objs:
+        print('=============>', i.order_number)
+        order_line_item = OrderLineItem.objects.get(
+            order=Order.objects.get(order_number=i.order_number)
+            )
+        print(order_line_item)
+        p = OrderLineItem.objects.filter(product=product).filter(
+            order=Order.objects.get(order_number=i.order_number)
+            )
+        print(p)
+        if len(p) > 0:
+            previous_order = True
+            print(previous_order)
+            break
 
     if request.method == 'POST':
         review = request.POST['review']
@@ -112,10 +138,15 @@ def product_detail(request, product_id):
     product_reviews = ProductReview.objects.filter(
         Product=product).order_by('-created_at')
 
+    bag = request.session.get('bag', {})
+    bag_item = len(bag)
+
     context = {
         'product': product,
         'product_reviews': product_reviews,
-        'reviews_count': len(product_reviews)
+        'reviews_count': len(product_reviews),
+        'previous_order': previous_order,
+        'bag_item': bag_item
     }
     print(product)
 
