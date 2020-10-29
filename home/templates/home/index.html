@@ -23,3 +23,13 @@
   </div>
 </div>
 {% endblock %} 
+
+{% block postloadjs %}
+    {{ block.super }}
+<script>	
+  function pageRedirect() {	
+      window.location.replace("/products/");	
+  }      	
+  setTimeout("pageRedirect()", 3000);	
+</script>
+{% endblock %} 
