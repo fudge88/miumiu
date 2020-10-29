@@ -78,6 +78,11 @@ img.nav-img-top {
     text-transform: uppercase;
 }
 
+a.checkout-link{
+    font-family: 'Playfair Display', serif;
+    font-size: x-large;
+}
+
 /* .dropdown-menu.show {
     margin: 30px;
 } */

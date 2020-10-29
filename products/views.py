@@ -92,8 +92,7 @@ def all_products(request):
         'current_sorting': current_sorting,
         'random_products': random_products,
         'page': page,
-        'posts': posts,
-        'bag_item': bag_item
+        'posts': posts
     }
 
     return render(request, 'products/products.html', context)
@@ -103,25 +102,19 @@ def product_detail(request, product_id):
     """ A view to show individual product details """
     product = get_object_or_404(Product, pk=product_id)
 
-    order_objs = Order.objects.filter(
-        user_profile=UserProfile.objects.get(user=request.user)
-        )
     previous_order = False
+    if request.user.is_authenticated:
+        order_objs = Order.objects.filter(
+            user_profile=UserProfile.objects.get(user=request.user)
+            )
 
-    for i in order_objs:
-        print('=============>', i.order_number)
-        order_line_item = OrderLineItem.objects.get(
-            order=Order.objects.get(order_number=i.order_number)
-            )
-        print(order_line_item)
-        p = OrderLineItem.objects.filter(product=product).filter(
-            order=Order.objects.get(order_number=i.order_number)
-            )
-        print(p)
-        if len(p) > 0:
-            previous_order = True
-            print(previous_order)
-            break
+        for i in order_objs:
+            p = OrderLineItem.objects.filter(product=product).filter(
+                order=Order.objects.get(order_number=i.order_number))
+            if len(p) > 0:
+                previous_order = True
+                print(previous_order)
+                break
 
     if request.method == 'POST':
         review = request.POST['review']

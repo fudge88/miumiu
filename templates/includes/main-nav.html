@@ -69,13 +69,9 @@
 
         <!-- =====================test -->
     {% if bag_item > 0 %}	
-    <div class="float-right pr-5">	
-        <a href="{% url 'checkout' %}">	
-            <div class="text-center icon">	
-                <span class="fa-stack">	
-                    <i class="fas fa fa-shopping-cart fa-stack-2x"></i>	
-                </span>	
-            </div>	
+    <div class="float-right pl-5">	
+        <a href="{% url 'checkout' %}" class=" checkout-link hyperlink text-center pt-2 mb-0">	
+            Go to Checkout
         </a>	
     </div>	
     {% endif %}
