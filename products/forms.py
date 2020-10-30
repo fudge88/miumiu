@@ -3,6 +3,7 @@ from .widgets import CustomClearableFileInput
 from .models import Product, Category, ProductReview
 
 
+# product form including widget
 class ProductForm(forms.ModelForm):
 
     class Meta:
@@ -22,7 +23,7 @@ class ProductForm(forms.ModelForm):
         for field_name, field in self.fields.items():
             field.widget.attrs['class'] = 'border-black'
 
-
+# reviews form
 class ProductReviewForm(forms.ModelForm):
     class Meta:
         model = ProductReview

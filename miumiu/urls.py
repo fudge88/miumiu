@@ -18,10 +18,10 @@ from django.urls import path, include
 from django.conf import settings
 from django.conf.urls.static import static
 from django.contrib.staticfiles.storage import staticfiles_storage
-from django.views.generic.base import RedirectView, TemplateView
+from django.views.generic.base import RedirectView
 
+# urls in on the project level, available across the app
 urlpatterns = [
-    # path('', TemplateView.as_view(template_name="account/index.html")),
     path('admin/', admin.site.urls),
     path('accounts/', include('allauth.urls')),
     path('', include('home.urls')),

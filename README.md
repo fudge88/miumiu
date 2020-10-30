@@ -246,10 +246,11 @@ search bar and the basket count icon.
 - The burger icon drops down to reveal the menu options, which further drop down into their subsections  
 - The search icon opens an input field under the navbar  
 - The basket count icon appears and functions in the same way as it does on the large screen  
+- goto checkout otion appears in main navonly when there is an item in the users bag
 
 **Home:**   
 Simple, relevant hero image of a female pampering herself. Simple message in the heading font speaking  
-to the user directly, with a shop now button that redirects to all products.  
+to the user directly, this page redirects to all products in 3 seconds.  
 
 **Promotion Bar:**  
 All information appears on the same strip on large screen, the smaller screen breaks down the information  
@@ -297,7 +298,8 @@ quantity they would like to purchase. This is then executed by clicking the 'add
 There are also social media icons in this block, that open the links on a new tab.  
 - There’s a button to go back and continue shopping.  
 - At the bottom of this page there are reviews for that product, all users can read this, and only  
-authenticated users are able to write a review, which is then time stamped should they wish to.  
+users who have purchased this item are able to write a review, which is then time stamped should they   
+wish to.  
 
 <h5 id=shopping-basket></h5>   
 

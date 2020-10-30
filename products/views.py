@@ -12,19 +12,18 @@ from profiles.models import UserProfile
 from .forms import ProductForm, ProductReviewForm
 
 
-# Create your views here.
-
-
 def all_products(request):
-    """ A view to show all products, including sorting and search queries """
-# pulls random products from db
+    """
+    show all products, including sorting and search queries
+    pulls random products from db for in-house promotion carousel
+    """
     products = Product.objects.all()
     try:
         random_products_no = random.sample(range(0, len(products)), 12)
     except:
         random_products_no = random.sample(
             range(0, len(products)), len(products))
-    print(random_products_no)
+
     random_products = []
     for r in random_products_no:
         random_products.append(products[r])
@@ -69,7 +68,7 @@ def all_products(request):
 
     current_sorting = f'{sort}_{direction}'
 
-    # pagination
+    # pagination please see README.md for refernces
     post_list = products
     paginator = Paginator(post_list, 12)
     page = request.GET.get('page')
@@ -92,14 +91,20 @@ def all_products(request):
         'current_sorting': current_sorting,
         'random_products': random_products,
         'page': page,
-        'posts': posts
+        'posts': posts,
+        'bag_item': bag_item
     }
 
     return render(request, 'products/products.html', context)
 
 
 def product_detail(request, product_id):
-    """ A view to show individual product details """
+    """
+    shows individual product details. Users who are authenticated
+    filters through their orders if user has purchased more then 'none',
+    the user is then able to write a review. Please see README.md
+    for refernces, also had support fom tutors.
+    """
     product = get_object_or_404(Product, pk=product_id)
 
     previous_order = False
@@ -113,20 +118,16 @@ def product_detail(request, product_id):
                 order=Order.objects.get(order_number=i.order_number))
             if len(p) > 0:
                 previous_order = True
-                print(previous_order)
                 break
 
     if request.method == 'POST':
         review = request.POST['review']
-        # subject = request.POST['subject']
         product_review_obj = ProductReview(
             Product=product,
             User=request.user,
             review=review,
-            # subject = subject
         )
         product_review_obj.save()
-        print('saved')
 
     product_reviews = ProductReview.objects.filter(
         Product=product).order_by('-created_at')
@@ -141,14 +142,16 @@ def product_detail(request, product_id):
         'previous_order': previous_order,
         'bag_item': bag_item
     }
-    print(product)
 
     return render(request, 'products/product_detail.html', context)
 
 
 @login_required
 def add_product(request):
-    """ Add a product to the store """
+    """ 
+    Adding a product to the store only superuser/admin can do this,
+    all other users would be redirected back to home.
+    """
     if not request.user.is_superuser:
         messages.error(request, 'Sorry, only store owners can do that.')
         return redirect(reverse('home'))
@@ -176,7 +179,10 @@ def add_product(request):
 
 @login_required
 def edit_product(request, product_id):
-    """ Edit a product in the store """
+    """ 
+    editing a product to the store only superuser/admin can do this,
+    all other users would be redirected back to home.
+    """
     if not request.user.is_superuser:
         messages.error(request, 'Sorry, only store owners can do that.')
         return redirect(reverse('home'))
@@ -207,7 +213,10 @@ def edit_product(request, product_id):
 
 @login_required
 def delete_product(request, product_id):
-    """ Delete a product from the store """
+    """ 
+    deleting a product to the store only superuser/admin can do this,
+    all other users would be redirected back to home.
+    """
     if not request.user.is_superuser:
         messages.error(request, 'Sorry, only store owners can do that.')
         return redirect(reverse('home'))
@@ -218,13 +227,14 @@ def delete_product(request, product_id):
     return redirect(reverse('products'))
 
 
-# PRODUCT REVIEWS
 @login_required
 def product_review(request, product_id):
-    """ shows product reviews """
+    """
+    product reviews are filtered to that specific product_id,
+    written myself using guides, please see README.md for references
+    """
     product_reviews = ProductReview.objects.filter(
         pk=product_id).order_by('-created_at')
-    print(product_reviews)
     review_form = ProductReviewForm()
 
     context = {
@@ -237,9 +247,9 @@ def product_review(request, product_id):
 
 @login_required
 def add_product_review(request, product_id):
-
     """
-    Handles the POST request for review form.
+    product reviews are added to that specific product_id,
+    written myself using guides, please see README.md for references
     """
     product = get_object_or_404(Product, pk=product_id)
     if request.method == "POST":

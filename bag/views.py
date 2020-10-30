@@ -6,7 +6,7 @@ from products.models import Product
 
 
 def shopping_bag(request):
-    """ renders shopping bag page"""
+    """ renders shopping bag page, counts products in bag"""
     bag = request.session.get('bag', {})
     bag_item = len(bag)
 
@@ -17,8 +17,8 @@ def shopping_bag(request):
 
 
 def add_to_bag(request, item_id):
-    """ Add a quantiity of the chosen product to the bag"""
-
+    """Add a quantiity of the chosen product to the bag"""
+    """Allows user to be redirected back to current page"""
     product = get_object_or_404(Product, pk=item_id)
     quantity = int(request.POST.get('quantity'))
     redirect_url = request.POST.get('redirect_url')
@@ -38,7 +38,7 @@ def add_to_bag(request, item_id):
 
 def edit_bag(request, item_id):
     """Adjust the quantity of the specified product in the bag"""
-
+    """Also deletes product in the bag"""
     product = get_object_or_404(Product, pk=item_id)
     try:
         quantity = int(request.POST.get('quantity'))
@@ -60,6 +60,7 @@ def edit_bag(request, item_id):
 
 def remove_item(request, item_id):
     """ Removes item from shopping bag"""
+    """ Or print an error"""
     product = Product.objects.get(pk=item_id)
 
     try:

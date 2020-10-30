@@ -55,7 +55,7 @@
                     </a>
                 </h5>
                 {% endif %} 
-                <!-- edit or delete buttons displayed only for superuser -->
+                <!-- edit or delete buttons displayed only for superuser/admin -->
                 {% if request.user.is_superuser %}
                 <small>
                     <a href="{% url 'edit_product' product.id %}"><i class="fas fa-edit"></i> Edit</a> | 
@@ -100,10 +100,10 @@
         </div>
     </div>
 </div>
-<!-- product revies associated to the product -->
+<!-- product reviews associated to the product -->
 {% include 'products/includes/product_reviews.html' %}
 
-<!-- modal -->
+<!-- modal to confirm deleteion-->
 <div class="modal fade" id="productDetail" data-backdrop="static" data-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
   <div class="modal-dialog">
     <div class="modal-content">

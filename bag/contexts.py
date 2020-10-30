@@ -6,7 +6,7 @@ from products.models import Product
 
 def bag_contents(request):
     """allows the bag contents available across the site"""
-
+    """also works out whether delivery costs will be applied and the total"""
     bag_items = []
     total = 0
     product_count = 0

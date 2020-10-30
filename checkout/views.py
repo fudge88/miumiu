@@ -19,6 +19,7 @@ import random
 
 @require_POST
 def cache_checkout_data(request):
+    """split secret key at bracket for stripe payment and save"""
     try:
         pid = request.POST.get('client_secret').split('_secret')[0]
         stripe.api_key = settings.STRIPE_SECRET_KEY
@@ -35,6 +36,12 @@ def cache_checkout_data(request):
 
 
 def checkout(request):
+    """
+    uses stripe ey to get form data from bag
+    iterates through bag items, gets quantities and saves to 
+    OrderLineItem. Other scenarios are covered off with 
+    except and else.
+    """
     stripe_public_key = settings.STRIPE_PUBLIC_KEY
     stripe_secret_key = settings.STRIPE_SECRET_KEY
 
@@ -101,8 +108,10 @@ def checkout(request):
             currency=settings.STRIPE_CURRENCY,
         )
 
-        # Attempt to prefill the form with any info the
-        # user maintains in their profile
+        """ 
+        Attempt to prefill the form with any info the
+        user updates in their profile
+        """
         if request.user.is_authenticated:
             try:
                 profile = UserProfile.objects.get(user=request.user)
@@ -138,16 +147,18 @@ def checkout(request):
 
 def checkout_success(request, order_number):
     """
-    Handle successful checkouts, random selection from database, and pagination
+    Handle successful checkouts, random selection from database
+    for the products promotion modal.
     """
     # random product selection from database
+    # line 155-164 written myself - see README.md for reference
     products = Product.objects.all()
     try:
         random_products_no = random.sample(range(0, len(products)), 12)
     except:
         random_products_no = random.sample(
             range(0, len(products)), len(products))
-    print(random_products_no)
+
     random_products = []
     for r in random_products_no:
         random_products.append(products[r])

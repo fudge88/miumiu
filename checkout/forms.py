@@ -2,6 +2,8 @@ from django import forms
 from .models import Order
 
 
+# user details to purchase products, and to prefill
+# fields at checkout from profile
 class OrderForm(forms.ModelForm):
     class Meta:
         model = Order

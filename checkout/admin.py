@@ -3,7 +3,7 @@ from .models import Order, OrderLineItem
 
 
 class OrderLineItemAdminInline(admin.TabularInline):
-    # allow to adjust order in admin panel
+    # allow admin to adjust order in admin panel
     model = OrderLineItem
     readonly_fields = ('lineitem_total',)
 
