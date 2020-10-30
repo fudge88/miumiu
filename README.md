@@ -52,7 +52,11 @@ glowing skin: exfoliate, mask, and moisturise.
 > **Security Pin:** Any 3 numbers  
 > **Zip:** Any 5 numbers
 
----
+---  
+
+<div style="float:right;">
+<a href="#contents">Back to Top</a>
+</div>  
 
 <h5 id=ux></h5>   
 
@@ -101,7 +105,11 @@ allowing the business owner to manage their online presence and product line ind
 >> - As a customer i would like a successful payment page with a summary of my order
 >> - As a customer i would like a pre-filled details at checkout
 
----  
+---   
+
+<div style="float:right;">
+<a href="#contents">Back to Top</a>
+</div>  
 
 <h5 id=strategy></h5>   
 
@@ -121,7 +129,11 @@ There is a facility to edit and delete existing products. Orders are available f
 see along with all the additional details the user would have provided ready for shipment. The admin  
 is also able to add and remove from orders.  
 
----  
+---   
+
+<div style="float:right;">
+<a href="#contents">Back to Top</a>
+</div>  
 
 <h5 id=design></h5>   
 
@@ -178,7 +190,11 @@ business logo, sticking to the colour theme.
 **Favicon:**
 I used [favicon](https://www.favicon.cc/?) to create a favicon.  
 
----  
+---   
+
+<div style="float:right;">
+<a href="#contents">Back to Top</a>
+</div>  
 
 <h5 id=mock-ups></h5>   
 
@@ -200,7 +216,11 @@ compact navbar is introduced on screen sizes 991px and below.
 In-house promotions are displayed on the larger screen, and hidden on the mobile view, to give a more neat  
 and compact version of the site.  
 
----
+---  
+
+<div style="float:right;">
+<a href="#contents">Back to Top</a>
+</div>  
 
 <h5 id=features></h5>   
 
@@ -328,7 +348,11 @@ function triggers a modal response to confirm if the admin wished to delete a pr
 - There’s also an upload widget installed for the admin to search their own documents and add an image to  
 their new or edited product accordingly.  
 
----
+---  
+
+<div style="float:right;">
+<a href="#contents">Back to Top</a>
+</div>  
 
 <h5 id=architech></h5>   
 
@@ -348,7 +372,11 @@ Below i have illustrated how the models interact with one another:
 
 ![Model entity diagram](/wireframes/model-architech.PNG)  
 
----
+---  
+
+<div style="float:right;">
+<a href="#contents">Back to Top</a>
+</div>  
 
 <h5 id=features-left-to-implement></h5>   
 
@@ -369,7 +397,11 @@ this at current, and will look into this in the near future to improve the UX.
 I would like to add a functioning ‘star’ review system to replace the static one I currently have;  
 this would generate the average ratings for each product and display a true rating of that product.  
 
----
+---   
+
+<div style="float:right;">
+<a href="#contents">Back to Top</a>
+</div>  
 
 <h5 id=technologies-used></h5>   
 
@@ -412,7 +444,12 @@ this would generate the average ratings for each product and display a true rati
 
 Testing information can be found [here](https://github.com/fudge88/miumiu/tree/master/TESTING.md).  
 
----
+---   
+
+<div style="float:right;">
+<a href="#contents">Back to Top</a>
+</div>  
+
 <h5 id=deployment></h5>  
 
 ## **Deployment:**  
@@ -556,7 +593,11 @@ credentials follwo indtructions:
 > `python3 manage.py runserver`
 11.	To access the admin interface, key in **_‘/admin’_** at the end of your locally deployed url.
 
----
+---  
+
+<div style="float:right;">
+<a href="#contents">Back to Top</a>
+</div>  
 
 <h5 id=credits></h5>   
 

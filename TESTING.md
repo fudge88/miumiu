@@ -23,6 +23,10 @@
 
 ---  
 
+<div style="float:right;">
+<a href="#testing">Back to Top</a>
+</div>  
+
 <h5 id=automated></h5>  
 
 ## **Automated Testing**  
@@ -66,6 +70,10 @@ To create this report in HTML:
  
 ---  
 
+<div style="float:right;">
+<a href="#testing">Back to Top</a>
+</div>  
+
 <h5 id=development></h5>  
 
 ## **Development Testing**  
@@ -81,6 +89,10 @@ specific error message, detailing where the error can be found and possibly how 
 i.e '{% endblock %} expected'.
  
 ---  
+
+<div style="float:right;">
+<a href="#testing">Back to Top</a>
+</div>  
 
 <h5 id=manual></h5>  
 
@@ -267,6 +279,10 @@ Although no user stories, still a nice feature to have.
 
 ---  
 
+<div style="float:right;">
+<a href="#testing">Back to Top</a>
+</div>  
+
 <h5 id=compatibility></h5>  
 
 ## **Compatibility**  
@@ -371,6 +387,10 @@ The following table illustrates the compatibility on various screen sizes and br
 
 ---  
 
+<div style="float:right;">
+<a href="#testing">Back to Top</a>
+</div>  
+
 <h5 id=validators></h5>  
 
 ## **Validators**
@@ -399,8 +419,13 @@ once hovered over. All code was syntactically valid.
 All the Python files were tested using 'flake8' which lists all errors in relation to Python on every  
 page of your application. I had a few indentation erros, and 'line too long' errors. I corrected these   
 where possible. I also used [PEP8 online](http://pep8online.com/) and further changes were made to make the code  
-PEP8 compliant where possible.
+PEP8 compliant where possible.  
 
+---  
+
+<div style="float:right;">
+<a href="#testing">Back to Top</a>
+</div>  
 
 ## **Bugs and Finds**  
 When testing the application i found when clicking on teh search icon, a bloack thick out of line border would   
