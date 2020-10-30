@@ -1,6 +1,15 @@
 from django.test import TestCase
-from products.models import Product, ProductReview
+from products.models import Product, ProductReview, Category
 from django.contrib.auth.models import User
+
+
+class CategoryTest(TestCase):
+    def setUp(self):
+        Category.objects.create(name="category")
+
+    def test_category(self):
+        c = Category.objects.get(name="category")
+        self.assertEqual(c.name, 'category')
 
 
 class ProductTestCase(TestCase):

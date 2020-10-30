@@ -234,14 +234,25 @@ theres an empty space that drops the page further down.
 - As a customer i would like a successful payment page with a summary of my order  
 
 **_Tests_**   
-- all information releevant to that order is visable
+- all information relevant to that order is visable
 - a button to redirect from that page  
 - on larger screens the carousel is visable  
 - carousel images redirect to the product detail page for the item clicked on  
 - message to confirm this is a historic order
+- email sent to customer confirming purchase
 
 **_Results_**  
-- test were fully functional on all devices used for testing, with various screen sizes.  
+- most were fully functional on all devices used for testing, with various screen sizes.  
+- however, the confirmation email failed to send. The problem lies with the webhooks, which  
+are coded to send a confirmation email upon recipt of payment. The webhooks are   
+currently failing as Stripe is unable to send errors to the console. The orders are being   
+sent to the admin as required, and payments are being seen under 'webhooks' in Stripe/events.  
+Because miumiu is not a live website, and actioning live payments, this doesnt majorly effect  
+the running of the app. In a real life scenario this must be fixed as this would catch payment  
+inturruptions and action the order giving further details of the event to the admin. A confirmation  
+email would be sent to the customer maintaining the UX, and refering their product in recipet.  
+Due to the time contraint i am unable to correct this at this time, however this will be  
+looked into being fixed into the near future.
 
 
 <h5 id=profile></h5>  
@@ -428,8 +439,13 @@ PEP8 compliant where possible.
 </div>  
 
 ## **Bugs and Finds**  
-When testing the application i found when clicking on teh search icon, a bloack thick out of line border would   
+When testing the application i found when clicking on teh search icon, a black thick out of line border would   
 appear. After searching online i found the solution, the suggestions were to add `outline:0 !important;`  
-to the CSS property for the icon, and it worked.
+to the CSS property for the icon, and it worked.  
+
+I had coded the product reviews so that authenticated users can leave a review. However, feed back from my mentor  
+suggested that the user should only be able to add a review for a product they have purchased.  Taking this on board  
+i made amendmenst to the code:  
+
 
 
