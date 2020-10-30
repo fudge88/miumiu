@@ -1,5 +1,4 @@
 from django.test import TestCase
-from django.urls import reverse
 from profiles.models import UserProfile
 from profiles.views import order_history, profile
 from checkout.models import Order

@@ -38,8 +38,8 @@ def cache_checkout_data(request):
 def checkout(request):
     """
     uses stripe ey to get form data from bag
-    iterates through bag items, gets quantities and saves to 
-    OrderLineItem. Other scenarios are covered off with 
+    iterates through bag items, gets quantities and saves to
+    OrderLineItem. Other scenarios are covered off with
     except and else.
     """
     stripe_public_key = settings.STRIPE_PUBLIC_KEY
@@ -108,7 +108,7 @@ def checkout(request):
             currency=settings.STRIPE_CURRENCY,
         )
 
-        """ 
+        """
         Attempt to prefill the form with any info the
         user updates in their profile
         """

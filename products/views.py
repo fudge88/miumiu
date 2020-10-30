@@ -148,7 +148,7 @@ def product_detail(request, product_id):
 
 @login_required
 def add_product(request):
-    """ 
+    """
     Adding a product to the store only superuser/admin can do this,
     all other users would be redirected back to home.
     """
@@ -179,7 +179,7 @@ def add_product(request):
 
 @login_required
 def edit_product(request, product_id):
-    """ 
+    """
     editing a product to the store only superuser/admin can do this,
     all other users would be redirected back to home.
     """
@@ -213,7 +213,7 @@ def edit_product(request, product_id):
 
 @login_required
 def delete_product(request, product_id):
-    """ 
+    """
     deleting a product to the store only superuser/admin can do this,
     all other users would be redirected back to home.
     """
