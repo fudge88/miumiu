@@ -35,6 +35,7 @@ glowing skin: exfoliate, mask, and moisturise.
     + [**Shopping basket**](#shopping-basket)
     + [**Checkout page**](#checkout-page)
     + [**Checkout Success**](#checkout-success)
+  * [**Information Architecture**](#architech)
   * [**Features left to implement**](#features-left-to-implement)
   * [**Technologies used**](#technologies-used)
   * [**Testing**](#testing)
@@ -118,7 +119,7 @@ likely customers will complete the cycle of purchase.
 **Admin** would be able to control the content on the websites, from users, products, and reviews.  
 There is a facility to edit and delete existing products. Orders are available for the admin to  
 see along with all the additional details the user would have provided ready for shipment. The admin  
-is also able to add and remove from orders.
+is also able to add and remove from orders.  
 
 ---  
 
@@ -326,6 +327,26 @@ There are also options to edit and delete from the product page and the product 
 function triggers a modal response to confirm if the admin wished to delete a product.
 - There’s also an upload widget installed for the admin to search their own documents and add an image to  
 their new or edited product accordingly.  
+
+---
+
+<h5 id=architech></h5>   
+
+## **Information Architecture:** 
+
+Below is an illustrated entity diagram showing the planned working system for my ecommerce app:  
+
+![entity diagram](/wireframes/entity-diagram.png)    
+
+The database system used during development was **_sqlite3_**, which comes as standard with Django.  
+However, sqlite3 is not common choice for large scale production or large databases, which is why  
+it is replaced by Postgres (provided by Heorku), this is a cloud database and is far more faster in   
+response and efficient.
+
+Below i have illustrated how the models interact with one another:  
+**_please note that the foreign keys are in blue_**
+
+![Model entity diagram](/wireframes/model-architech.PNG)  
 
 ---
 
