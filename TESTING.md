@@ -443,9 +443,14 @@ When testing the application i found when clicking on teh search icon, a black t
 appear. After searching online i found the solution, the suggestions were to add `outline:0 !important;`  
 to the CSS property for the icon, and it worked.  
 
-I had coded the product reviews so that authenticated users can leave a review. However, feed back from my mentor  
-suggested that the user should only be able to add a review for a product they have purchased.  Taking this on board  
-i made amendmenst to the code:  
+When testing my application heroku, as an admin i tried to add a new product, however i would get a http error:  
 
+![http error](/wireframes/error.PNG)  
+
+This was odd as i was able to add a product from my locally deployed site without issues, and my deployed   
+version was flagging the above error. After doing some digging i came across a post in [stackoverflow](https://stackoverflow.com/questions/63709876/aws-s3-ls-an-http-client-raised-an-unhandled-exception-invalid-header-value)  
+where one of teh answers were that the AWS ACCESS KEY in my Herku variables has created a new line. I removed   
+the empty line, and rebuilt teh dynos. I opened teh app, and tried adding teh product aain, to my suprise it   
+actually worked.
 
 
